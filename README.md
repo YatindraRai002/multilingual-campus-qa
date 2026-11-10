@@ -1,5 +1,7 @@
 # Multilingual Qwen Fine-Tuning and Grounded Campus FAQ Research
 
+**[Read the research-paper draft](RESEARCH_DRAFT.md)** — manuscript with abstract, related work, methods, actual results, limitations, references and experimental provenance. Author and affiliation details remain to be confirmed; human factuality review is pending.
+
 **Active study: Qwen/Qwen2.5-1.5B-Instruct on the laptop RTX 2050.** The user explicitly approved this change so actual GPU experiments can run with 4 GiB VRAM. The original 7B model/training settings are archived in `config/profiles/`; 1.5B results must never be represented as 7B results. See [the authorized study amendments](docs/STUDY_AMENDMENTS.md).
 
 **Completed locally:** QLoRA training, two full 13,921-question benchmark runs, and two separate four-arm campus experiments (63 and 45 questions per arm). All **10 runs / 28,274 predictions** succeeded. Validation: **103 Python tests and 3 Edge browser tests passed**, including real GPU-backed chat. See the [final research report and handover](docs/FINAL_RESEARCH_REPORT.md) for all run IDs, metrics, artifacts and limitations.

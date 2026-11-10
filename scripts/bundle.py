@@ -10,7 +10,7 @@ output.parent.mkdir(exist_ok=True)
 files = []
 for name in ['backend','frontend','config','docs','scripts','notebooks','tests']:
     files += [p for p in (root/name).rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc']
-for name in ['README.md','pyproject.toml','requirements.txt','requirements-ml.txt','requirements-local-lock.txt','package.json','package-lock.json','playwright.config.js','.gitignore','.gitattributes']:
+for name in ['README.md','RESEARCH_DRAFT.md','pyproject.toml','requirements.txt','requirements-ml.txt','requirements-local-lock.txt','package.json','package-lock.json','playwright.config.js','.gitignore','.gitattributes']:
     if (root/name).is_file():
         files.append(root/name)
 # Deliberate allowlist: reviewed excerpts and sealed records, never raw web pages,
