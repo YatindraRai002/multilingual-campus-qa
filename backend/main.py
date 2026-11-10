@@ -14,6 +14,7 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from backend.college import college_summary
+from backend.campus_chat import detect_chat_language, enforce_reply_language, faq_reply, suggestions, unavailable_reply
 from backend.datasets import LANGUAGES, current_manifest, identify_language, load_split
 from backend.db import Database
 from backend.evaluation.evaluation_runner import evaluate_predictions
@@ -300,13 +301,24 @@ class ChatRequest(BaseModel):
     question: str = Field(min_length=3,max_length=2000)
     language: Literal["en","hi","ta"] | None = None
     experiment: Literal["A","B","C","D"] = "D"
+    answer_mode: Literal["model", "faq_first"] = "model"
+
+
+@app.get("/api/chat/suggestions")
+def chat_suggestions():
+    return suggestions()
 
 
 @app.post("/api/chat")
 def chat(body: ChatRequest):
-    language = body.language or identify_language(body.question)
+    language = body.language or (detect_chat_language(body.question) if body.answer_mode == "faq_first"
+                                 else identify_language(body.question))
     if not language:
         raise HTTPException(422,"Choose English, Hindi or Tamil explicitly for mixed-script or transliterated questions.")
+    if body.answer_mode == "faq_first" and body.experiment in {"C", "D"}:
+        answer = faq_reply(body.question, language)
+        if answer is not None:
+            return answer
     engine = None
     from filelock import Timeout
     try:
@@ -324,9 +336,17 @@ def chat(body: ChatRequest):
             result = infer_record(engine,row,track="campus",experiment=body.experiment,retriever=retriever)
             if result["evaluation_status"] != "completed":
                 raise HTTPException(422,result["error"])
+            if body.answer_mode == "faq_first":
+                result = enforce_reply_language(result, language)
             return {**result,"model_loading_seconds":engine.loading_seconds,'runtime_memory':memory,"research_scored":False,
                     "notice":"Interactive answers are not research evaluation records."}
+    except PrerequisiteError as exc:
+        if body.answer_mode == "faq_first":
+            return unavailable_reply(body.question, language, str(exc))
+        raise
     except Timeout:
+        if body.answer_mode == "faq_first":
+            return unavailable_reply(body.question, language, "The local model is busy with another request.")
         raise HTTPException(409,"The GPU is in use by another training, evaluation or chat request.")
 @app.get("/api/docs")
 def documents():

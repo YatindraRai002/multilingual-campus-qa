@@ -7,7 +7,7 @@ test('real dataset dashboard, navigation, and compute prerequisites', async ({pa
   const models = await (await request.get('/api/models')).json();
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
-  await page.goto('/');
+  await page.goto('/#overview');
   await expect(page.getByRole('heading', {name:'A clearer view of every experiment.'})).toBeVisible();
   await expect(page.getByText('13,921', {exact:true})).toBeVisible();
   if (!history.count) await expect(page.getByText('Evaluation not yet performed.', {exact:true}).first()).toBeVisible();
@@ -38,7 +38,7 @@ test('real dataset dashboard, navigation, and compute prerequisites', async ({pa
   await page.locator('nav a[data-page="chat"]').click();
   if (!models.adapter || !campus.ingestion) {
     await page.getByLabel('Your campus question').fill('Where is the library?');
-    await page.getByRole('button', {name:'Ask question'}).click();
+    await page.getByRole('button', {name:'Send message'}).click();
     await expect(page.locator('.chat-message.error')).toBeVisible();
   }
   await page.locator('nav a[data-page="review"]').click();
@@ -60,7 +60,7 @@ test('real dataset dashboard, navigation, and compute prerequisites', async ({pa
 
 test('responsive dashboard has accessible mobile navigation', async ({page}) => {
   await page.setViewportSize({width:390,height:844});
-  await page.goto('/');
+  await page.goto('/#overview');
   await expect(page.getByRole('heading', {name:'A clearer view of every experiment.'})).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole('button', {name:'Toggle navigation'}).click();
@@ -76,11 +76,13 @@ test('trained campus chat returns a real cited answer with visible review proven
   const campus = await (await request.get('/api/college-faq/summary')).json();
   const models = await (await request.get('/api/models')).json();
   test.skip(!models.adapter || campus.corpus.version !== 'b07405a784a7045c', 'Requires the completed local campus pilot.');
+  const system = await (await request.get('/api/system')).json();
+  test.skip(!system.inference.ready, 'The local GPU currently lacks enough free memory for a new model request.');
   const before = await (await request.get('/api/experiments')).json();
   await page.goto('/#chat');
   await page.getByLabel('Your campus question').fill("At SRMIST's Kattankulathur campus: What temple does SRMIST list among its campus worship places?");
   const responsePromise = page.waitForResponse(response => response.url().endsWith('/api/chat') && response.request().method() === 'POST', {timeout:100000});
-  await page.getByRole('button', {name:'Ask question'}).click();
+  await page.getByRole('button', {name:'Send message'}).click();
   const response = await responsePromise;
   expect(response.status()).toBe(200);
   const answer = await response.json();

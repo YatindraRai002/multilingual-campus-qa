@@ -3,9 +3,73 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;',
 const number = value => value === null || value === undefined ? '—' : Number(value).toLocaleString('en-IN');
 const decimal = (value, places = 2) => value === null || value === undefined ? '—' : Number(value).toFixed(places);
 const date = value => value ? new Date(value).toLocaleString('en-IN', {timeZone:'Asia/Kolkata',day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}) + ' IST' : '—';
-const label = {overview:'Overview', datasets:'Benchmark data', training:'Model & training', experiments:'Experiments', campus:'Campus knowledge', chat:'Grounded chat', review:'Human review', reports:'Reports & provenance'};
-let navigation = 0, page = 'overview', cache = {}, polling = null;
+const label = {overview:'Overview', datasets:'Benchmark data', training:'Model & training', experiments:'Experiments', campus:'Campus knowledge', chat:'Campus chat', review:'Human review', reports:'Reports & provenance'};
+let navigation = 0, page = 'chat', cache = {}, polling = null;
 let studyRefresh = null;
+const chatState = {messages:[], suggestions:[], preference:'auto', draft:'', lastLanguage:'en', busy:false};
+const chatCopy = {
+  en:{placeholder:'Ask a campus question…',pending:'Checking campus sources…',send:'Send message',topic:'Try a question',detected:'Reply in English',faq:'From the campus FAQ',error:'Your question could not be answered. Please try again.'},
+  hi:{placeholder:'परिसर के बारे में अपना सवाल लिखें…',pending:'परिसर के स्रोत देख रहे हैं…',send:'सवाल भेजें',topic:'एक सवाल पूछें',detected:'जवाब हिन्दी में',faq:'परिसर की FAQ से',error:'आपके सवाल का जवाब नहीं मिल सका। कृपया फिर कोशिश करें।'},
+  ta:{placeholder:'வளாகம் பற்றிய உங்கள் கேள்வியை எழுதுங்கள்…',pending:'வளாகத் தகவல்களைச் சரிபார்க்கிறோம்…',send:'கேள்வியை அனுப்பு',topic:'ஒரு கேள்வியைக் கேளுங்கள்',detected:'பதில் தமிழில்',faq:'வளாக FAQ தகவல்',error:'பதில் வழங்க முடியவில்லை. மீண்டும் முயற்சிக்கவும்.'}
+};
+
+function typedLanguage(text) {
+  const hindi = /[\u0900-\u097f]/u.test(text), tamil = /[\u0b80-\u0bff]/u.test(text);
+  return hindi && tamil ? null : hindi ? 'hi' : tamil ? 'ta' : /[a-z]/iu.test(text) ? 'en' : null;
+}
+function chatLanguage() { return chatState.preference === 'auto' ? typedLanguage(chatState.draft) || chatState.lastLanguage : chatState.preference; }
+function suggestionMarkup(language, compact=false) {
+  return chatState.suggestions.map(item => `<button type="button" class="${compact ? 'chat-topic-chip' : 'chat-suggestion'}" data-suggestion="${esc(item.id)}" lang="${language}" aria-label="${esc(item.questions[language])}" ${chatState.busy ? 'disabled' : ''}><strong>${esc(item.labels[language])}</strong>${compact ? '' : `<span>${esc(item.questions[language])}</span><i aria-hidden="true">↗</i>`}</button>`).join('');
+}
+function chatMessagesMarkup() {
+  if (!chatState.messages.length) return `<div class="chat-empty"><div class="assistant-emblem" aria-hidden="true">cq<span>✦</span></div><h2>Hi! How can I help you?</h2><p>Pick a question below, or type your own.<br>English, हिन्दी, தமிழ் — your question sets the language.</p><div class="chat-suggestions" id="chat-suggestions">${suggestionMarkup(chatLanguage())}</div></div>`;
+  return chatState.messages.map(message => {
+    if (message.role === 'user') return `<div class="chat-turn user-turn"><div class="chat-message user" lang="${message.language}">${esc(message.text)}</div><span class="chat-person" aria-hidden="true">You</span></div>`;
+    const result = message.result, language = result?.language || message.language, copy = chatCopy[language];
+    const content = message.pending ? `<span class="spinner"></span> ${esc(copy.pending)}` : message.error ? esc(copy.error) + `<small class="chat-error-detail">${esc(message.error)}</small>` : `<div class="chat-answer-text">${esc(result.generated_answer)}</div>${result.answer_method === 'source_faq' || result.answer_method === 'localized_source_faq' ? `<small class="chat-answer-origin">${esc(copy.faq)}</small>` : ''}${(result.citations || []).map(citation => citationMarkup(citation,result.retrieved || [])).join('')}`;
+    return `<div class="chat-turn assistant-turn"><span class="chat-avatar" aria-hidden="true">cq</span><div class="chat-reply"><span class="chat-speaker">CampusQA <small>${{en:'English',hi:'हिन्दी',ta:'தமிழ்'}[language]}</small></span><div class="chat-message ${message.error ? 'error' : 'assistant'}" lang="${language}" ${message.pending ? 'aria-busy="true"' : ''}>${content}</div></div></div>`;
+  }).join('');
+}
+function refreshChat() {
+  if (page !== 'chat' || !$('#messages')) return;
+  const messages = $('#messages');
+  messages.innerHTML = chatMessagesMarkup();
+  $('#chat-followups').hidden = !chatState.messages.length;
+  $('#chat-followup-topics').innerHTML = suggestionMarkup(chatLanguage(),true);
+  $('#send-chat').disabled = chatState.busy;
+  $('#new-chat').disabled = chatState.busy;
+  messages.scrollTo({top:messages.scrollHeight,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+}
+function refreshChatLanguage() {
+  if (!$('#question')) return;
+  const language = chatLanguage(), copy = chatCopy[language];
+  $('#question').placeholder = copy.placeholder;
+  $('#chat-detected').textContent = chatState.preference === 'auto' && chatState.draft.trim() && !typedLanguage(chatState.draft) ? 'Choose a reply language' : chatState.preference === 'auto' && !chatState.draft && !chatState.messages.length ? 'Auto-detect · English / हिन्दी / தமிழ்' : copy.detected;
+  $('#send-chat').setAttribute('title',copy.send);
+  if ($('#chat-suggestions')) $('#chat-suggestions').innerHTML = suggestionMarkup(language);
+  $('#chat-followup-topics').innerHTML = suggestionMarkup(language,true);
+}
+
+async function submitChat() {
+  if (chatState.busy) return;
+  const question = $('#question').value.trim();
+  if (question.length < 3) return;
+  chatState.draft = question;
+  const language = chatLanguage(), pending = {role:'assistant',language,pending:true};
+  chatState.lastLanguage = language;
+  chatState.messages.push({role:'user',language,text:question},pending);
+  chatState.busy = true;
+  chatState.draft = '';
+  $('#question').value = '';
+  $('#question').style.height = '';
+  refreshChat(); refreshChatLanguage();
+  try {
+    const result = await api('/chat',{method:'POST',body:JSON.stringify({question,
+      language:chatState.preference === 'auto' ? null : chatState.preference,experiment:'D',answer_mode:'faq_first'})});
+    pending.result = result;
+  } catch (error) { pending.error = error.message; }
+  finally { pending.pending = false; chatState.busy = false; refreshChat(); if (page === 'chat') $('#question')?.focus(); }
+}
 
 async function api(path, options = {}) {
   const response = await fetch('/api' + path, {headers:{'Content-Type':'application/json'}, ...options});
@@ -157,9 +221,13 @@ async function campus() {
 }
 
 async function chat() {
-  const [system,models] = await Promise.all([api('/system'),api('/models')]);
-  return heading('GROUNDED CAMPUS CHAT','An answer with<br>somewhere to point.','Ask in English, Hindi or Tamil. Evidence and source citations travel with the answer.') +
-  `<div class="chat-layout"><section class="card"><div class="card-heading"><div><h2>Campus assistant</h2><p>Interactive conversations are unscored and stay outside research results</p></div>${badge(system.inference.ready ? 'ready' : 'pending',system.inference.ready ? 'Compute ready' : 'Setup required')}</div><div class="chat-body" id="messages" aria-live="polite"><div class="chat-empty"><div class="language-glyphs"><span>A</span><span lang="hi">अ</span><span lang="ta">அ</span></div><h2>Ask with confidence in the evidence.</h2><p>The assistant needs a compatible GPU, a trained adapter for LoRA, and a verified index for retrieval.</p></div></div><form class="chat-compose" id="chat-form"><div class="form-grid"><div class="field"><label for="chat-language">Answer language</label><select id="chat-language"><option value="en">English</option><option value="hi">हिन्दी · Hindi</option><option value="ta">தமிழ் · Tamil</option></select></div><div class="field"><label for="chat-experiment">Configuration</label><select id="chat-experiment"><option value="D">D · LoRA + RAG</option><option value="C">C · Original + RAG</option><option value="B">B · LoRA</option><option value="A">A · Original</option></select></div></div><div class="field"><label class="sr-only" for="question">Your campus question</label><textarea id="question" rows="2" placeholder="Ask a question about SRM Kattankulathur…" required minlength="3" maxlength="2000"></textarea></div><div class="inline-actions"><button type="submit" class="button primary" id="send-chat">Ask question ↗</button><small>Evidence is required for grounded configurations.</small></div></form></section><aside>${card('Before the first answer','Visible prerequisites, never simulated replies',`<div class="mini-note amber">${system.inference.ready ? 'Compute gate passed. Check adapter and corpus availability.' : esc(system.inference.blockers[0])}</div>${details([['Model',system.model.model_id],['Adapter',models.adapter ? 'Available' : 'Not trained'],['Source policy','Official, reviewed records'],['Missing evidence','Explicit abstention']])}<a class="button small section-gap" href="#training">View training setup ↗</a>`)}</aside></div>`;
+  chatState.suggestions = (await api('/chat/suggestions')).questions;
+  return `<div class="chat-page-heading"><div class="eyebrow"><span class="live-dot"></span> SRM KATTANKULATHUR · CAMPUS GUIDE</div><h1>Your campus. <span>Your language.</span></h1><p>Ask in English, <span lang="hi">हिन्दी</span> or <span lang="ta">தமிழ்</span>. I’ll reply in the same language.</p></div>
+  <section class="campus-chat-panel" aria-label="Campus assistant"><div class="chat-panel-header"><div><span class="chat-header-dot"></span><strong>CampusQA</strong><span class="chat-header-note">Here to help you find your way</span></div><button class="button small" id="new-chat" ${chatState.busy ? 'disabled' : ''}>＋ New chat</button></div>
+  <div class="chat-body" id="messages" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions text">${chatMessagesMarkup()}</div>
+  <div class="chat-followups" id="chat-followups" ${chatState.messages.length ? '' : 'hidden'}><span>Try another topic</span><div id="chat-followup-topics">${suggestionMarkup(chatLanguage(),true)}</div></div>
+  <form class="chat-compose" id="chat-form"><div class="chat-input-wrap"><label class="sr-only" for="question">Your campus question</label><textarea id="question" rows="2" placeholder="${esc(chatCopy[chatLanguage()].placeholder)}" required minlength="3" maxlength="2000">${esc(chatState.draft)}</textarea><button type="submit" id="send-chat" aria-label="Send message" ${chatState.busy ? 'disabled' : ''}><span aria-hidden="true">↑</span></button></div><div class="chat-compose-meta"><div class="chat-language-control"><label for="chat-language">Reply language</label><select id="chat-language">${[['auto','Auto-detect'],['en','English'],['hi','हिन्दी'],['ta','தமிழ்']].map(([value,name]) => `<option value="${value}" ${chatState.preference === value ? 'selected' : ''}>${name}</option>`).join('')}</select></div><span id="chat-detected">${chatState.preference === 'auto' && !chatState.draft ? 'Auto-detect · English / हिन्दी / தமிழ்' : chatCopy[chatLanguage()].detected}</span><small>Enter to send · Shift + Enter for a new line</small></div></form></section>
+  <p class="chat-source-note">Answers link to official campus sources. If information is unavailable, I’ll say so. <a href="#campus">Explore the knowledge base ↗</a></p>`;
 }
 
 async function review() {
@@ -178,8 +246,10 @@ async function reports() {
 const views = {overview,datasets,training,experiments,campus,chat,review,reports};
 async function navigate() {
   const current = ++navigation;
-  page = location.hash.slice(1).split('?')[0] || 'overview';
-  if (!views[page]) page = 'overview';
+  page = location.hash.slice(1).split('?')[0] || 'chat';
+  if (!views[page]) page = 'chat';
+  document.body.classList.toggle('chat-page',page === 'chat');
+  $('#workspace-label').textContent = page === 'chat' ? 'Campus assistant' : 'Research workspace';
   clearInterval(polling);
   clearInterval(studyRefresh);
   document.title = `${label[page]} · CampusQA Research`;
@@ -256,6 +326,18 @@ document.addEventListener('click',async event => {
   try {
     if (button.id === 'menu-button') { const open = $('#sidebar').classList.toggle('open'); button.setAttribute('aria-expanded',String(open)); }
     if (button.id === 'refresh-page') await navigate();
+    if (button.id === 'new-chat') {
+      if (chatState.busy) return;
+      chatState.messages = []; chatState.draft = ''; chatState.lastLanguage = 'en';
+      $('#question').value = ''; refreshChat(); refreshChatLanguage(); $('#question').focus();
+    }
+    if (button.dataset.suggestion) {
+      if (chatState.busy) return;
+      const topic = chatState.suggestions.find(item => item.id === button.dataset.suggestion);
+      chatState.draft = topic.questions[chatLanguage()];
+      $('#question').value = chatState.draft;
+      refreshChatLanguage(); $('#chat-form').requestSubmit();
+    }
     if (button.id === 'load-samples') {
       button.disabled = true;
       const data = await api('/datasets/records?split=validation&language=en&limit=3');
@@ -295,12 +377,26 @@ document.addEventListener('click',async event => {
 });
 
 document.addEventListener('change',event => {
+  if (event.target.id === 'chat-language') { chatState.preference = event.target.value; refreshChatLanguage(); }
   if (event.target.id === 'track') {
     for (const option of $('#experiment').options) option.disabled = $('#track').value === 'benchmark' && ['C','D'].includes(option.value);
     if ($('#track').value === 'benchmark' && ['C','D'].includes($('#experiment').value)) $('#experiment').value = 'A';
   }
   if (['track','experiment','pilot'].includes(event.target.id)) { $('#start-evaluation').disabled = true; $('#preflight-result').innerHTML = ''; }
   if (event.target.id === 'review-run') loadReview(event.target.value).catch(error => toast(error.message));
+});
+
+document.addEventListener('input',event => {
+  if (event.target.id !== 'question') return;
+  chatState.draft = event.target.value;
+  event.target.style.height = 'auto';
+  event.target.style.height = Math.min(event.target.scrollHeight,160) + 'px';
+  refreshChatLanguage();
+});
+document.addEventListener('keydown',event => {
+  if (event.target.id === 'question' && event.key === 'Enter' && !event.shiftKey && !event.isComposing) {
+    event.preventDefault(); if (!chatState.busy) $('#chat-form').requestSubmit();
+  }
 });
 
 document.addEventListener('submit',async event => {
@@ -322,16 +418,7 @@ document.addEventListener('submit',async event => {
       },4000);
     }
     if (form.id === 'chat-form') {
-      const question = $('#question').value.trim(), language = $('#chat-language').value;
-      $('.chat-empty')?.remove();
-      const messages = $('#messages');
-      messages.insertAdjacentHTML('beforeend',`<div class="chat-message user" lang="${language}">${esc(question)}</div><div class="chat-message assistant" id="pending-chat"><span class="spinner"></span> Checking evidence and model prerequisites…</div>`);
-      $('#question').value = '';
-      try {
-        const result = await api('/chat',{method:'POST',body:JSON.stringify({question,language,experiment:$('#chat-experiment').value})});
-        $('#pending-chat').outerHTML = `<div class="chat-message assistant" lang="${language}">${esc(result.generated_answer)}${result.citations.map(citation => citationMarkup(citation, result.retrieved || [])).join('')}</div>`;
-      } catch (error) { $('#pending-chat').outerHTML = `<div class="chat-message error">${esc(error.message)}</div>`; }
-      messages.lastElementChild?.scrollIntoView({behavior:'smooth',block:'nearest'});
+      await submitChat();
     }
     if (form.classList.contains('annotation-form')) {
       const data = new FormData(form), claims = JSON.parse(data.get('claims'));

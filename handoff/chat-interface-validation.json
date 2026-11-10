@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-11-10T19:25:19.932477+00:00",
+  "feature": "Chat-first campus assistant, five source-backed topics, English/Hindi/Tamil",
+  "python_suite": {
+    "passed": 133,
+    "failed": 0,
+    "skipped": 0,
+    "junit": "results/chat-ui-full-suite.xml"
+  },
+  "browser": {
+    "passed": 7,
+    "skipped": 1,
+    "log": "results/chat-ui-browser.log",
+    "skipped_scope": "The GPU generation story was unavailable during the full run and passed in the subsequent native GPU recheck."
+  },
+  "real_faq_language_cases": 15,
+  "real_faq_cases_passed": 15,
+  "desktop_and_mobile_screenshots_reviewed": true,
+  "research_store_counts": {
+    "runs": 10,
+    "predictions": 28274,
+    "annotations": 0
+  },
+  "historical_metrics_and_frozen_sources_unchanged": true,
+  "new_model_training": false,
+  "application_faq_answer_method": "source_faq; exact approved questions, no GPU inference",
+  "default_model_api_preserved": true,
+  "server_left_running_for_user": "http://127.0.0.1:8765",
+  "chat_language_followup_recheck": {
+    "passed": 4,
+    "skipped": 1,
+    "log": "results/chat-ui-browser-final.log",
+    "skipped_scope": "Unavailable-model branch skipped because GPU capacity had become available; this branch passed in the full browser run."
+  },
+  "native_gpu_model_smoke_recheck": {
+    "passed": 1,
+    "skipped": 0,
+    "log": "results/chat-ui-model-smoke.log",
+    "scope": "Actual browser-to-API-to-Qwen/LoRA/RAG cited response after GPU memory became available."
+  }
+}
