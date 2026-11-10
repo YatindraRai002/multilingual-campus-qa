@@ -1,0 +1,11 @@
+{
+  "name": "campusqa-dashboard-checks",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check frontend/app.js",
+    "test:browser": "playwright test",
+    "start": ".venv\\Scripts\\python.exe -m backend.cli serve --port 8765"
+  },
+  "devDependencies": {"@playwright/test": "1.56.1"}
+}

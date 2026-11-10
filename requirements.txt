@@ -1,0 +1,2 @@
+# Lightweight API, dataset preparation, reports, and dashboard.
+-e .[test]

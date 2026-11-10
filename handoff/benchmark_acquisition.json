@@ -1,0 +1,70 @@
+{
+  "acquired_at": "2026-11-07T16:41:28.997506+00:00",
+  "indicqa_revision": "d7e91454f5c8a85b82e2549453521a2b7a185c44",
+  "artifacts": [
+    {
+      "url": "https://huggingface.co/datasets/ai4bharat/IndicQA/resolve/d7e91454f5c8a85b82e2549453521a2b7a185c44/README.md",
+      "path": "data/benchmark/raw/indicqa/d7e91454f5c8a85b82e2549453521a2b7a185c44/README.md",
+      "bytes": 1163,
+      "sha256": "384a9d2d2ef7e2a17dc6ed5665a486c7544e6ad586a45d766aefc634fefa2f3f"
+    },
+    {
+      "url": "https://huggingface.co/datasets/ai4bharat/IndicQA/resolve/d7e91454f5c8a85b82e2549453521a2b7a185c44/IndicQA.py",
+      "path": "data/benchmark/raw/indicqa/d7e91454f5c8a85b82e2549453521a2b7a185c44/IndicQA.py",
+      "bytes": 4208,
+      "sha256": "6f07c39b37d929de7e2552af007e61664df76d94db693cfb4822be3b92dd743e"
+    },
+    {
+      "url": "https://huggingface.co/datasets/ai4bharat/IndicQA/resolve/d7e91454f5c8a85b82e2549453521a2b7a185c44/data/indicqa.hi.json",
+      "path": "data/benchmark/raw/indicqa/d7e91454f5c8a85b82e2549453521a2b7a185c44/data/indicqa.hi.json",
+      "bytes": 2673518,
+      "sha256": "9c91d20e7c095956a097e8d2962c0e4bd7029006f2031e86fc4af16f7fef8cb5"
+    },
+    {
+      "url": "https://huggingface.co/datasets/ai4bharat/IndicQA/resolve/d7e91454f5c8a85b82e2549453521a2b7a185c44/data/indicqa.ta.json",
+      "path": "data/benchmark/raw/indicqa/d7e91454f5c8a85b82e2549453521a2b7a185c44/data/indicqa.ta.json",
+      "bytes": 2709926,
+      "sha256": "247c9e74623f8e73e723f0dabd725c4504b3ca6690c4019c0c6e78f4a7aae77c"
+    },
+    {
+      "url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v1.1.json",
+      "path": "data/benchmark/raw/squad/train-v1.1.json",
+      "bytes": 30288272,
+      "sha256": "3527663986b8295af4f7fcdff1ba1ff3f72d07d61a20f487cb238a6ef92fd955"
+    },
+    {
+      "url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v1.1.json",
+      "path": "data/benchmark/raw/squad/dev-v1.1.json",
+      "bytes": 4854279,
+      "sha256": "95aa6a52d5d6a735563366753ca50492a658031da74f301ac5238b03966972c9"
+    },
+    {
+      "url": "https://huggingface.co/datasets/l3cube-pune/indic-squad/resolve/f5973900b6c0e3caf6a1698b49a3309bad3ae849/README.md",
+      "path": "data/benchmark/raw/indicsquad/f5973900b6c0e3caf6a1698b49a3309bad3ae849/README.md",
+      "bytes": 4649,
+      "sha256": "fafdfa6edd28fba0c7e597b9db867b4c7fd346af49261088c22d521adf9266d5"
+    },
+    {
+      "url": "https://huggingface.co/datasets/l3cube-pune/indic-squad/resolve/f5973900b6c0e3caf6a1698b49a3309bad3ae849/Hindi/train.json",
+      "path": "data/benchmark/raw/indicsquad/f5973900b6c0e3caf6a1698b49a3309bad3ae849/Hindi/train.json",
+      "bytes": 284617996,
+      "sha256": "dc85cd00295132b2a173ac43a86386533c32b9e1b25fed4e6e668430bde3254e"
+    },
+    {
+      "url": "https://huggingface.co/datasets/l3cube-pune/indic-squad/resolve/f5973900b6c0e3caf6a1698b49a3309bad3ae849/Tamil/train.json",
+      "path": "data/benchmark/raw/indicsquad/f5973900b6c0e3caf6a1698b49a3309bad3ae849/Tamil/train.json",
+      "bytes": 329843928,
+      "sha256": "8d752bfe103ac163b2540c4560a2f31ae5ab393b3cb19ff42cf50d1a69028ca1"
+    }
+  ],
+  "dataset_card": "https://huggingface.co/datasets/ai4bharat/IndicQA",
+  "license": {
+    "ai4bharat/IndicQA": "cc-by-4.0",
+    "SQuAD-v1.1": "cc-by-sa-4.0",
+    "l3cube-pune/indic-squad": "cc-by-4.0; inherited SQuAD cc-by-sa-4.0 obligations retained"
+  },
+  "paper_resource": "ayushayush591/IndicQA_Benchmark",
+  "warning": "AI4Bharat IndicQA is a component, not the complete Singh et al. paper benchmark.",
+  "english_parallel": false,
+  "version": "0bea24a245b74165"
+}

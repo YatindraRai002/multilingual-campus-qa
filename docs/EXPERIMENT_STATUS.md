@@ -1,0 +1,6020 @@
+# Experiment status
+
+Updated: 2026-11-08T23:11:53.287992+00:00
+
+```json
+[
+  {
+    "run_id": "54ab8518-0d9a-4a4d-9fbc-8270e3ff2ad3",
+    "track": "campus",
+    "experiment": "D",
+    "status": "completed",
+    "dataset_version": "29ed6c44573105ff",
+    "created_at": "2026-11-08T23:10:06.742528+00:00",
+    "ended_at": "2026-11-08T23:11:53.271431+00:00",
+    "completed_predictions": 45,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 45,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SRM-KTR-source-reviewed-campus": {
+          "languages": {
+            "en": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 60.0,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 60.0,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 9,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 60.0,
+                "numerator": 9.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 33.33333333333333,
+                  "upper": 86.66666666666667,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.6,
+                "numerator": 9.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.3333333333333333,
+                  "upper": 0.8666666666666667,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 60.0,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.4996639599946017,
+                  "median": 0.42448149994015694,
+                  "p95": 1.238756579940673,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.2717510390126457,
+                    "upper": 0.7439074748310182,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.026300493340628842,
+                  "median": 0.023522899951785803,
+                  "p95": 0.03808400001144033,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.02319090450978062,
+                    "upper": 0.03136131750109295,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.47014035332637527,
+                  "median": 0.3981093999464065,
+                  "p95": 1.2108210599632003,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.24424323799437844,
+                    "upper": 0.7120952466768601,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 7.799089443660746,
+                  "numerator": 55,
+                  "denominator": 7.052105299895629,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 7.175814115476176,
+                    "upper": 8.196475051066749,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "hi": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 40.0,
+                "numerator": 6.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 13.333333333333334,
+                  "upper": 66.66666666666666,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 40.0,
+                "numerator": 6.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 13.333333333333334,
+                  "upper": 66.66666666666666,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 5,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 59.83333333333334,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.8,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.5983333333333334,
+                  "upper": 1.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 40.0,
+                "numerator": 6.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 13.333333333333334,
+                  "upper": 66.66666666666666,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 2.042476186652978,
+                  "median": 1.752456699963659,
+                  "p95": 4.5119505700538864,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 1.4124542764828463,
+                    "upper": 2.6927784949903915,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.025229426667404672,
+                  "median": 0.024968400015495718,
+                  "p95": 0.02812593999551609,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.024440829496791897,
+                    "upper": 0.026131713500556847,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 2.0131191533446935,
+                  "median": 1.7217780000064522,
+                  "p95": 4.482190940063447,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 1.3835412716694797,
+                    "upper": 2.6633766150146645,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 7.815400944943182,
+                  "numerator": 236,
+                  "denominator": 30.1967873001704,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 7.229780868808152,
+                    "upper": 8.167153510153655,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 53.333333333333336,
+                "numerator": 8.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 26.666666666666668,
+                  "upper": 80.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 53.333333333333336,
+                "numerator": 8.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 26.666666666666668,
+                  "upper": 80.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 10,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 59.83333333333334,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.8,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.5983333333333334,
+                  "upper": 1.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 73.33333333333333,
+                "numerator": 11.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 53.16666666666668,
+                  "upper": 93.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 3.273231780009034,
+                  "median": 3.011012400034815,
+                  "p95": 7.093607850011898,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 2.300862990168777,
+                    "upper": 4.6051965908424854,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.02487260001556327,
+                  "median": 0.024885499966330826,
+                  "p95": 0.02773704003775492,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.023982060336275028,
+                    "upper": 0.025749993354741794,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 3.244095726652692,
+                  "median": 2.982842899975367,
+                  "p95": 7.068141580023797,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 2.2714268899862264,
+                    "upper": 4.577278346815341,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 8.137860970964605,
+                  "numerator": 396,
+                  "denominator": 48.661435899790376,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 7.609497330171197,
+                    "upper": 8.491930976853602,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "54ab8518-0d9a-4a4d-9fbc-8270e3ff2ad3",
+      "dataset_version": "29ed6c44573105ff",
+      "track": "campus",
+      "experiment": "D",
+      "computed_at": "2026-11-08T23:11:53.264092+00:00"
+    }
+  },
+  {
+    "run_id": "5b593ab6-cca9-4cb2-b727-58ca6c12834f",
+    "track": "campus",
+    "experiment": "C",
+    "status": "completed",
+    "dataset_version": "29ed6c44573105ff",
+    "created_at": "2026-11-08T23:08:17.852447+00:00",
+    "ended_at": "2026-11-08T23:09:54.158295+00:00",
+    "completed_predictions": 45,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 45,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SRM-KTR-source-reviewed-campus": {
+          "languages": {
+            "en": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 60.0,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 60.0,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 9,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 60.0,
+                "numerator": 9.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 33.33333333333333,
+                  "upper": 86.66666666666667,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.6,
+                "numerator": 9.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.3333333333333333,
+                  "upper": 0.8666666666666667,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 60.0,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.339219466651169,
+                  "median": 0.35620170005131513,
+                  "p95": 0.792358709918335,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.19101186099733847,
+                    "upper": 0.488758933818899,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.02680541332811117,
+                  "median": 0.024527600035071373,
+                  "p95": 0.03960901995887976,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.023589650821328786,
+                    "upper": 0.03183969699797065,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.30905765333057694,
+                  "median": 0.3322654999792576,
+                  "p95": 0.7516723000328056,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.16411851983381592,
+                    "upper": 0.454375620499292,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 13.373987955937146,
+                  "numerator": 62,
+                  "denominator": 4.635864799958654,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 11.990743725197788,
+                    "upper": 14.433500074352036,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "hi": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 66.66666666666666,
+                "numerator": 10.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 46.666666666666664,
+                  "upper": 86.66666666666667,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 66.66666666666666,
+                "numerator": 10.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 46.666666666666664,
+                  "upper": 86.66666666666667,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 9,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 59.83333333333334,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.8,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.5983333333333334,
+                  "upper": 1.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 66.66666666666666,
+                "numerator": 10.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 46.666666666666664,
+                  "upper": 86.66666666666667,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 1.4335040266703194,
+                  "median": 1.596694300067611,
+                  "p95": 2.5359768500085917,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 1.0340112361707725,
+                    "upper": 1.802674618168773,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.026011786664215227,
+                  "median": 0.025792900007218122,
+                  "p95": 0.028941179998219012,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.02494916482110663,
+                    "upper": 0.02705182215780951,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 1.4033720000026126,
+                  "median": 1.5702949999831617,
+                  "p95": 2.5089942899765445,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 1.0037503831684202,
+                    "upper": 1.7723255871564227,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 14.298893427137857,
+                  "numerator": 301,
+                  "denominator": 21.05058000003919,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 13.622614820761445,
+                    "upper": 14.778013004032804,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 46.666666666666664,
+                "numerator": 7.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 20.0,
+                  "upper": 66.66666666666666,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 49.629629629629626,
+                "numerator": 7.444444444444445,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 24.444444444444446,
+                  "upper": 71.1111111111111,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 13,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 59.83333333333334,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.8,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.5983333333333334,
+                  "upper": 1.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 60.0,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 3.3404487266670913,
+                  "median": 3.1683346000500023,
+                  "p95": 9.223053660010917,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 2.111483251658501,
+                    "upper": 4.743299353350109,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.024845446661735573,
+                  "median": 0.025049599935300648,
+                  "p95": 0.02718407994834706,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.023942266988063544,
+                    "upper": 0.02574832248520882,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 3.3113615666748957,
+                  "median": 3.143122100038454,
+                  "p95": 9.191526760009582,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 2.0825982008571735,
+                    "upper": 4.713420118319142,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 15.260590640990133,
+                  "numerator": 758,
+                  "denominator": 49.670423500123434,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 14.460387579960148,
+                    "upper": 15.70114110655016,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "5b593ab6-cca9-4cb2-b727-58ca6c12834f",
+      "dataset_version": "29ed6c44573105ff",
+      "track": "campus",
+      "experiment": "C",
+      "computed_at": "2026-11-08T23:09:54.151589+00:00"
+    }
+  },
+  {
+    "run_id": "8448fdf6-04aa-40d8-ba1f-30695f2977e7",
+    "track": "campus",
+    "experiment": "B",
+    "status": "completed",
+    "dataset_version": "29ed6c44573105ff",
+    "created_at": "2026-11-08T23:07:14.200732+00:00",
+    "ended_at": "2026-11-08T23:08:01.314702+00:00",
+    "completed_predictions": 45,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 45,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SRM-KTR-source-reviewed-campus": {
+          "languages": {
+            "en": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 20.0,
+                "numerator": 3.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 40.166666666666515,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 20.0,
+                "numerator": 3.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 40.166666666666515,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 20.0,
+                "numerator": 3.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 40.166666666666515,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.6845899799916272,
+                  "median": 0.6586170999798924,
+                  "p95": 0.7821271099383008,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.6564703531708801,
+                    "upper": 0.7295883085019886,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.6808436666537697,
+                  "median": 0.6559310000156984,
+                  "p95": 0.7753618499496949,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.6536036103222674,
+                    "upper": 0.7240717674731665,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 8.81259574534779,
+                  "numerator": 90,
+                  "denominator": 10.212654999806546,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 8.286471415344753,
+                    "upper": 9.179875861088368,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "hi": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 20.0,
+                "numerator": 3.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 40.166666666666515,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 20.0,
+                "numerator": 3.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 40.166666666666515,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 20.0,
+                "numerator": 3.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 40.166666666666515,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.7185706333257258,
+                  "median": 0.7049700999632478,
+                  "p95": 0.7806896100635641,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.7058829089746966,
+                    "upper": 0.7344205906498246,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.7155950466636568,
+                  "median": 0.7018882998963818,
+                  "p95": 0.7778037700103596,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.7028461333146939,
+                    "upper": 0.7314360999989246,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 8.384630424671055,
+                  "numerator": 90,
+                  "denominator": 10.733925699954852,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 8.203040761372174,
+                    "upper": 8.53671908577418,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 20.0,
+                "numerator": 3.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 40.166666666666515,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 20.0,
+                "numerator": 3.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 40.166666666666515,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 20.0,
+                "numerator": 3.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 40.166666666666515,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.7217595666802178,
+                  "median": 0.7134007000131533,
+                  "p95": 0.7591644800500944,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.7102027098357212,
+                    "upper": 0.7336659313637454,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.7184219466677556,
+                  "median": 0.7104579999577254,
+                  "p95": 0.7553587699891068,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.7068026851732673,
+                    "upper": 0.7303579431739248,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 8.351637958486233,
+                  "numerator": 90,
+                  "denominator": 10.776329200016335,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 8.215149924240322,
+                    "upper": 8.488932096711363,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "8448fdf6-04aa-40d8-ba1f-30695f2977e7",
+      "dataset_version": "29ed6c44573105ff",
+      "track": "campus",
+      "experiment": "B",
+      "computed_at": "2026-11-08T23:08:01.305247+00:00"
+    }
+  },
+  {
+    "run_id": "7f661f59-cb10-4fc7-a2da-69e4a3a213c5",
+    "track": "campus",
+    "experiment": "A",
+    "status": "completed",
+    "dataset_version": "29ed6c44573105ff",
+    "created_at": "2026-11-08T23:04:25.302207+00:00",
+    "ended_at": "2026-11-08T23:07:09.623067+00:00",
+    "completed_predictions": 45,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 45,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SRM-KTR-source-reviewed-campus": {
+          "languages": {
+            "en": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 0.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 17.203715170278638,
+                "numerator": 2.580557275541796,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 6.792687601356332,
+                  "upper": 28.48584402181925,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 15,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 59.83333333333334,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 1.2260605066626644,
+                  "median": 1.45052900002338,
+                  "p95": 2.1546977600548414,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.830076416330606,
+                    "upper": 1.6101364303488905,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 1.2226397533047324,
+                  "median": 1.4477864999789745,
+                  "p95": 2.1519700599834324,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.8261583007984639,
+                    "upper": 1.6055968948127701,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 15.921833568759128,
+                  "numerator": 292,
+                  "denominator": 18.339596299570985,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 15.330869454263766,
+                    "upper": 16.279382581594177,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "hi": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 0.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 12.06831149968405,
+                "numerator": 1.8102467249526073,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 5.930507455507454,
+                  "upper": 18.623927180299727,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 15,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 59.83333333333334,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 3.9353674666490406,
+                  "median": 4.134200599975884,
+                  "p95": 7.846745229908264,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 2.8274257119884716,
+                    "upper": 5.153363570300668,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 3.9323261799989266,
+                  "median": 4.131140399957076,
+                  "p95": 7.843725340033415,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 2.824416194342969,
+                    "upper": 5.150334438647453,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 16.394028296677124,
+                  "numerator": 967,
+                  "denominator": 58.9848926999839,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 16.15442763916157,
+                    "upper": 16.548161753928188,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 15,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 12,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 0.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 11.529434697855752,
+                "numerator": 1.7294152046783628,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 3.0811988304093565,
+                  "upper": 23.14721247563353,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 15,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 80.0,
+                "numerator": 12.0,
+                "denominator": 15,
+                "reviewed_or_scored": 15,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 59.83333333333334,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 4.81114988666183,
+                  "median": 3.266491600079462,
+                  "p95": 11.394064199982676,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 3.1278437696773715,
+                    "upper": 6.549672226975089,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 4.808123133323776,
+                  "median": 3.2629577999468893,
+                  "p95": 11.391232949960976,
+                  "count": 15,
+                  "measurement_clusters": 15,
+                  "mean_ci": {
+                    "lower": 3.1247582064951227,
+                    "upper": 6.546718518308285,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 16.52758560110599,
+                  "numerator": 1192,
+                  "denominator": 72.12184699985664,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 16.373662570747552,
+                    "upper": 16.65050087514363,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "7f661f59-cb10-4fc7-a2da-69e4a3a213c5",
+      "dataset_version": "29ed6c44573105ff",
+      "track": "campus",
+      "experiment": "A",
+      "computed_at": "2026-11-08T23:07:09.608350+00:00"
+    }
+  },
+  {
+    "run_id": "d9f859af-917e-4cf9-b6ab-574b8933ca99",
+    "track": "campus",
+    "experiment": "D",
+    "status": "completed",
+    "dataset_version": "a75705ed443380de",
+    "created_at": "2026-11-08T22:34:28.671571+00:00",
+    "ended_at": "2026-11-08T22:36:36.934957+00:00",
+    "completed_predictions": 63,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 63,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SRM-KTR-source-reviewed-campus": {
+          "languages": {
+            "en": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 61.904761904761905,
+                "numerator": 13.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 42.857142857142854,
+                  "upper": 80.95238095238095,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.6190476190476191,
+                "numerator": 13.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.42857142857142855,
+                  "upper": 0.8095238095238095,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.5180916428466195,
+                  "median": 0.5274165999144316,
+                  "p95": 1.7551994000095874,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.3242354908317793,
+                    "upper": 0.7610086773735626,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.024878609520826666,
+                  "median": 0.023708000080659986,
+                  "p95": 0.02531589998397976,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.022846872368938332,
+                    "upper": 0.02802955070371917,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.49018441427809495,
+                  "median": 0.5016681000124663,
+                  "p95": 1.7312601000303403,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.29843800129657166,
+                    "upper": 0.731184714029604,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 7.965903833381832,
+                  "numerator": 82,
+                  "denominator": 10.293872699839994,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 7.403629907317966,
+                    "upper": 8.36176247306464,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "hi": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 85.71428571428571,
+                "numerator": 18.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 66.66666666666666,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.8333333333333334,
+                "numerator": 17.5,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.6666666666666666,
+                  "upper": 0.9761904761904762,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 2.2377677857266027,
+                  "median": 1.897385299904272,
+                  "p95": 4.8976284000091255,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.68642161488436,
+                    "upper": 2.813476745963479,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.025619485703784795,
+                  "median": 0.024749599979259074,
+                  "p95": 0.029915399965830147,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.024375750464692137,
+                    "upper": 0.027267877026627373,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 2.208330847611207,
+                  "median": 1.8693916000192985,
+                  "p95": 4.8641741999890655,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.6583339442802494,
+                    "upper": 2.783594030576032,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 8.2587694039703,
+                  "numerator": 383,
+                  "denominator": 46.374947799835354,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 8.064025775468082,
+                    "upper": 8.419379597716688,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 85.71428571428571,
+                "numerator": 18.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 66.66666666666666,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.8333333333333334,
+                "numerator": 17.5,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.6666666666666666,
+                  "upper": 0.9529761904761899,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 2.403642157137039,
+                  "median": 2.9341434999369085,
+                  "p95": 3.9124165000393987,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.8547378161949815,
+                    "upper": 2.9291420226108693,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.024384352400721537,
+                  "median": 0.024260299978777766,
+                  "p95": 0.027383300010114908,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.023724738217701782,
+                    "upper": 0.025096446562591676,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 2.375704804773531,
+                  "median": 2.9079559000674635,
+                  "p95": 3.886594699928537,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.8269271077651952,
+                    "upper": 2.9016212779841486,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 8.238156749148073,
+                  "numerator": 411,
+                  "denominator": 49.889800900244154,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 7.99957053580338,
+                    "upper": 8.438424348318309,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "d9f859af-917e-4cf9-b6ab-574b8933ca99",
+      "dataset_version": "a75705ed443380de",
+      "track": "campus",
+      "experiment": "D",
+      "computed_at": "2026-11-08T22:36:36.925738+00:00"
+    }
+  },
+  {
+    "run_id": "168585c5-3777-4bac-aa51-8aab3151a3c5",
+    "track": "campus",
+    "experiment": "C",
+    "status": "completed",
+    "dataset_version": "a75705ed443380de",
+    "created_at": "2026-11-08T22:32:24.634114+00:00",
+    "ended_at": "2026-11-08T22:34:24.542790+00:00",
+    "completed_predictions": 63,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 63,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SRM-KTR-source-reviewed-campus": {
+          "languages": {
+            "en": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 61.904761904761905,
+                "numerator": 13.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 42.857142857142854,
+                  "upper": 80.95238095238095,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.6190476190476191,
+                "numerator": 13.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.42857142857142855,
+                  "upper": 0.8095238095238095,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.44877822380069465,
+                  "median": 0.4481281000189483,
+                  "p95": 1.3000976999755949,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.28340422236305174,
+                    "upper": 0.6287021236850359,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.02589398571511819,
+                  "median": 0.023502500029280782,
+                  "p95": 0.03069139993749559,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.02324734251001029,
+                    "upper": 0.029768374647911905,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.41988343810330014,
+                  "median": 0.4215210999827832,
+                  "p95": 1.2718593999743462,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.25457125287336696,
+                    "upper": 0.5994378788107063,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 14.403090236036428,
+                  "numerator": 127,
+                  "denominator": 8.817552200169303,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 13.22791843241538,
+                    "upper": 15.189978252425615,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "hi": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 85.71428571428571,
+                "numerator": 18.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 66.66666666666666,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.8333333333333334,
+                "numerator": 17.5,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.6666666666666666,
+                  "upper": 0.9761904761904762,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 2.359176757141194,
+                  "median": 1.7040666999528185,
+                  "p95": 5.9069043000927195,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.6078536621261654,
+                    "upper": 3.163797578328411,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.025788838099244805,
+                  "median": 0.025753999943844974,
+                  "p95": 0.028881400008685887,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.02495145392202262,
+                    "upper": 0.026756403451214456,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 2.3297912095163373,
+                  "median": 1.6763660999713466,
+                  "p95": 5.877196799963713,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.5790357196358467,
+                    "upper": 3.1353977169061267,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 15.227197326216757,
+                  "numerator": 745,
+                  "denominator": 48.92561539984308,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 14.822708484750068,
+                    "upper": 15.461470597844441,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": 85.71428571428571,
+                "numerator": 18.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": {
+                  "lower": 66.66666666666666,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "mrr": {
+                "value": 0.8333333333333334,
+                "numerator": 17.5,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "ratio",
+                "status": "scored",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": {
+                  "lower": 0.6666666666666666,
+                  "upper": 0.9529761904761899,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "abstention_accuracy": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 1.9898745285768418,
+                  "median": 1.793623699923046,
+                  "p95": 3.5893521000398323,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.4604477895323986,
+                    "upper": 2.708557376416173,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.025492004784090177,
+                  "median": 0.025066500063985586,
+                  "p95": 0.02947509998921305,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.02470140800481507,
+                    "upper": 0.02628421466409539,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 1.9607879380928352,
+                  "median": 1.7630532999755815,
+                  "p95": 3.5608846000395715,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.4314263751257732,
+                    "upper": 2.6792130383071098,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 14.935686678182599,
+                  "numerator": 615,
+                  "denominator": 41.17654669994954,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 14.500078751654872,
+                    "upper": 15.220969016674768,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "168585c5-3777-4bac-aa51-8aab3151a3c5",
+      "dataset_version": "a75705ed443380de",
+      "track": "campus",
+      "experiment": "C",
+      "computed_at": "2026-11-08T22:34:24.533218+00:00"
+    }
+  },
+  {
+    "run_id": "82540012-8fa2-4827-8b33-8f199248da88",
+    "track": "campus",
+    "experiment": "B",
+    "status": "completed",
+    "dataset_version": "a75705ed443380de",
+    "created_at": "2026-11-08T22:31:05.951653+00:00",
+    "ended_at": "2026-11-08T22:32:06.782642+00:00",
+    "completed_predictions": 63,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 63,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SRM-KTR-source-reviewed-campus": {
+          "languages": {
+            "en": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 2,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 23.809523809523807,
+                "numerator": 5.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 9.523809523809524,
+                  "upper": 42.857142857142854,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.6914179190339166,
+                  "median": 0.6865047999890521,
+                  "p95": 0.7621619999408722,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.6554824235696635,
+                    "upper": 0.7266807134426754,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.6882324047564041,
+                  "median": 0.6838588999817148,
+                  "p95": 0.7595113000134006,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.6527161889245257,
+                    "upper": 0.7225876058182967,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 8.579604598612095,
+                  "numerator": 124,
+                  "denominator": 14.452880499884486,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 8.21372007997658,
+                    "upper": 8.864730851670734,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "hi": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.7222974381043709,
+                  "median": 0.7157392000081018,
+                  "p95": 0.7684879000298679,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.7133909382171364,
+                    "upper": 0.7334304448810317,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.7191706904587114,
+                  "median": 0.7129569000098854,
+                  "p95": 0.7656687999842688,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.710332658200752,
+                    "upper": 0.7303603924997982,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 8.34294289186479,
+                  "numerator": 126,
+                  "denominator": 15.10258449963294,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 8.215122374031745,
+                    "upper": 8.446746649260145,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 14.285714285714285,
+                "numerator": 3.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 33.33333333333333,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 0.7362344523925068,
+                  "median": 0.7283546000253409,
+                  "p95": 0.8219854000490159,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.7215054875274377,
+                    "upper": 0.7534979570428342,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 0.7330748095132765,
+                  "median": 0.7253874000161886,
+                  "p95": 0.8185755000449717,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.7185674691682271,
+                    "upper": 0.7502056073724469,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 8.184703555676245,
+                  "numerator": 126,
+                  "denominator": 15.394570999778807,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 7.99780745686257,
+                    "upper": 8.349946681355101,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "82540012-8fa2-4827-8b33-8f199248da88",
+      "dataset_version": "a75705ed443380de",
+      "track": "campus",
+      "experiment": "B",
+      "computed_at": "2026-11-08T22:32:06.772100+00:00"
+    }
+  },
+  {
+    "run_id": "7397049e-5b46-4f77-9362-6a4d82a50252",
+    "track": "campus",
+    "experiment": "A",
+    "status": "completed",
+    "dataset_version": "a75705ed443380de",
+    "created_at": "2026-11-08T22:27:01.958288+00:00",
+    "ended_at": "2026-11-08T22:30:58.035774+00:00",
+    "completed_predictions": 63,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 63,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SRM-KTR-source-reviewed-campus": {
+          "languages": {
+            "en": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 0.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 20.853300139014426,
+                "numerator": 4.379193029193029,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 12.710740317883173,
+                  "upper": 29.304372215086502,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 21,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 85.71428571428571,
+                "numerator": 18.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 66.66666666666666,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 1.3550305333476336,
+                  "median": 1.5129736000671983,
+                  "p95": 2.1473545000189915,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.1358895551259465,
+                    "upper": 1.5782212140660876,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 1.3518484285644565,
+                  "median": 1.5023806999670342,
+                  "p95": 2.1446637000190094,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 1.133062668572945,
+                    "upper": 1.5746636067863575,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 16.16833839896771,
+                  "numerator": 459,
+                  "denominator": 28.38881699985359,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 15.774988457072311,
+                    "upper": 16.506983197152227,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "hi": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 0.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 11.820378869251048,
+                "numerator": 2.48227956254272,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 7.226892990050883,
+                  "upper": 16.777467206978482,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 21,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 85.71428571428571,
+                "numerator": 18.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 66.66666666666666,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 4.280839128574978,
+                  "median": 4.273300000000745,
+                  "p95": 6.798997600097209,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 3.543950117397305,
+                    "upper": 5.099879233598282,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 4.277781966668997,
+                  "median": 4.270448099938221,
+                  "p95": 6.795863499981351,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 3.540834997857261,
+                    "upper": 5.096738385121266,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 16.541727772302828,
+                  "numerator": 1486,
+                  "denominator": 89.83342130004894,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 16.33230044137655,
+                    "upper": 16.717910811677793,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 21,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 18,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 0.0,
+                "numerator": 0.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 0.0,
+                  "upper": 0.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 11.480146127570315,
+                "numerator": 2.410830686789766,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 4.562288683589378,
+                  "upper": 19.154015117752778,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 21,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 85.71428571428571,
+                "numerator": 18.0,
+                "denominator": 21,
+                "reviewed_or_scored": 21,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 66.66666666666666,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 4.902348761923522,
+                  "median": 5.126321300049312,
+                  "p95": 11.378810300026089,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 3.5599332731052225,
+                    "upper": 6.338276208469012,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 4.899105357144782,
+                  "median": 5.1233495000051335,
+                  "p95": 11.37574000004679,
+                  "count": 21,
+                  "measurement_clusters": 21,
+                  "mean_ci": {
+                    "lower": 3.5567373244073854,
+                    "upper": 6.335341001663169,
+                    "level": 0.95,
+                    "method": "percentile_bootstrap",
+                    "resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response",
+                    "limitation": "Responses sharing a source document may be correlated."
+                  }
+                },
+                "throughput": {
+                  "value": 16.611390539349724,
+                  "numerator": 1709,
+                  "denominator": 102.88121250004042,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 16.433407108256503,
+                    "upper": 16.746217162779125,
+                    "level": 0.95,
+                    "method": "response_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "response"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "7397049e-5b46-4f77-9362-6a4d82a50252",
+      "dataset_version": "a75705ed443380de",
+      "track": "campus",
+      "experiment": "A",
+      "computed_at": "2026-11-08T22:30:58.026521+00:00"
+    }
+  },
+  {
+    "run_id": "fc7c6a02-bb45-4aed-8ecb-35b2611ddb07",
+    "track": "benchmark",
+    "experiment": "B",
+    "status": "completed",
+    "dataset_version": "acbff74f81c1a1d1",
+    "created_at": "2026-11-08T01:05:03.353393+00:00",
+    "ended_at": "2026-11-08T21:56:08.128025+00:00",
+    "completed_predictions": 13921,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 13921,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SQuAD-v1.1": {
+          "languages": {
+            "en": {
+              "count": 10570,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 10570,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 77.52128666035951,
+                "numerator": 8194.0,
+                "denominator": 10570,
+                "reviewed_or_scored": 10570,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 76.74526963103122,
+                  "upper": 78.32592242194892,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 86.07608470539529,
+                "numerator": 9098.242153360283,
+                "denominator": 10570,
+                "reviewed_or_scored": 10570,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 85.48697525360438,
+                  "upper": 86.66207409362084,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 10533,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 99.64995269631032,
+                "numerator": 10533.0,
+                "denominator": 10570,
+                "reviewed_or_scored": 10570,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 99.5364238410596,
+                  "upper": 99.75402081362347,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 1.6901248794143744,
+                  "median": 1.4599982000654563,
+                  "p95": 3.1656891999882646,
+                  "count": 10570,
+                  "measurement_clusters": 2643,
+                  "mean_ci": {
+                    "lower": 1.652597268746364,
+                    "upper": 1.7280559388385512,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 10570,
+                  "measurement_clusters": 2643,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 1.6788527099707304,
+                  "median": 1.4485997000010684,
+                  "p95": 3.15192069998011,
+                  "count": 10570,
+                  "measurement_clusters": 2643,
+                  "mean_ci": {
+                    "lower": 1.6413311339330012,
+                    "upper": 1.7167226648989473,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "throughput": {
+                  "value": 12.712641850718837,
+                  "numerator": 56411,
+                  "denominator": 4437.3939470976475,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 12.538912340604512,
+                    "upper": 12.892559950055354,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        },
+        "ai4bharat/IndicQA": {
+          "languages": {
+            "hi": {
+              "count": 1547,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 1052,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 28.829993535875886,
+                "numerator": 446.0,
+                "denominator": 1547,
+                "reviewed_or_scored": 1547,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 26.6305753070459,
+                  "upper": 31.092436974789916,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 39.22182859157651,
+                "numerator": 606.7616883116885,
+                "denominator": 1547,
+                "reviewed_or_scored": 1547,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 36.885523906532335,
+                  "upper": 41.449533659617664,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 1545,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 68.13186813186813,
+                "numerator": 1054.0,
+                "denominator": 1547,
+                "reviewed_or_scored": 1547,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 65.67388493859082,
+                  "upper": 70.58823529411765,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 15.276573282222666,
+                  "median": 8.29358910000883,
+                  "p95": 33.902358199970124,
+                  "count": 1547,
+                  "measurement_clusters": 1158,
+                  "mean_ci": {
+                    "lower": 13.552362505418506,
+                    "upper": 17.086745010825663,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 1547,
+                  "measurement_clusters": 1158,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 15.254089746476135,
+                  "median": 8.282838399987668,
+                  "p95": 33.88655475005486,
+                  "count": 1547,
+                  "measurement_clusters": 1158,
+                  "mean_ci": {
+                    "lower": 13.532027517354361,
+                    "upper": 17.057395473886782,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "throughput": {
+                  "value": 0.9308434020463247,
+                  "numerator": 18622,
+                  "denominator": 20005.513235698105,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 0.8132520188591748,
+                    "upper": 1.083455119990551,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 1804,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 1277,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 14.412416851441243,
+                "numerator": 260.0,
+                "denominator": 1804,
+                "reviewed_or_scored": 1804,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 12.914356984478934,
+                  "upper": 16.07538802660754,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 20.588953383759186,
+                "numerator": 371.4247190430157,
+                "denominator": 1804,
+                "reviewed_or_scored": 1804,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 18.8919106201575,
+                  "upper": 22.35736842097001,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 1804,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 70.78713968957871,
+                "numerator": 1277.0,
+                "denominator": 1804,
+                "reviewed_or_scored": 1804,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 68.68070953436806,
+                  "upper": 72.83952328159646,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 40.422815544402006,
+                  "median": 35.124210399982985,
+                  "p95": 95.5538241849572,
+                  "count": 1804,
+                  "measurement_clusters": 1407,
+                  "mean_ci": {
+                    "lower": 38.71160309804475,
+                    "upper": 42.15197541248573,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 1804,
+                  "measurement_clusters": 1407,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 40.41265889129794,
+                  "median": 35.11340090003796,
+                  "p95": 95.54373497506022,
+                  "count": 1804,
+                  "measurement_clusters": 1407,
+                  "mean_ci": {
+                    "lower": 38.7014024335651,
+                    "upper": 42.1418336644918,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "throughput": {
+                  "value": 0.7527403958257677,
+                  "numerator": 37941,
+                  "denominator": 50403.831401100964,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 0.715785273303579,
+                    "upper": 0.7911422159597763,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "fc7c6a02-bb45-4aed-8ecb-35b2611ddb07",
+      "dataset_version": "acbff74f81c1a1d1",
+      "track": "benchmark",
+      "experiment": "B",
+      "snapshot_reason": "paired_v3_replay_after_uninterrupted_full_benchmark",
+      "computed_at": "2026-11-08T22:01:41.166371+00:00"
+    }
+  },
+  {
+    "run_id": "013018a0-f42d-418d-8de8-922d7ca8e728",
+    "track": "benchmark",
+    "experiment": "A",
+    "status": "completed",
+    "dataset_version": "acbff74f81c1a1d1",
+    "created_at": "2026-11-07T17:59:39.171392+00:00",
+    "ended_at": "2026-11-07T23:51:33.202152+00:00",
+    "completed_predictions": 13921,
+    "metrics": {
+      "status": "scored",
+      "completed_predictions": 13921,
+      "excluded_failed_predictions": 0,
+      "populations": {
+        "SQuAD-v1.1": {
+          "languages": {
+            "en": {
+              "count": 10570,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 10570,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 38.78902554399243,
+                "numerator": 4100.0,
+                "denominator": 10570,
+                "reviewed_or_scored": 10570,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 37.83349101229896,
+                  "upper": 39.744560075685904,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 62.76950889473167,
+                "numerator": 6634.737090173138,
+                "denominator": 10570,
+                "reviewed_or_scored": 10570,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 62.035609779227975,
+                  "upper": 63.45729767257144,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 10567,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 99.97161778618732,
+                "numerator": 10567.0,
+                "denominator": 10570,
+                "reviewed_or_scored": 10570,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 99.93377483443709,
+                  "upper": 100.0,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 2.4042300041630718,
+                  "median": 2.1315700000268407,
+                  "p95": 4.638136800029315,
+                  "count": 10570,
+                  "measurement_clusters": 2643,
+                  "mean_ci": {
+                    "lower": 2.357019798367171,
+                    "upper": 2.4565870335448805,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 10570,
+                  "measurement_clusters": 2643,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 2.392594444294735,
+                  "median": 2.1203170000226237,
+                  "p95": 4.627603300032206,
+                  "count": 10570,
+                  "measurement_clusters": 2643,
+                  "mean_ci": {
+                    "lower": 2.3454173377357206,
+                    "upper": 2.4449276354100866,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "throughput": {
+                  "value": 22.026756363343086,
+                  "numerator": 139282,
+                  "denominator": 6323.309601398825,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 21.7695677199284,
+                    "upper": 22.272775570308728,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        },
+        "ai4bharat/IndicQA": {
+          "languages": {
+            "hi": {
+              "count": 1547,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 1052,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 16.7420814479638,
+                "numerator": 259.0,
+                "denominator": 1547,
+                "reviewed_or_scored": 1547,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 14.802844214608921,
+                  "upper": 18.74595992243051,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 27.561146698815257,
+                "numerator": 426.370939430672,
+                "denominator": 1547,
+                "reviewed_or_scored": 1547,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 25.68246338329494,
+                  "upper": 29.557831616737595,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 1547,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 68.00258564964447,
+                "numerator": 1052.0,
+                "denominator": 1547,
+                "reviewed_or_scored": 1547,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 65.48157724628312,
+                  "upper": 70.458952811894,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 5.26483156354322,
+                  "median": 4.546277599991299,
+                  "p95": 12.508646049990784,
+                  "count": 1547,
+                  "measurement_clusters": 1158,
+                  "mean_ci": {
+                    "lower": 5.015832188832153,
+                    "upper": 5.50638235796621,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 1547,
+                  "measurement_clusters": 1158,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 5.254196868907421,
+                  "median": 4.532339200028218,
+                  "p95": 12.501589670014798,
+                  "count": 1547,
+                  "measurement_clusters": 1158,
+                  "mean_ci": {
+                    "lower": 5.005315971356819,
+                    "upper": 5.495784234071791,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "throughput": {
+                  "value": 7.925779295122301,
+                  "numerator": 45674,
+                  "denominator": 5762.714087699715,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 7.598516634904259,
+                    "upper": 8.250438105175585,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            },
+            "ta": {
+              "count": 1804,
+              "human_reviewed": 0,
+              "accuracy": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 1277,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Human-validated correct answerable responses / all answerable responses × 100.",
+                "confidence_interval": null
+              },
+              "exact_match": {
+                "value": 5.099778270509978,
+                "numerator": 92.0,
+                "denominator": 1804,
+                "reviewed_or_scored": 1804,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best normalized reference exact match; English articles removed only for English.",
+                "confidence_interval": {
+                  "lower": 4.1019955654102,
+                  "upper": 6.154379157427937,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "f1": {
+                "value": 13.195445749082902,
+                "numerator": 238.04584131345555,
+                "denominator": 1804,
+                "reviewed_or_scored": 1804,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Best whitespace-token reference F1 × 100; Indic combining marks preserved.",
+                "confidence_interval": {
+                  "lower": 11.851014303304298,
+                  "upper": 14.557595804551696,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "hallucination_incidence": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 1803,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Responses with >=1 human-verified unsupported claim / all non-abstained responses × 100.",
+                "confidence_interval": null
+              },
+              "unsupported_claim_rate": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "status": "pending",
+                "unit": "percent",
+                "definition": "Human-verified unsupported factual claims / all evaluated factual claims × 100.",
+                "confidence_interval": null
+              },
+              "recall_at_k": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "percent",
+                "status": "pending",
+                "definition": "Queries retrieving a relevant document in top 4 / all retrieval queries × 100. Explicitly empty relevance lists contribute zero; missing labels leave the scope pending.",
+                "confidence_interval": null
+              },
+              "mrr": {
+                "value": null,
+                "numerator": 0,
+                "denominator": 0,
+                "reviewed_or_scored": 0,
+                "unit": "ratio",
+                "status": "pending",
+                "definition": "Mean reciprocal rank of the first relevant document in top 4, over all retrieval queries; empty relevance lists contribute zero.",
+                "confidence_interval": null
+              },
+              "abstention_accuracy": {
+                "value": 70.84257206208426,
+                "numerator": 1278.0,
+                "denominator": 1804,
+                "reviewed_or_scored": 1804,
+                "unit": "percent",
+                "status": "scored",
+                "definition": "Correct answer/abstain decisions / responses with answerability ground truth × 100.",
+                "confidence_interval": {
+                  "lower": 68.79018847006651,
+                  "upper": 72.9490022172949,
+                  "level": 0.95,
+                  "method": "percentile_bootstrap",
+                  "resamples": 1000,
+                  "seed": 42,
+                  "resampling_unit": "response",
+                  "limitation": "Responses sharing a source document may be correlated."
+                }
+              },
+              "latency": {
+                "total_seconds": {
+                  "mean": 6.844855214079621,
+                  "median": 5.813191349996487,
+                  "p95": 17.79341420001583,
+                  "count": 1804,
+                  "measurement_clusters": 1407,
+                  "mean_ci": {
+                    "lower": 6.52722721462688,
+                    "upper": 7.114493298452813,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "retrieval_seconds": {
+                  "mean": 0.0,
+                  "median": 0.0,
+                  "p95": 0.0,
+                  "count": 1804,
+                  "measurement_clusters": 1407,
+                  "mean_ci": {
+                    "lower": 0.0,
+                    "upper": 0.0,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "generation_seconds": {
+                  "mean": 6.834515070066126,
+                  "median": 5.803613249998307,
+                  "p95": 17.782011099974625,
+                  "count": 1804,
+                  "measurement_clusters": 1407,
+                  "mean_ci": {
+                    "lower": 6.517077906363971,
+                    "upper": 7.104067514755234,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  }
+                },
+                "throughput": {
+                  "value": 9.618859961834243,
+                  "numerator": 84926,
+                  "denominator": 8829.112840499787,
+                  "unit": "tokens/s",
+                  "confidence_interval": {
+                    "lower": 9.37104349011528,
+                    "upper": 9.883040205917762,
+                    "level": 0.95,
+                    "method": "generation_batch_clustered_ratio_bootstrap",
+                    "resamples": 1000,
+                    "valid_resamples": 1000,
+                    "seed": 42,
+                    "resampling_unit": "generation_batch"
+                  },
+                  "definition": "Generated tokens / measured generation seconds; batch durations counted once; excludes loading and retrieval."
+                }
+              }
+            }
+          },
+          "language_performance_gap": {
+            "value": null,
+            "unit": "percentage_points",
+            "status": "pending",
+            "languages": [],
+            "definition": "Highest minus lowest validated language accuracy within the same source dataset.",
+            "note": "This is a descriptive gap; different source datasets are never treated as parallel populations."
+          }
+        }
+      },
+      "definitions_version": "qa-metrics-v3-all-retrieval-queries",
+      "human_metrics_policy": "pending until every eligible response in the scope is reviewed",
+      "comparison_note": "English SQuAD and Hindi/Tamil IndicQA are separate populations.",
+      "run_id": "013018a0-f42d-418d-8de8-922d7ca8e728",
+      "dataset_version": "acbff74f81c1a1d1",
+      "track": "benchmark",
+      "experiment": "A",
+      "snapshot_reason": "paired_v3_replay_after_uninterrupted_full_benchmark",
+      "computed_at": "2026-11-08T22:01:34.203215+00:00"
+    }
+  }
+]
+```

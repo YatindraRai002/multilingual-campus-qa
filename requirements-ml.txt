@@ -1,0 +1,2 @@
+# Install CUDA PyTorch first; see scripts/setup.ps1 or docs/REPRODUCIBILITY.md.
+-e .[ml,test]

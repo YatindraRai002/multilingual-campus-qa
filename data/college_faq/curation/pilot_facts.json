@@ -1,0 +1,143 @@
+{
+  "reviewer": "Codex — AI source and translation review",
+  "reviewer_kind": "ai",
+  "human_review_status": "pending",
+  "scope": "Official-source-backed Kattankulathur pilot; human certification and response factuality annotations remain pending.",
+  "facts": [
+    {
+      "id": "ktr-library-rfid",
+      "source_document_id": "srm-library-aa051c3d41af32d5",
+      "fact_split": "validation",
+      "evidence_quote": "RFID (Radio Frequency Identification) technology",
+      "review_notes": "The library overview explicitly names RFID; the acronym and both translations preserve that technology.",
+      "en": {"question": "Which identification technology automates the SRMIST Central Library?", "answer": "RFID, or Radio Frequency Identification.", "aliases": ["RFID", "Radio Frequency Identification", "RFID technology"], "queries": ["What technology is used for automation at the SRMIST Central Library?", "Does SRMIST's Central Library identify items using which technology?"]},
+      "hi": {"question": "एसआरएमआईएसटी के केंद्रीय पुस्तकालय में कौन सी पहचान तकनीक प्रयोग होती है?", "answer": "आरएफआईडी, यानी रेडियो फ्रीक्वेंसी आइडेंटिफिकेशन।", "aliases": ["RFID", "आरएफआईडी", "रेडियो फ्रीक्वेंसी आइडेंटिफिकेशन"], "queries": ["एसआरएमआईएसटी केंद्रीय पुस्तकालय के स्वचालन में कौन सी तकनीक लगती है?", "केंद्रीय पुस्तकालय में पहचान के लिए किस तकनीक का उपयोग होता है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் மத்திய நூலகத்தில் எந்த அடையாளத் தொழில்நுட்பம் பயன்படுத்தப்படுகிறது?", "answer": "ஆர்எஃப்ஐடி எனப்படும் வானொலி அலைவரிசை அடையாளத் தொழில்நுட்பம்.", "aliases": ["RFID", "ஆர்எஃப்ஐடி", "Radio Frequency Identification"], "queries": ["எஸ்ஆர்எம் மத்திய நூலகத்தைத் தானியக்கமாக்கும் தொழில்நுட்பம் எது?", "மத்திய நூலகத்தில் பொருட்களை அடையாளம் காண எந்தத் தொழில்நுட்பம் உள்ளது?"]}
+    },
+    {
+      "id": "ktr-transport-booking",
+      "source_document_id": "srm-transport-05d1ba9b15526a9f",
+      "fact_split": "test",
+      "evidence_quote": "Student / Faculty Portal",
+      "review_notes": "The public transport page directs bookings to the Student / Faculty Portal; no private portal was accessed and no fee claim is included.",
+      "en": {"question": "Where can SRMIST students manage campus bus bookings?", "answer": "Use the Student / Faculty Portal.", "aliases": ["Student / Faculty Portal", "Student Portal", "Student and Faculty Portal"], "queries": ["Which portal should an SRMIST student use to book college transport?", "Where does the official SRMIST transport page direct online bus bookings?"]},
+      "hi": {"question": "एसआरएमआईएसटी के छात्र कॉलेज बस की बुकिंग कहाँ कर सकते हैं?", "answer": "छात्र एवं संकाय पोर्टल पर।", "aliases": ["छात्र एवं संकाय पोर्टल", "छात्र पोर्टल", "Student / Faculty Portal", "Student Portal"], "queries": ["एसआरएमआईएसटी में कॉलेज बस बुक करने के लिए कौन सा पोर्टल है?", "आधिकारिक परिवहन पृष्ठ ऑनलाइन बस बुकिंग के लिए कहाँ जाने को कहता है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் மாணவர்கள் கல்லூரிப் பேருந்தை எங்கு முன்பதிவு செய்யலாம்?", "answer": "மாணவர் மற்றும் ஆசிரியர் இணையவாயிலில்.", "aliases": ["மாணவர் மற்றும் ஆசிரியர் இணையவாயில்", "மாணவர் இணையவாயில்", "Student / Faculty Portal", "Student Portal"], "queries": ["எஸ்ஆர்எம் கல்லூரிப் பேருந்தை முன்பதிவு செய்ய எந்த இணையவாயிலைப் பயன்படுத்த வேண்டும்?", "அதிகாரப்பூர்வ போக்குவரத்துப் பக்கம் பேருந்து முன்பதிவுக்கு எந்தத் தளத்தைக் குறிப்பிடுகிறது?"]}
+    },
+    {
+      "id": "ktr-facilities-division",
+      "source_document_id": "srm-facilities-8cffc6f00045ae65",
+      "fact_split": "validation",
+      "evidence_quote": "The Facility & Operations division",
+      "review_notes": "The page assigns campus maintenance to this division and gives its Kattankulathur address; the department meaning is preserved in translation.",
+      "en": {"question": "Which SRMIST division handles campus maintenance and facilities?", "answer": "The Facility and Operations division.", "aliases": ["Facility and Operations division", "Facilities and Operations", "Facility & Operations", "Facilities & Operations division"], "queries": ["Which division is responsible for maintaining the SRMIST campus?", "Who manages SRMIST's campus facilities and maintenance services?"]},
+      "hi": {"question": "एसआरएमआईएसटी परिसर के रखरखाव की जिम्मेदारी किस विभाग की है?", "answer": "सुविधा और संचालन विभाग की।", "aliases": ["सुविधा और संचालन विभाग", "सुविधा एवं संचालन विभाग", "Facilities and Operations", "Facility and Operations division"], "queries": ["एसआरएमआईएसटी में परिसर की सुविधाओं का रखरखाव कौन सा विभाग करता है?", "परिसर के रखरखाव और सुविधाओं के लिए किस विभाग से संपर्क करना चाहिए?"]},
+      "ta": {"question": "எஸ்ஆர்எம் வளாகத்தின் வசதிகளையும் பராமரிப்பையும் எந்தப் பிரிவு கவனிக்கிறது?", "answer": "வசதிகள் மற்றும் செயல்பாடுகள் பிரிவு.", "aliases": ["வசதிகள் மற்றும் செயல்பாடுகள் பிரிவு", "Facilities and Operations", "Facility and Operations division"], "queries": ["எஸ்ஆர்எம் வளாகப் பராமரிப்புக்குப் பொறுப்பான பிரிவு எது?", "வளாக வசதிகளையும் பராமரிப்புச் சேவைகளையும் எந்தப் பிரிவு நிர்வகிக்கிறது?"]}
+    },
+    {
+      "id": "ktr-sports-aquatic",
+      "source_document_id": "srm-sports-6050888a6ec198d5",
+      "fact_split": "test",
+      "evidence_quote": "Paarivendhar Aquatic Complex",
+      "review_notes": "The sports page names the aquatic complex; initials and the named person are preserved, without copying promotional claims.",
+      "en": {"question": "What aquatic complex is listed among SRMIST's sports facilities?", "answer": "Dr. T. R. Paarivendhar Aquatic Complex.", "aliases": ["Dr. T. R. Paarivendhar Aquatic Complex", "T. R. Paarivendhar Aquatic Complex", "Dr. T.R.P Aquatic Complex", "Paarivendhar Aquatic Complex"], "queries": ["What is the name of SRMIST's aquatic sports complex?", "Which aquatic complex does the SRMIST sports page name?"]},
+      "hi": {"question": "एसआरएमआईएसटी के जलीय खेल परिसर का नाम क्या है?", "answer": "डॉ. टी. आर. पारिवेंधर एक्वाटिक कॉम्प्लेक्स।", "aliases": ["डॉ. टी. आर. पारिवेंधर एक्वाटिक कॉम्प्लेक्स", "पारिवेंधर एक्वाटिक कॉम्प्लेक्स", "Dr. T. R. Paarivendhar Aquatic Complex", "Paarivendhar Aquatic Complex"], "queries": ["एसआरएमआईएसटी के एक्वाटिक कॉम्प्लेक्स को किस नाम से जाना जाता है?", "आधिकारिक खेल पृष्ठ किस जलीय खेल परिसर का उल्लेख करता है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் நீர்விளையாட்டு வளாகத்தின் பெயர் என்ன?", "answer": "டாக்டர் டி. ஆர். பாரிவேந்தர் நீர்விளையாட்டு வளாகம்.", "aliases": ["டாக்டர் டி. ஆர். பாரிவேந்தர் நீர்விளையாட்டு வளாகம்", "பாரிவேந்தர் நீர்விளையாட்டு வளாகம்", "Dr. T. R. Paarivendhar Aquatic Complex", "Paarivendhar Aquatic Complex"], "queries": ["எஸ்ஆர்எம் நீர்விளையாட்டு மையம் எந்தப் பெயரில் அழைக்கப்படுகிறது?", "அதிகாரப்பூர்வ விளையாட்டுப் பக்கம் எந்த நீர்விளையாட்டு வளாகத்தைக் குறிப்பிடுகிறது?"]}
+    },
+    {
+      "id": "ktr-astronomy-club",
+      "source_document_id": "srm-clubs-7ed6c14c4901d5c7",
+      "fact_split": "test",
+      "evidence_quote": "space and astronomy",
+      "review_notes": "The Astrophilia section explicitly covers stars, space and astronomy; the club name and that subject are preserved in both translations.",
+      "en": {"question": "Which SRMIST club focuses on astronomy and space?", "answer": "Astrophilia.", "aliases": ["Astrophilia", "Astrophilia club"], "queries": ["What is SRMIST's club for astronomy enthusiasts called?", "Which campus club discusses stars and space?"]},
+      "hi": {"question": "एसआरएमआईएसटी का कौन सा क्लब खगोल विज्ञान और अंतरिक्ष पर केंद्रित है?", "answer": "एस्ट्रोफिलिया क्लब।", "aliases": ["एस्ट्रोफिलिया", "एस्ट्रोफिलिया क्लब", "Astrophilia", "Astrophilia club"], "queries": ["एसआरएमआईएसटी में खगोल विज्ञान के शौकीनों के क्लब का नाम क्या है?", "परिसर में तारों और अंतरिक्ष पर चर्चा करने वाला क्लब कौन सा है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் வளாகத்தில் வானியல் மற்றும் விண்வெளிக்கான மன்றம் எது?", "answer": "அஸ்ட்ரோஃபிலியா மன்றம்.", "aliases": ["அஸ்ட்ரோஃபிலியா", "அஸ்ட்ரோஃபிலியா மன்றம்", "Astrophilia", "Astrophilia club"], "queries": ["எஸ்ஆர்எம் வானியல் ஆர்வலர் மன்றத்தின் பெயர் என்ன?", "நட்சத்திரங்களையும் விண்வெளியையும் பற்றி விவாதிக்கும் வளாக மன்றம் எது?"]}
+    },
+    {
+      "id": "ktr-annsh-school",
+      "source_document_id": "srm-community-fb303f09176e7781",
+      "fact_split": "test",
+      "evidence_quote": "ANNSH School A school for school dropouts",
+      "review_notes": "The community page identifies ANNSH and its intended children; no pupil names or enrollment counts are retained.",
+      "en": {"question": "Which SRM campus school serves school dropouts and construction workers' children?", "answer": "ANNSH School.", "aliases": ["ANNSH", "ANNSH School", "Annsh school"], "queries": ["What is the campus school for construction workers' children called?", "Which school is named for helping school dropouts on the SRM campus?"]},
+      "hi": {"question": "एसआरएम परिसर का कौन सा स्कूल पढ़ाई छोड़ चुके और निर्माण श्रमिकों के बच्चों के लिए है?", "answer": "अंश स्कूल।", "aliases": ["अंश", "अंश स्कूल", "ANNSH", "ANNSH School"], "queries": ["निर्माण श्रमिकों के बच्चों के लिए परिसर के स्कूल का नाम क्या है?", "एसआरएम परिसर में पढ़ाई छोड़ चुके बच्चों की मदद करने वाला स्कूल कौन सा है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் வளாகத்தில் பள்ளிப் படிப்பை நிறுத்திய மற்றும் கட்டுமானத் தொழிலாளர்களின் குழந்தைகளுக்கான பள்ளி எது?", "answer": "அன்ஷ் பள்ளி.", "aliases": ["அன்ஷ்", "அன்ஷ் பள்ளி", "ANNSH", "ANNSH School"], "queries": ["கட்டுமானத் தொழிலாளர்களின் குழந்தைகளுக்கான வளாகப் பள்ளியின் பெயர் என்ன?", "பள்ளிப் படிப்பை நிறுத்திய குழந்தைகளுக்காக எஸ்ஆர்எம் வளாகத்தில் உள்ள பள்ளி எது?"]}
+    },
+    {
+      "id": "ktr-vinayagar-temple",
+      "source_document_id": "srm-religious-84f00409e4871742",
+      "fact_split": "validation",
+      "evidence_quote": "Vinayagar Temple in the Campus",
+      "review_notes": "The religious-life page lists this temple; only the facility name is recorded and its religious meaning is preserved.",
+      "en": {"question": "Which Hindu temple is listed on the SRMIST campus?", "answer": "Vinayagar Temple.", "aliases": ["Vinayagar Temple", "Vinayagar", "Vinayakar Temple"], "queries": ["What temple does SRMIST list among its campus worship places?", "Which temple is on the SRMIST campus according to the religious-life page?"]},
+      "hi": {"question": "एसआरएमआईएसटी परिसर में कौन सा हिंदू मंदिर सूचीबद्ध है?", "answer": "विनायगर मंदिर।", "aliases": ["विनायगर मंदिर", "विनायगर", "Vinayagar Temple", "Vinayakar Temple"], "queries": ["एसआरएमआईएसटी परिसर के पूजा स्थलों में किस मंदिर का नाम है?", "आधिकारिक धार्मिक जीवन पृष्ठ के अनुसार परिसर में कौन सा मंदिर है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் வளாகத்தில் எந்த இந்துக் கோயில் உள்ளது?", "answer": "விநாயகர் கோயில்.", "aliases": ["விநாயகர் கோயில்", "விநாயகர் ஆலயம்", "Vinayagar Temple", "Vinayakar Temple"], "queries": ["எஸ்ஆர்எம் வளாக வழிபாட்டுத் தலங்களில் எந்தக் கோயில் குறிப்பிடப்படுகிறது?", "அதிகாரப்பூர்வ ஆன்மிகப் பக்கத்தின்படி வளாகத்தில் உள்ள கோயில் எது?"]}
+    },
+    {
+      "id": "ktr-hostel-directorate",
+      "source_document_id": "srm-hostels-efb344c164c97b96",
+      "fact_split": "test",
+      "evidence_quote": "Directorate of Hostels SRMIST-KTR Campus",
+      "review_notes": "The hostel page explicitly names the Directorate and KTR campus; no individual officer or changeable contact number is used.",
+      "en": {"question": "Which directorate oversees SRMIST KTR hostels?", "answer": "The Directorate of Hostels.", "aliases": ["Directorate of Hostels", "Hostel Directorate"], "queries": ["What directorate is named for managing SRMIST KTR accommodation?", "Which directorate looks after the Kattankulathur student hostels?"]},
+      "hi": {"question": "एसआरएमआईएसटी केटीआर के छात्रावासों की देखरेख कौन सा निदेशालय करता है?", "answer": "छात्रावास निदेशालय।", "aliases": ["छात्रावास निदेशालय", "Directorate of Hostels", "Hostel Directorate"], "queries": ["एसआरएमआईएसटी केटीआर के आवास प्रबंधन के लिए किस निदेशालय का नाम दिया गया है?", "कट्टनकुलथूर के छात्रावासों की जिम्मेदारी किस निदेशालय की है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் கேடிஆர் விடுதிகளை எந்த இயக்குநரகம் கவனிக்கிறது?", "answer": "விடுதிகள் இயக்குநரகம்.", "aliases": ["விடுதிகள் இயக்குநரகம்", "விடுதி இயக்குநரகம்", "Directorate of Hostels", "Hostel Directorate"], "queries": ["எஸ்ஆர்எம் கேடிஆர் தங்குமிட நிர்வாகத்திற்கான இயக்குநரகம் எது?", "காட்டாங்குளத்தூர் மாணவர் விடுதிகளை எந்த இயக்குநரகம் நிர்வகிக்கிறது?"]}
+    },
+    {
+      "id": "ktr-kopperundevi-name",
+      "source_document_id": "srm-women-hostel-94895dcde3c32317",
+      "fact_split": "test",
+      "evidence_quote": "Kopperundevi (M-Block) block, formerly known",
+      "review_notes": "The women's hostel page explicitly connects Sister Nivedita's former name to Kopperundevi M Block; names and block identity were checked.",
+      "en": {"question": "What is the women's hostel formerly called Sister Nivedita now named?", "answer": "Kopperundevi, or M Block.", "aliases": ["Kopperundevi", "Kopperundevi M Block", "Kopperundevi (M Block)", "M Block", "Kopperundevi (M-Block)"], "queries": ["Which women's hostel was previously known as Sister Nivedita block?", "What is the current name of the former Sister Nivedita hostel at SRMIST?"]},
+      "hi": {"question": "पहले सिस्टर निवेदिता कहलाने वाले महिला छात्रावास का अब क्या नाम है?", "answer": "कोप्पेरुन्देवी, यानी एम ब्लॉक।", "aliases": ["कोप्पेरुन्देवी", "कोप्पेरुन्देवी एम ब्लॉक", "एम ब्लॉक", "Kopperundevi", "Kopperundevi M Block", "M Block"], "queries": ["कौन सा महिला छात्रावास पहले सिस्टर निवेदिता ब्लॉक था?", "एसआरएमआईएसटी के पुराने सिस्टर निवेदिता छात्रावास का नया नाम क्या है?"]},
+      "ta": {"question": "முன்பு சிஸ்டர் நிவேதிதா என அழைக்கப்பட்ட மகளிர் விடுதியின் தற்போதைய பெயர் என்ன?", "answer": "கோப்பெருந்தேவி, அதாவது எம் பிளாக்.", "aliases": ["கோப்பெருந்தேவி", "கோப்பெருந்தேவி எம் பிளாக்", "எம் பிளாக்", "Kopperundevi", "Kopperundevi M Block", "M Block"], "queries": ["எந்த மகளிர் விடுதி முன்பு சிஸ்டர் நிவேதிதா பிளாக் என அழைக்கப்பட்டது?", "எஸ்ஆர்எம்மின் பழைய சிஸ்டர் நிவேதிதா விடுதியின் புதிய பெயர் என்ன?"]}
+    },
+    {
+      "id": "ktr-oori-ac",
+      "source_document_id": "srm-men-hostel-0226617da422dc30",
+      "fact_split": "validation",
+      "evidence_quote": "All rooms are air-conditioned",
+      "review_notes": "This sentence is in the Oori section of the men's hostel page; the yes/no question and AC condition remain identical across languages.",
+      "en": {"question": "Are the Oori men's hostel rooms air-conditioned?", "answer": "Yes, Oori rooms are air-conditioned.", "aliases": ["Yes", "Yes, they are air-conditioned", "Oori rooms are air-conditioned", "Air-conditioned"], "queries": ["Does the Oori boys' hostel provide AC rooms?", "Is air conditioning available in all Oori hostel rooms?"]},
+      "hi": {"question": "क्या ओरी पुरुष छात्रावास के कमरे वातानुकूलित हैं?", "answer": "हाँ, ओरी के कमरे वातानुकूलित हैं।", "aliases": ["हाँ", "हां", "वातानुकूलित", "हाँ, कमरे वातानुकूलित हैं", "Yes"], "queries": ["क्या ओरी छात्रावास में एसी वाले कमरे हैं?", "क्या ओरी छात्रावास के सभी कमरों में वातानुकूलन है?"]},
+      "ta": {"question": "ஓரி ஆண்கள் விடுதியின் அறைகள் குளிரூட்டப்பட்டவையா?", "answer": "ஆம், ஓரி விடுதியின் அறைகள் குளிரூட்டப்பட்டவை.", "aliases": ["ஆம்", "குளிரூட்டப்பட்டவை", "ஆம், அறைகள் குளிரூட்டப்பட்டவை", "Yes"], "queries": ["ஓரி ஆண்கள் விடுதியில் குளிர்சாதன அறைகள் உள்ளனவா?", "ஓரி விடுதியின் எல்லா அறைகளிலும் குளிர்சாதன வசதி உள்ளதா?"]}
+    },
+    {
+      "id": "ktr-green-pearl",
+      "source_document_id": "srm-international-hostel-2d69cffc6938417a",
+      "fact_split": "test",
+      "evidence_quote": "named Green Pearl International Hostel",
+      "review_notes": "The international-hostel page explicitly identifies Green Pearl as outside the campus; no travel-time estimate or occupancy count is asserted.",
+      "en": {"question": "Which SRMIST international hostel is located outside the campus?", "answer": "Green Pearl International Hostel.", "aliases": ["Green Pearl International Hostel", "Green Pearl", "Greenpearl"], "queries": ["What is the international hostel outside the SRMIST campus called?", "Which off-campus international hostel does SRMIST name?"]},
+      "hi": {"question": "एसआरएमआईएसटी का कौन सा अंतरराष्ट्रीय छात्रावास परिसर के बाहर है?", "answer": "ग्रीन पर्ल अंतरराष्ट्रीय छात्रावास।", "aliases": ["ग्रीन पर्ल", "ग्रीन पर्ल अंतरराष्ट्रीय छात्रावास", "Green Pearl", "Green Pearl International Hostel"], "queries": ["एसआरएमआईएसटी परिसर के बाहर स्थित अंतरराष्ट्रीय छात्रावास का नाम क्या है?", "आधिकारिक पृष्ठ परिसर से बाहर के किस अंतरराष्ट्रीय छात्रावास का उल्लेख करता है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் வளாகத்திற்கு வெளியே உள்ள சர்வதேச விடுதி எது?", "answer": "கிரீன் பேர்ல் சர்வதேச விடுதி.", "aliases": ["கிரீன் பேர்ல்", "கிரீன் பேர்ல் சர்வதேச விடுதி", "Green Pearl", "Green Pearl International Hostel"], "queries": ["எஸ்ஆர்எம் வளாகத்திற்கு வெளியில் அமைந்த சர்வதேச விடுதியின் பெயர் என்ன?", "வளாகத்திற்கு வெளியே உள்ளதாக அதிகாரப்பூர்வ பக்கம் குறிப்பிடும் சர்வதேச விடுதி எது?"]}
+    },
+    {
+      "id": "ktr-dining-station",
+      "source_document_id": "srm-dining-320c1a26f260af72",
+      "fact_split": "test",
+      "evidence_quote": "Opp to the Potheri Railway Station",
+      "review_notes": "The dining page places the Food Joint opposite Potheri station near Gate 4; only the station identity is included, excluding prices and opening times.",
+      "en": {"question": "Which railway station is opposite the SRMIST Food Joint and Super Market?", "answer": "Potheri Railway Station.", "aliases": ["Potheri", "Potheri Railway Station", "Potheri station"], "queries": ["The SRMIST Food Joint is opposite which railway station?", "What station is across from the SRMIST food joint near Gate 4?"]},
+      "hi": {"question": "एसआरएमआईएसटी फूड जॉइंट और सुपर मार्केट के सामने कौन सा रेलवे स्टेशन है?", "answer": "पोथेरी रेलवे स्टेशन।", "aliases": ["पोथेरी", "पोथेरी रेलवे स्टेशन", "Potheri", "Potheri Railway Station"], "queries": ["एसआरएमआईएसटी फूड जॉइंट किस रेलवे स्टेशन के सामने है?", "गेट चार के पास फूड जॉइंट के सामने वाले स्टेशन का नाम क्या है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் உணவகம் மற்றும் சூப்பர் மார்க்கெட்டுக்கு எதிரே எந்த ரயில் நிலையம் உள்ளது?", "answer": "பொத்தேரி ரயில் நிலையம்.", "aliases": ["பொத்தேரி", "பொத்தேரி ரயில் நிலையம்", "Potheri", "Potheri Railway Station"], "queries": ["எஸ்ஆர்எம் உணவகத்திற்கு எதிரே உள்ள ரயில் நிலையம் எது?", "நான்காம் வாயிலுக்கு அருகிலுள்ள உணவகத்திற்கு எதிரே இருக்கும் நிலையத்தின் பெயர் என்ன?"]}
+    },
+    {
+      "id": "ktr-student-affairs",
+      "source_document_id": "srm-student-life-f0d141dc0270a95c",
+      "fact_split": "test",
+      "evidence_quote": "managed by the student affairs department",
+      "review_notes": "The student-life page assigns extracurricular programs, clubs and the student council to Student Affairs; both translations preserve that department.",
+      "en": {"question": "Which department manages SRMIST extracurricular programs, clubs and the student council?", "answer": "The Student Affairs department.", "aliases": ["Student Affairs", "Student Affairs department", "Department of Student Affairs"], "queries": ["Who manages clubs and extracurricular activities at SRMIST?", "Which SRMIST department oversees the student council and extracurricular programs?"]},
+      "hi": {"question": "एसआरएमआईएसटी में क्लबों और छात्र परिषद की देखरेख कौन सा विभाग करता है?", "answer": "छात्र मामलों का विभाग।", "aliases": ["छात्र मामलों का विभाग", "छात्र मामले विभाग", "Student Affairs", "Student Affairs department"], "queries": ["एसआरएमआईएसटी के क्लब और पाठ्येतर गतिविधियाँ कौन सा विभाग संभालता है?", "छात्र परिषद और पाठ्येतर कार्यक्रमों की जिम्मेदारी किस विभाग की है?"]},
+      "ta": {"question": "எஸ்ஆர்எம் மன்றங்களையும் மாணவர் மன்றத்தையும் எந்தத் துறை நிர்வகிக்கிறது?", "answer": "மாணவர் விவகாரத் துறை.", "aliases": ["மாணவர் விவகாரத் துறை", "மாணவர் விவகாரங்கள் துறை", "Student Affairs", "Student Affairs department"], "queries": ["எஸ்ஆர்எம் மன்றங்களையும் பாடத்திட்டத்திற்கு வெளியான செயல்பாடுகளையும் எந்தத் துறை கவனிக்கிறது?", "மாணவர் மன்றத்திற்கும் கூடுதல் செயல்பாட்டுத் திட்டங்களுக்கும் பொறுப்பான துறை எது?"]}
+    }
+  ],
+  "unanswerable_queries": {
+    "en": ["What will the exact SRMIST KTR B.Tech tuition fee be for 2035–36?", "What is the confirmed first-semester B.Tech examination date at KTR in 2035?", "Which exact hostel room number will I receive when joining SRMIST in 2035?"],
+    "hi": ["वर्ष २०३५–३६ में एसआरएमआईएसटी केटीआर की बीटेक ट्यूशन फीस की निश्चित राशि क्या होगी?", "केटीआर में वर्ष २०३५ की बीटेक प्रथम सेमेस्टर परीक्षा की निश्चित तारीख क्या है?", "वर्ष २०३५ में एसआरएमआईएसटी में प्रवेश लेने पर मुझे छात्रावास का कौन सा कमरा मिलेगा?"],
+    "ta": ["இரண்டாயிரத்து முப்பத்தைந்து–முப்பத்தாறு ஆண்டில் எஸ்ஆர்எம் கேடிஆர் பீடெக் கல்விக் கட்டணத்தின் துல்லியமான தொகை என்ன?", "இரண்டாயிரத்து முப்பத்தைந்தில் கேடிஆர் பீடெக் முதல் பருவத் தேர்வுக்கான உறுதியான தேதி என்ன?", "இரண்டாயிரத்து முப்பத்தைந்தில் எஸ்ஆர்எம்மில் சேரும்போது எனக்கு எந்த விடுதி அறை எண் ஒதுக்கப்படும்?"]
+  }
+}

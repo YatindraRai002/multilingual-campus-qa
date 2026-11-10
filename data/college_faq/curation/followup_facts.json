@@ -1,0 +1,73 @@
+{
+  "reviewer": "Codex — AI source and translation review",
+  "reviewer_kind": "ai",
+  "human_review_status": "pending",
+  "scope": "Fresh-source follow-up of the frozen verbatim-attribution policy; original campus results remain intact.",
+  "facts": [
+    {
+      "id": "ktr-dental-ebsco",
+      "source_document_id": "ktr-dental-library-694354efd93d7eac",
+      "fact_split": "test",
+      "evidence_quote": "EBSCO Dentistry Research Database",
+      "review_notes": "The Kattankulathur dental library explicitly lists this database; only its identity is used, without collection counts or medical advice.",
+      "en": {"question": "Which dentistry research database is listed by the KTR Dental College library?", "answer": "EBSCO Dentistry Research Database.", "aliases": ["EBSCO Dentistry Research Database", "EBSCO Dentistry Database", "EBSCO"], "queries": ["Which database for dentistry research does the Dental College library list?", "What is the dental research database named on the KTR dental library page?"]},
+      "hi": {"question": "केटीआर डेंटल कॉलेज के पुस्तकालय में दंत चिकित्सा अनुसंधान का कौन सा डेटाबेस सूचीबद्ध है?", "answer": "ईबीएससीओ दंत चिकित्सा अनुसंधान डेटाबेस।", "aliases": ["ईबीएससीओ", "ईबीएससीओ दंत चिकित्सा अनुसंधान डेटाबेस", "EBSCO Dentistry Research Database", "EBSCO"], "queries": ["डेंटल कॉलेज पुस्तकालय दंत अनुसंधान के लिए कौन सा डेटाबेस देता है?", "केटीआर के दंत पुस्तकालय पृष्ठ पर किस दंत अनुसंधान डेटाबेस का नाम है?"]},
+      "ta": {"question": "கேடிஆர் பல் மருத்துவக் கல்லூரி நூலகத்தில் எந்தப் பல் மருத்துவ ஆய்வுத் தரவுத்தளம் உள்ளது?", "answer": "ஈபிஸ்கோ பல் மருத்துவ ஆய்வுத் தரவுத்தளம்.", "aliases": ["ஈபிஸ்கோ", "ஈபிஸ்கோ பல் மருத்துவ ஆய்வுத் தரவுத்தளம்", "EBSCO Dentistry Research Database", "EBSCO"], "queries": ["பல் மருத்துவக் கல்லூரி நூலகம் பல் மருத்துவ ஆய்விற்கு எந்தத் தரவுத்தளத்தைப் பட்டியலிடுகிறது?", "கேடிஆர் பல் மருத்துவ நூலகப் பக்கத்தில் குறிப்பிடப்படும் ஆய்வுத் தரவுத்தளம் எது?"]}
+    },
+    {
+      "id": "ktr-dental-pierre-hostel",
+      "source_document_id": "ktr-dental-hostel-be2951ddc033451e",
+      "fact_split": "test",
+      "evidence_quote": "Pierre Fauchard",
+      "review_notes": "The dental college hostel page names Pierre Fauchard in its men's section; no room availability, fees or allocation guarantee is asserted.",
+      "en": {"question": "Which men's hostel is named on the KTR Dental College hostel page?", "answer": "Pierre Fauchard.", "aliases": ["Pierre Fauchard", "Pierre Fauchard hostel"], "queries": ["What named accommodation does the KTR Dental College page list for male students?", "Which men's hostel name appears in the dental college accommodation information?"]},
+      "hi": {"question": "केटीआर डेंटल कॉलेज के छात्रावास पृष्ठ पर किस पुरुष छात्रावास का नाम है?", "answer": "पियरे फॉशार छात्रावास।", "aliases": ["पियरे फॉशार", "पियरे फॉशार छात्रावास", "Pierre Fauchard", "Pierre Fauchard hostel"], "queries": ["केटीआर डेंटल कॉलेज पृष्ठ पुरुष छात्रों के लिए किस नाम का आवास बताता है?", "दंत चिकित्सा कॉलेज की आवास जानकारी में कौन सा पुरुष छात्रावास दिया गया है?"]},
+      "ta": {"question": "கேடிஆர் பல் மருத்துவக் கல்லூரி விடுதிப் பக்கத்தில் எந்த ஆண்கள் விடுதியின் பெயர் உள்ளது?", "answer": "பியர் ஃபோஷார் விடுதி.", "aliases": ["பியர் ஃபோஷார்", "பியர் ஃபோஷார் விடுதி", "Pierre Fauchard", "Pierre Fauchard hostel"], "queries": ["கேடிஆர் பல் மருத்துவக் கல்லூரி ஆண் மாணவர்களுக்கு எந்தப் பெயருடைய விடுதியைக் குறிப்பிடுகிறது?", "பல் மருத்துவக் கல்லூரியின் தங்குமிடத் தகவலில் குறிப்பிடப்படும் ஆண்கள் விடுதி எது?"]}
+    },
+    {
+      "id": "ktr-mobile-powered-chairs",
+      "source_document_id": "ktr-dental-mobile-a944893185eb0a9d",
+      "fact_split": "test",
+      "evidence_quote": "two powered chairs",
+      "review_notes": "The mobile dental unit's equipment list specifies two powered chairs; the quantity is preserved in both translations without treatment recommendations.",
+      "en": {"question": "How many powered chairs does the KTR Mobile Dental Clinic unit contain?", "answer": "Two powered chairs.", "aliases": ["Two powered chairs", "2 powered chairs", "two", "2"], "queries": ["What is the number of powered chairs in the Mobile Dental Clinic unit?", "How many powered dental chairs are listed for the KTR mobile clinic?"]},
+      "hi": {"question": "केटीआर की मोबाइल दंत क्लिनिक इकाई में कितनी विद्युतचालित कुर्सियाँ हैं?", "answer": "दो विद्युतचालित दंत कुर्सियाँ।", "aliases": ["दो विद्युतचालित दंत कुर्सियाँ", "दो", "2", "two powered chairs"], "queries": ["मोबाइल दंत क्लिनिक की इकाई में विद्युतचालित कुर्सियों की संख्या कितनी है?", "केटीआर की चलित दंत क्लिनिक के लिए कितनी विद्युतचालित कुर्सियाँ दी गई हैं?"]},
+      "ta": {"question": "கேடிஆர் நடமாடும் பல் மருத்துவ அலகில் எத்தனை மின்சார நாற்காலிகள் உள்ளன?", "answer": "இரண்டு மின்சாரப் பல் சிகிச்சை நாற்காலிகள்.", "aliases": ["இரண்டு", "2", "இரண்டு மின்சாரப் பல் சிகிச்சை நாற்காலிகள்", "two powered chairs"], "queries": ["நடமாடும் பல் மருத்துவ அலகில் உள்ள மின்சார நாற்காலிகளின் எண்ணிக்கை என்ன?", "கேடிஆர் நடமாடும் பல் மருத்துவமனைக்கு எத்தனை மின்சாரப் பல் சிகிச்சை நாற்காலிகள் குறிப்பிடப்பட்டுள்ளன?"]}
+    },
+    {
+      "id": "ktr-stratus-centre",
+      "source_document_id": "ktr-dental-simulation-9122ad0e5ce2617f",
+      "fact_split": "test",
+      "evidence_quote": "SRM/STRATUS Centre for Medical Simulation",
+      "review_notes": "The simulation page names this educational centre. Names and its training purpose are translated; no clinical procedure or accreditation claim is supplied.",
+      "en": {"question": "Which medical simulation centre is named on the KTR Dental College simulation page?", "answer": "SRM/STRATUS Centre for Medical Simulation.", "aliases": ["SRM/STRATUS Centre for Medical Simulation", "SRM STRATUS Centre", "SRM STRATUS Center for Medical Simulation", "STRATUS Centre"], "queries": ["What is the name of the medical simulation centre described by the KTR Dental College?", "Which named centre provides medical simulation education on the dental college page?"]},
+      "hi": {"question": "केटीआर डेंटल कॉलेज के सिमुलेशन पृष्ठ पर किस चिकित्सा सिमुलेशन केंद्र का नाम है?", "answer": "एसआरएम/स्ट्रैटस चिकित्सा सिमुलेशन केंद्र।", "aliases": ["एसआरएम स्ट्रैटस चिकित्सा सिमुलेशन केंद्र", "एसआरएम स्ट्रैटस केंद्र", "SRM/STRATUS Centre for Medical Simulation", "STRATUS Centre"], "queries": ["केटीआर डेंटल कॉलेज में वर्णित चिकित्सा सिमुलेशन केंद्र का नाम क्या है?", "दंत कॉलेज के पृष्ठ पर चिकित्सा सिमुलेशन शिक्षा देने वाला कौन सा केंद्र दिया गया है?"]},
+      "ta": {"question": "கேடிஆர் பல் மருத்துவக் கல்லூரியின் உருவகப்படுத்தல் பக்கத்தில் எந்த மருத்துவ மையத்தின் பெயர் உள்ளது?", "answer": "எஸ்ஆர்எம்/ஸ்ட்ராட்டஸ் மருத்துவ உருவகப்படுத்தல் மையம்.", "aliases": ["எஸ்ஆர்எம் ஸ்ட்ராட்டஸ் மருத்துவ உருவகப்படுத்தல் மையம்", "ஸ்ட்ராட்டஸ் மையம்", "SRM/STRATUS Centre for Medical Simulation", "STRATUS Centre"], "queries": ["கேடிஆர் பல் மருத்துவக் கல்லூரி விவரிக்கும் மருத்துவ உருவகப்படுத்தல் மையத்தின் பெயர் என்ன?", "பல் மருத்துவக் கல்லூரிப் பக்கத்தில் மருத்துவ உருவகப்படுத்தல் கல்வி வழங்கும் எந்த மையம் குறிப்பிடப்படுகிறது?"]}
+    },
+    {
+      "id": "ktr-medical-cafe",
+      "source_document_id": "ktr-medical-cafeteria-35b7909d2e25283e",
+      "fact_split": "test",
+      "evidence_quote": "Slice of Life Café",
+      "review_notes": "The official cafeteria page names this cafe beside the medical college. Accent/plain spelling aliases are fixed before inference; capacity, opening times and prices are excluded.",
+      "en": {"question": "What cafe is named beside SRM Medical College at KTR?", "answer": "Slice of Life Cafe.", "aliases": ["Slice of Life Cafe", "Slice of Life Café", "Slice of Life"], "queries": ["Which cafe does the medical college cafeteria page name?", "What is the cafe beside SRM Medical College called?"]},
+      "hi": {"question": "केटीआर में एसआरएम मेडिकल कॉलेज के पास के कैफ़े का नाम क्या है?", "answer": "स्लाइस ऑफ लाइफ़ कैफ़े।", "aliases": ["स्लाइस ऑफ लाइफ़", "स्लाइस ऑफ लाइफ़ कैफ़े", "Slice of Life Cafe", "Slice of Life Café"], "queries": ["मेडिकल कॉलेज का कैफेटेरिया पृष्ठ किस कैफ़े का नाम देता है?", "एसआरएम मेडिकल कॉलेज के बगल में स्थित कैफ़े को क्या कहते हैं?"]},
+      "ta": {"question": "கேடிஆர் எஸ்ஆர்எம் மருத்துவக் கல்லூரிக்கு அருகிலுள்ள உணவகத்தின் பெயர் என்ன?", "answer": "ஸ்லைஸ் ஆஃப் லைஃப் கஃபே.", "aliases": ["ஸ்லைஸ் ஆஃப் லைஃப்", "ஸ்லைஸ் ஆஃப் லைஃப் கஃபே", "Slice of Life Cafe", "Slice of Life Café"], "queries": ["மருத்துவக் கல்லூரியின் உணவகப் பக்கம் எந்தக் கஃபேயின் பெயரைக் குறிப்பிடுகிறது?", "எஸ்ஆர்எம் மருத்துவக் கல்லூரிக்கு அருகிலுள்ள கஃபே என்ன பெயரில் அழைக்கப்படுகிறது?"]}
+    },
+    {
+      "id": "ktr-medical-clinicalkey",
+      "source_document_id": "ktr-medical-library-25a81b67ca9adb8b",
+      "fact_split": "test",
+      "evidence_quote": "CLINICALKEY",
+      "review_notes": "ClinicalKey is explicitly listed among the medical library's electronic resources; the resource identity is translated, without medical advice or collection counts.",
+      "en": {"question": "Which clinical reference platform is listed by the KTR Medical College central library?", "answer": "ClinicalKey.", "aliases": ["ClinicalKey", "Clinical Key"], "queries": ["What clinical reference website is named in the medical central library's electronic resources?", "Which clinical reference platform appears on the KTR medical library page?"]},
+      "hi": {"question": "केटीआर मेडिकल कॉलेज के केंद्रीय पुस्तकालय में कौन सा क्लिनिकल संदर्भ मंच सूचीबद्ध है?", "answer": "क्लिनिकलकी।", "aliases": ["क्लिनिकलकी", "क्लिनिकल की", "ClinicalKey", "Clinical Key"], "queries": ["मेडिकल केंद्रीय पुस्तकालय के इलेक्ट्रॉनिक संसाधनों में किस क्लिनिकल संदर्भ वेबसाइट का नाम है?", "केटीआर मेडिकल पुस्तकालय पृष्ठ पर कौन सा क्लिनिकल संदर्भ मंच दिया गया है?"]},
+      "ta": {"question": "கேடிஆர் மருத்துவக் கல்லூரி மத்திய நூலகத்தில் எந்த மருத்துவ மேற்கோள் தளம் பட்டியலிடப்பட்டுள்ளது?", "answer": "கிளினிக்கல்கீ.", "aliases": ["கிளினிக்கல்கீ", "கிளினிக்கல் கீ", "ClinicalKey", "Clinical Key"], "queries": ["மருத்துவ மத்திய நூலகத்தின் மின்னணு வளங்களில் எந்த மருத்துவ மேற்கோள் இணையதளம் குறிப்பிடப்படுகிறது?", "கேடிஆர் மருத்துவ நூலகப் பக்கத்தில் உள்ள மருத்துவ மேற்கோள் தளம் எது?"]}
+    }
+  ],
+  "unanswerable_queries": {
+    "en": ["What will the exact KTR BDS tuition fee be for 2036–37?", "What is the confirmed KTR dental college examination date in 2036?", "Which exact hostel room will be allocated to me when I join KTR in 2036?"],
+    "hi": ["वर्ष २०३६–३७ में केटीआर के बीडीएस पाठ्यक्रम की निश्चित ट्यूशन फीस क्या होगी?", "वर्ष २०३६ में केटीआर डेंटल कॉलेज की परीक्षा की निश्चित तारीख क्या है?", "वर्ष २०३६ में केटीआर में प्रवेश लेने पर मुझे छात्रावास का कौन सा कमरा मिलेगा?"],
+    "ta": ["இரண்டாயிரத்து முப்பத்தாறு–முப்பத்தேழு ஆண்டில் கேடிஆர் பல் மருத்துவப் படிப்பின் துல்லியமான கல்விக் கட்டணம் என்ன?", "இரண்டாயிரத்து முப்பத்தாறில் கேடிஆர் பல் மருத்துவக் கல்லூரித் தேர்வுக்கான உறுதியான தேதி என்ன?", "இரண்டாயிரத்து முப்பத்தாறில் கேடிஆரில் சேரும்போது எனக்கு எந்த விடுதி அறை ஒதுக்கப்படும்?"]
+  }
+}

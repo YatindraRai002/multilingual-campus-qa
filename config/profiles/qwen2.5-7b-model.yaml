@@ -1,0 +1,18 @@
+model_id: Qwen/Qwen2.5-7B-Instruct
+revision: a09a35458c702b33eeacc393d103063234e8bc28
+license: apache-2.0
+trust_remote_code: false
+quantization: nf4
+double_quantization: true
+compute_dtype: float16
+attention_implementation: sdpa
+min_inference_vram_gib: 6
+min_training_vram_gib: 12
+recommended_training_vram_gib: 16
+max_input_tokens: 1792
+prompt_version: grounded-qa-v1
+generation:
+  max_new_tokens: 192
+  do_sample: false
+  repetition_penalty: 1.0
+seed: 42

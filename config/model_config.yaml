@@ -1,0 +1,24 @@
+model_id: Qwen/Qwen2.5-1.5B-Instruct
+revision: 989aa7980e4cf806f80c7fef2b1adb7bc71aa306
+artifact_name: qwen2.5-1.5b
+display_name: Qwen2.5-1.5B-Instruct
+size_label: 1.5B
+study_amendment: user_approved_local_gpu_1_5b
+license: apache-2.0
+trust_remote_code: false
+quantization: nf4
+double_quantization: true
+compute_dtype: float16
+attention_implementation: explicit_gqa_sdpa
+min_inference_vram_gib: 1.8
+min_training_vram_gib: 2.5
+recommended_training_vram_gib: 4
+max_input_tokens: 9216
+evaluation_batch_size: 4
+evaluation_batch_token_budget: 4096
+prompt_version: grounded-qa-v1
+generation:
+  max_new_tokens: 192
+  do_sample: false
+  repetition_penalty: 1.0
+seed: 42

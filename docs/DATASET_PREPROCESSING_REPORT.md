@@ -1,0 +1,146 @@
+# Dataset preprocessing report
+
+Generated from downloaded records. No synthetic data are included.
+
+```json
+{
+  "version": "acbff74f81c1a1d1",
+  "created_at": "2026-11-07T16:45:12.569784+00:00",
+  "processing_version": "unicode-nfc-source-groups-v6-approved-indicsquad-script-audit",
+  "acquisition_version": "0bea24a245b74165",
+  "indicqa_revision": "d7e91454f5c8a85b82e2549453521a2b7a185c44",
+  "english_parallel": false,
+  "splits": {
+    "train": {
+      "total": 96341,
+      "languages": {
+        "en": 78437,
+        "hi": 8954,
+        "ta": 8950
+      },
+      "sources": {
+        "SQuAD-v1.1": 78437,
+        "l3cube-pune/indic-squad": 17904
+      },
+      "answerability": {
+        "en": {
+          "answerable": 78437
+        },
+        "hi": {
+          "answerable": 8954
+        },
+        "ta": {
+          "answerable": 8950
+        }
+      }
+    },
+    "validation": {
+      "total": 11052,
+      "languages": {
+        "en": 8961,
+        "hi": 1044,
+        "ta": 1047
+      },
+      "sources": {
+        "SQuAD-v1.1": 8961,
+        "l3cube-pune/indic-squad": 2091
+      },
+      "answerability": {
+        "en": {
+          "answerable": 8961
+        },
+        "hi": {
+          "answerable": 1044
+        },
+        "ta": {
+          "answerable": 1047
+        }
+      }
+    },
+    "test": {
+      "total": 13921,
+      "languages": {
+        "hi": 1547,
+        "ta": 1804,
+        "en": 10570
+      },
+      "sources": {
+        "ai4bharat/IndicQA": 3351,
+        "SQuAD-v1.1": 10570
+      },
+      "answerability": {
+        "en": {
+          "answerable": 10570
+        },
+        "hi": {
+          "unanswerable": 495,
+          "answerable": 1052
+        },
+        "ta": {
+          "answerable": 1277,
+          "unanswerable": 527
+        }
+      }
+    }
+  },
+  "split_checksums": {
+    "train": "2938f8e505ec22a637338eb80045f1c78f69734fc4dcc8edc2dabe4729c61a27",
+    "validation": "13d9e8f076e6df1fa194550eb89105b6014d58d72310e2cb1f0d7349b335f2f3",
+    "test": "673b97cc01580f792aa9fad2530e9119a9a620c6af4982dd7a2af5670a57f525"
+  },
+  "training_rejected": 9,
+  "training_duplicates_removed": 197,
+  "test_records_removed": 0,
+  "test_warning_counts": {
+    "original_answer_offset_mismatch": 1949,
+    "answer_not_in_context": 29
+  },
+  "test_duplicate_pairs": 39,
+  "training_languages_missing": [],
+  "licenses": {
+    "ai4bharat/IndicQA": "cc-by-4.0",
+    "SQuAD-v1.1": "cc-by-sa-4.0",
+    "l3cube-pune/indic-squad": "cc-by-4.0; inherited SQuAD cc-by-sa-4.0 obligations retained"
+  },
+  "supplemental_training": {
+    "dataset_id": "l3cube-pune/indic-squad",
+    "revision": "f5973900b6c0e3caf6a1698b49a3309bad3ae849",
+    "approved_extension": true,
+    "configuration": {
+      "enabled": true,
+      "user_approved": true,
+      "dataset_id": "l3cube-pune/indic-squad",
+      "revision": "f5973900b6c0e3caf6a1698b49a3309bad3ae849",
+      "maximum_records_per_language": 10000,
+      "seed": 42,
+      "selection": "stable_hash_of_original_id_after_mapping_to_squad_v1_original_train"
+    },
+    "languages": {
+      "hi": {
+        "original_training_rows": 118516,
+        "excluded_unmapped_original_training_id": 39633,
+        "eligible_mapped_training_rows": 78026,
+        "excluded_empty_or_unanswerable_translation": 849,
+        "excluded_answer_not_in_context": 8,
+        "selected_before_group_split": 10000,
+        "eligible_not_selected_by_budget": 68026
+      },
+      "ta": {
+        "original_training_rows": 118516,
+        "excluded_unmapped_original_training_id": 39633,
+        "eligible_mapped_training_rows": 77975,
+        "excluded_empty_or_unanswerable_translation": 879,
+        "excluded_answer_not_in_context": 29,
+        "selected_before_group_split": 10000,
+        "eligible_not_selected_by_budget": 67975
+      }
+    },
+    "selection_uses_test_answers": false,
+    "english_mapping": "original training ID only; no IndicQA English parallel mapping is asserted",
+    "published_validation_and_test_files_used": false
+  },
+  "split_policy": "IndicQA official test; SQuAD dev held out as test; training documents grouped with seed 42; no parallel English mapping."
+}
+```
+
+NFC and whitespace normalization preserve Unicode; original bytes and offsets stay in raw/. Question scripts and answer spans are audited. Warnings never remove held-out test records. Training quality issues and held-out overlaps are excluded. Connected source documents sharing contexts or questions stay in the same split. IndicQA has no training or validation split. English SQuAD results must be presented separately from IndicQA results.

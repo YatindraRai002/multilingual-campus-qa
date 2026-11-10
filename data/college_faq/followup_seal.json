@@ -1,0 +1,82 @@
+{
+  "corpus": {
+    "version": "b07405a784a7045c",
+    "created_at": "2026-11-08T22:58:59.151596+00:00",
+    "count": 57,
+    "languages": {
+      "en": 19,
+      "hi": 19,
+      "ta": 19
+    },
+    "verification": {
+      "source_verified": 57
+    },
+    "eligible_verified_count": 57,
+    "human_verified_count": 0,
+    "reviewer_kinds": {
+      "ai": 57
+    },
+    "records_sha256": "bd827218c7289bfaad0b06229aad8603738c39f597291901e9c066aecd7056f7",
+    "campus": "Kattankulathur"
+  },
+  "test_set": {
+    "version": "29ed6c44573105ff",
+    "corpus_version": "b07405a784a7045c",
+    "count": 45,
+    "test_checksum": "41a79c24acc3de44cbd749c4fcf5bb83cc69db1320d31b82501c6cfcc06f680d",
+    "created_at": "2026-11-08T22:58:59.199377+00:00",
+    "reference_annotation_policy": {
+      "reviewer_kinds": {
+        "ai": 45
+      },
+      "human_reference_review_complete": false,
+      "response_factuality_metrics": "pending until actual human response annotations exist"
+    }
+  },
+  "index": {
+    "version": "6e044fab88609b53",
+    "collection": "campus_faq_6e044fab88609b53",
+    "corpus_version": "b07405a784a7045c",
+    "chunks": 57,
+    "faq_records": 57,
+    "languages": {
+      "en": 19,
+      "hi": 19,
+      "ta": 19
+    },
+    "reviewer_kinds": {
+      "ai": 57
+    },
+    "configuration": {
+      "embedding_model": "intfloat/multilingual-e5-small",
+      "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "embedding_status": "validated",
+      "candidate_models": [
+        "intfloat/multilingual-e5-small",
+        "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+      ],
+      "candidate_revisions": {
+        "intfloat/multilingual-e5-small": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+        "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      },
+      "collection": "campus_faq",
+      "device": "cpu",
+      "top_k": 4,
+      "max_cosine_distance": 0.12740584881953368,
+      "max_context_characters": 5500,
+      "chunk_characters": 1000,
+      "chunk_overlap": 150,
+      "max_source_age_days": 180,
+      "require_verified": true,
+      "accepted_verification_statuses": [
+        "human_verified",
+        "source_verified"
+      ],
+      "validation_query_fingerprint": "10f0070d60c4d0f543e97eec99c2b2cedfcb809fc4dad9bc0fbffed27f35e845",
+      "citation_policy": "model-or-verbatim-v2"
+    },
+    "created_at": "2026-11-08T22:59:12.625675+00:00",
+    "content_fingerprint": "4c28d0b0e481e6613865022901b016194d5e262f7ae52aed92586c16a25cc86d"
+  },
+  "protocol": "results/citation-policy-followup/sealed_protocol.json"
+}

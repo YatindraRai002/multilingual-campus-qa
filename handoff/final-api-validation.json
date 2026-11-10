@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-11-08T23:27:45.280772+00:00",
+  "report_http_status": 200,
+  "comparison_http_status": 200,
+  "matched_campus_arms": 4,
+  "all_completed": true,
+  "same_runtime_memory_policy": true,
+  "active_evaluations": 0,
+  "active_training": 0
+}

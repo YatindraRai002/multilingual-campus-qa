@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-11-08T22:17:33.040010+00:00",
+  "kind": "AI-curated official-source-backed pilot",
+  "human_reference_review_complete": false,
+  "reviewer": "Codex — AI source and translation review",
+  "curation_sha256": "7ddd78238b7cddd17d3ee01700849710744c05575af064df31b2b835c668cae4",
+  "faq_records": 39,
+  "faq_languages": {
+    "en": 13,
+    "hi": 13,
+    "ta": 13
+  },
+  "source_documents_used": 13,
+  "retrieval_validation_queries": 24,
+  "campus_test_queries": 63,
+  "test_answerability": {
+    "answerable": 54,
+    "unanswerable": 9
+  },
+  "validation_source_documents": [
+    "srm-facilities-8cffc6f00045ae65",
+    "srm-library-aa051c3d41af32d5",
+    "srm-men-hostel-0226617da422dc30",
+    "srm-religious-84f00409e4871742"
+  ],
+  "test_source_documents": [
+    "srm-clubs-7ed6c14c4901d5c7",
+    "srm-community-fb303f09176e7781",
+    "srm-dining-320c1a26f260af72",
+    "srm-hostels-efb344c164c97b96",
+    "srm-international-hostel-2d69cffc6938417a",
+    "srm-sports-6050888a6ec198d5",
+    "srm-student-life-f0d141dc0270a95c",
+    "srm-transport-05d1ba9b15526a9f",
+    "srm-women-hostel-94895dcde3c32317"
+  ],
+  "source_disjoint_query_splits": true,
+  "query_context": "Every validation/test question explicitly names the Kattankulathur campus, identically for all four model conditions.",
+  "negative_query_limitation": "Three clearly out-of-corpus future/personal requests per language; no general open-domain robustness claim.",
+  "faq_path": "D:\\shameek RAI\\data\\college_faq\\curation_versions\\068baf91-6d5a-48be-bd23-0cbc54f63bd2\\faq.jsonl",
+  "validation_path": "D:\\shameek RAI\\data\\college_faq\\curation_versions\\068baf91-6d5a-48be-bd23-0cbc54f63bd2\\retrieval_validation.jsonl",
+  "test_path": "D:\\shameek RAI\\data\\college_faq\\curation_versions\\068baf91-6d5a-48be-bd23-0cbc54f63bd2\\campus_test.jsonl"
+}

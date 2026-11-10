@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-08T23:03:33.651714+00:00",
+  "study_id": "0f3dfb3d-298f-47c1-a020-4be01eb4bcec",
+  "test_version": "a75705ed443380de",
+  "citation_policy": "model-emitted-v1",
+  "runs": {
+    "C": {
+      "run_id": "168585c5-3777-4bac-aa51-8aab3151a3c5",
+      "predictions": 63,
+      "final_abstentions": 63,
+      "reasons": {
+        "invalid_or_missing_source_citation": 51,
+        "insufficient_verified_retrieval": 12
+      }
+    },
+    "D": {
+      "run_id": "d9f859af-917e-4cf9-b6ab-574b8933ca99",
+      "predictions": 63,
+      "final_abstentions": 63,
+      "reasons": {
+        "invalid_or_missing_source_citation": 50,
+        "insufficient_verified_retrieval": 12,
+        "model_abstention": 1
+      }
+    }
+  }
+}

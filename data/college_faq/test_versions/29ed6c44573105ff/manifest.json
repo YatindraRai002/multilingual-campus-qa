@@ -1,0 +1,14 @@
+{
+  "version": "29ed6c44573105ff",
+  "corpus_version": "b07405a784a7045c",
+  "count": 45,
+  "test_checksum": "41a79c24acc3de44cbd749c4fcf5bb83cc69db1320d31b82501c6cfcc06f680d",
+  "created_at": "2026-11-08T22:58:59.199377+00:00",
+  "reference_annotation_policy": {
+    "reviewer_kinds": {
+      "ai": 45
+    },
+    "human_reference_review_complete": false,
+    "response_factuality_metrics": "pending until actual human response annotations exist"
+  }
+}

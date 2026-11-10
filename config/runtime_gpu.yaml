@@ -1,0 +1,4 @@
+# Operational memory control; model weights, prompts and generation are unchanged.
+version: bounded-cuda-cache-v1
+per_process_memory_fraction: 0.75
+device: 0

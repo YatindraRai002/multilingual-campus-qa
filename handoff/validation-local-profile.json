@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-11-08T23:28:35.764055+00:00",
+  "python_suite": {
+    "passed": 103,
+    "skipped": 0,
+    "exit_code": 0,
+    "duration_seconds": 18.791,
+    "log": "results/pytest-current.log",
+    "junit": "results/pytest-current.xml"
+  },
+  "browser": {
+    "passed": 3,
+    "skipped": 0,
+    "exit_code": 0,
+    "log": "results/browser-trained-profile.log",
+    "scope": "Actual completed results, training chart, review form, responsive navigation and live GPU-backed cited chat"
+  },
+  "model_experiments_complete": true,
+  "independent_human_review_complete": false,
+  "model_runs": 10,
+  "predictions": 28274,
+  "failed_predictions": 0,
+  "final_model_audit": "results/final-model-validation.json",
+  "chat_smoke": "results/chat-smoke.json",
+  "data_reconstruction": "results/reproduction-check.json",
+  "human_response_annotations": 0,
+  "campus_corpus_version": "b07405a784a7045c",
+  "campus_index_version": "6e044fab88609b53",
+  "real_training_validation": "results/training/7e800833-02fb-4f7f-88e0-883f7fd4dfa3/adapter_validation.json",
+  "memory_policy": {
+    "version": "bounded-cuda-cache-v1",
+    "allocator_fraction": 0.75,
+    "actual_capacity_check": "results/bounded_adapter_capacity/499b2181-0723-4cee-bd4b-99c1bee0a616/result.json",
+    "benchmark_B_interrupted_or_recovered": false
+  },
+  "metric_definitions": "qa-metrics-v3-all-retrieval-queries"
+}

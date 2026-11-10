@@ -1,0 +1,137 @@
+{
+  "created_at": "2026-11-08T22:20:51.700061+00:00",
+  "corpus_version": "652d19bfd9f0b4cc",
+  "query_fingerprint": "10f0070d60c4d0f543e97eec99c2b2cedfcb809fc4dad9bc0fbffed27f35e845",
+  "split": "validation",
+  "candidates": [
+    {
+      "model_id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "languages": {
+        "en": {
+          "queries": 8,
+          "recall_at_k": 100.0,
+          "mrr": 1.0,
+          "relevant_hit_distances": [
+            0.14713036426459458,
+            0.12772104046420962,
+            0.12553393089332354,
+            0.12528079994480756,
+            0.1212965433012908,
+            0.122752935636951,
+            0.12561976283303677,
+            0.09984064353829636
+          ]
+        },
+        "hi": {
+          "queries": 8,
+          "recall_at_k": 100.0,
+          "mrr": 1.0,
+          "relevant_hit_distances": [
+            0.11278850136783136,
+            0.10584822936794691,
+            0.08159526466659084,
+            0.08980569716039544,
+            0.10994346978475145,
+            0.10588764425172714,
+            0.1012549407350054,
+            0.09486632903167169
+          ]
+        },
+        "ta": {
+          "queries": 8,
+          "recall_at_k": 100.0,
+          "mrr": 1.0,
+          "relevant_hit_distances": [
+            0.10094263308192875,
+            0.10265393243747989,
+            0.1043459302359907,
+            0.08163410312150343,
+            0.10164803391723931,
+            0.11731936110378638,
+            0.10167946979278197,
+            0.11805557584237225
+          ]
+        }
+      },
+      "selection_score": 1.0
+    },
+    {
+      "model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "languages": {
+        "en": {
+          "queries": 8,
+          "recall_at_k": 100.0,
+          "mrr": 1.0,
+          "relevant_hit_distances": [
+            0.3341785121090063,
+            0.33242784729954666,
+            0.21891904967683695,
+            0.20280862591551818,
+            0.18271410451502912,
+            0.19728105680006902,
+            0.3044523620611248,
+            0.21574675562273937
+          ]
+        },
+        "hi": {
+          "queries": 8,
+          "recall_at_k": 100.0,
+          "mrr": 0.8541666666666666,
+          "relevant_hit_distances": [
+            0.24603348119810797,
+            0.22889401421995892,
+            0.16110466165996307,
+            0.15054777106347839,
+            0.1325760121777264,
+            0.14527035682096168,
+            0.3031837227084553,
+            0.24876489829712733
+          ]
+        },
+        "ta": {
+          "queries": 8,
+          "recall_at_k": 25.0,
+          "mrr": 0.08333333333333333,
+          "relevant_hit_distances": [
+            0.10499267984450378,
+            0.10558526830321946
+          ]
+        }
+      },
+      "selection_score": 0.08333333333333333
+    }
+  ],
+  "selection_policy": "maximize worst-language MRR",
+  "query_reviewer_kinds": {
+    "ai": 24
+  },
+  "selected": {
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "embedding_status": "validated",
+    "candidate_models": [
+      "intfloat/multilingual-e5-small",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "candidate_revisions": {
+      "intfloat/multilingual-e5-small": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "collection": "campus_faq",
+    "device": "cpu",
+    "top_k": 4,
+    "max_cosine_distance": 0.12740584881953368,
+    "max_context_characters": 5500,
+    "chunk_characters": 1000,
+    "chunk_overlap": 150,
+    "max_source_age_days": 180,
+    "require_verified": true,
+    "accepted_verification_statuses": [
+      "human_verified",
+      "source_verified"
+    ],
+    "validation_query_fingerprint": "10f0070d60c4d0f543e97eec99c2b2cedfcb809fc4dad9bc0fbffed27f35e845"
+  }
+}

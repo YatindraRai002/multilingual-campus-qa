@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-11-08T22:55:09.997350+00:00",
+  "kind": "AI-curated official-source-backed pilot",
+  "human_reference_review_complete": false,
+  "reviewer": "Codex — AI source and translation review",
+  "curation_sha256": "a3c2d4cb22704ab16ca1d904d5d996abc641efe1dd60cc3bace29f66b5f56578",
+  "faq_records": 57,
+  "curation_path": "data/college_faq/curation/followup_facts.json",
+  "parent_corpus_version": "652d19bfd9f0b4cc",
+  "faq_languages": {
+    "en": 19,
+    "hi": 19,
+    "ta": 19
+  },
+  "source_documents_used": 19,
+  "knowledge_only_source_documents": [
+    "srm-clubs-7ed6c14c4901d5c7",
+    "srm-community-fb303f09176e7781",
+    "srm-dining-320c1a26f260af72",
+    "srm-hostels-efb344c164c97b96",
+    "srm-international-hostel-2d69cffc6938417a",
+    "srm-sports-6050888a6ec198d5",
+    "srm-student-life-f0d141dc0270a95c",
+    "srm-transport-05d1ba9b15526a9f",
+    "srm-women-hostel-94895dcde3c32317"
+  ],
+  "retrieval_validation_queries": 24,
+  "campus_test_queries": 45,
+  "test_answerability": {
+    "answerable": 36,
+    "unanswerable": 9
+  },
+  "validation_source_documents": [
+    "srm-facilities-8cffc6f00045ae65",
+    "srm-library-aa051c3d41af32d5",
+    "srm-men-hostel-0226617da422dc30",
+    "srm-religious-84f00409e4871742"
+  ],
+  "test_source_documents": [
+    "ktr-dental-hostel-be2951ddc033451e",
+    "ktr-dental-library-694354efd93d7eac",
+    "ktr-dental-mobile-a944893185eb0a9d",
+    "ktr-dental-simulation-9122ad0e5ce2617f",
+    "ktr-medical-cafeteria-35b7909d2e25283e",
+    "ktr-medical-library-25a81b67ca9adb8b"
+  ],
+  "source_disjoint_query_splits": true,
+  "query_context": "Every validation/test question explicitly names the Kattankulathur campus, identically for all four model conditions.",
+  "negative_query_limitation": "Three clearly out-of-corpus future/personal requests per language; no general open-domain robustness claim.",
+  "faq_path": "D:\\shameek RAI\\data\\college_faq\\curation_versions\\406c2868-079d-4927-8d2b-4b53326eb3bf\\faq.jsonl",
+  "validation_path": "D:\\shameek RAI\\data\\college_faq\\curation_versions\\406c2868-079d-4927-8d2b-4b53326eb3bf\\retrieval_validation.jsonl",
+  "test_path": "D:\\shameek RAI\\data\\college_faq\\curation_versions\\406c2868-079d-4927-8d2b-4b53326eb3bf\\campus_test.jsonl"
+}

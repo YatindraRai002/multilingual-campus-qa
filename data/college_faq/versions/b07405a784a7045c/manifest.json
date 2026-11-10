@@ -1,0 +1,20 @@
+{
+  "version": "b07405a784a7045c",
+  "created_at": "2026-11-08T22:58:59.151596+00:00",
+  "count": 57,
+  "languages": {
+    "en": 19,
+    "hi": 19,
+    "ta": 19
+  },
+  "verification": {
+    "source_verified": 57
+  },
+  "eligible_verified_count": 57,
+  "human_verified_count": 0,
+  "reviewer_kinds": {
+    "ai": 57
+  },
+  "records_sha256": "bd827218c7289bfaad0b06229aad8603738c39f597291901e9c066aecd7056f7",
+  "campus": "Kattankulathur"
+}

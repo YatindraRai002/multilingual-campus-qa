@@ -1,0 +1,44 @@
+{
+  "version": "d7d31923b9ecac7f",
+  "collection": "campus_faq_d7d31923b9ecac7f",
+  "corpus_version": "652d19bfd9f0b4cc",
+  "chunks": 39,
+  "faq_records": 39,
+  "languages": {
+    "en": 13,
+    "hi": 13,
+    "ta": 13
+  },
+  "reviewer_kinds": {
+    "ai": 39
+  },
+  "configuration": {
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "embedding_status": "validated",
+    "candidate_models": [
+      "intfloat/multilingual-e5-small",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "candidate_revisions": {
+      "intfloat/multilingual-e5-small": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "collection": "campus_faq",
+    "device": "cpu",
+    "top_k": 4,
+    "max_cosine_distance": 0.12740584881953368,
+    "max_context_characters": 5500,
+    "chunk_characters": 1000,
+    "chunk_overlap": 150,
+    "max_source_age_days": 180,
+    "require_verified": true,
+    "accepted_verification_statuses": [
+      "human_verified",
+      "source_verified"
+    ],
+    "validation_query_fingerprint": "10f0070d60c4d0f543e97eec99c2b2cedfcb809fc4dad9bc0fbffed27f35e845"
+  },
+  "created_at": "2026-11-08T22:20:56.803064+00:00",
+  "content_fingerprint": "081550578d78a060e8204f3086340ff64a933fd83844ded110fcbb37e3990cad"
+}

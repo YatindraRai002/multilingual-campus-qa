@@ -1,0 +1,3 @@
+# Sealed protocol hashes depend on original bytes, including line endings.
+# Disable checkout normalization so historical source/snapshot hashes stay valid.
+* -text

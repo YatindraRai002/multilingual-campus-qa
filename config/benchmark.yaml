@@ -1,0 +1,12 @@
+indicqa_revision: d7e91454f5c8a85b82e2549453521a2b7a185c44
+squad_sha256:
+  train-v1.1.json: 3527663986b8295af4f7fcdff1ba1ff3f72d07d61a20f487cb238a6ef92fd955
+  dev-v1.1.json: 95aa6a52d5d6a735563366753ca50492a658031da74f301ac5238b03966972c9
+supplemental_training:
+  enabled: true
+  user_approved: true
+  dataset_id: l3cube-pune/indic-squad
+  revision: f5973900b6c0e3caf6a1698b49a3309bad3ae849
+  maximum_records_per_language: 10000
+  seed: 42
+  selection: stable_hash_of_original_id_after_mapping_to_squad_v1_original_train

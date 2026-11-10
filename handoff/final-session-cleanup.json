@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-08T23:28:57.399434+00:00",
+  "owned_preview": {
+    "pid": 17344,
+    "created": 1794179119.7851295,
+    "command": [
+      "D:\\shameek RAI\\.runtime\\python\\cpython-3.11.14-windows-x86_64-none\\python.exe",
+      "-u",
+      "-m",
+      "backend.cli",
+      "serve",
+      "--port",
+      "8765"
+    ],
+    "cwd": "D:\\shameek RAI"
+  },
+  "preview_stopped": true,
+  "model_jobs_stopped": false,
+  "other_project_processes_stopped": false,
+  "permanent_power_settings_changed": false,
+  "temporary_power_hold_release": "confirmed released",
+  "temporary_power_hold_released_at": "2026-11-08T23:28:24.329761+00:00",
+  "study_power_hold_released": true,
+  "preview_port_closed": true
+}

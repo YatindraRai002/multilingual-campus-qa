@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "dataset_version": "acbff74f81c1a1d1",
+  "split_checksums": {
+    "train": "2938f8e505ec22a637338eb80045f1c78f69734fc4dcc8edc2dabe4729c61a27",
+    "validation": "13d9e8f076e6df1fa194550eb89105b6014d58d72310e2cb1f0d7349b335f2f3",
+    "test": "673b97cc01580f792aa9fad2530e9119a9a620c6af4982dd7a2af5670a57f525"
+  },
+  "fresh_workspace_reconstruction": true,
+  "checked_at": "2026-11-08T01:38:02.999511+00:00",
+  "platform": "Windows",
+  "canonical_jsonl_encoding": "UTF-8 with explicit CRLF",
+  "log": "results/reproduction-current.log"
+}

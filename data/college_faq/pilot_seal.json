@@ -1,0 +1,59 @@
+{
+  "sealed_at": "2026-11-08T22:19:34.886223+00:00",
+  "corpus": {
+    "version": "652d19bfd9f0b4cc",
+    "created_at": "2026-11-08T22:19:34.833835+00:00",
+    "count": 39,
+    "languages": {
+      "en": 13,
+      "hi": 13,
+      "ta": 13
+    },
+    "verification": {
+      "source_verified": 39
+    },
+    "eligible_verified_count": 39,
+    "human_verified_count": 0,
+    "reviewer_kinds": {
+      "ai": 39
+    },
+    "records_sha256": "a62509e8392b7885f5738ff731818e4bb2400fcd147ab44ba60f330e3100a343",
+    "campus": "Kattankulathur"
+  },
+  "test_set": {
+    "version": "a75705ed443380de",
+    "corpus_version": "652d19bfd9f0b4cc",
+    "count": 63,
+    "test_checksum": "fd694047a89839008c2ff0e12e41c8dd1ae5913c94043c4545ff39f51706ea47",
+    "created_at": "2026-11-08T22:19:34.877223+00:00",
+    "reference_annotation_policy": {
+      "reviewer_kinds": {
+        "ai": 63
+      },
+      "human_reference_review_complete": false,
+      "response_factuality_metrics": "pending until actual human response annotations exist"
+    }
+  },
+  "validation_path": "D:\\shameek RAI\\data\\college_faq\\curation_versions\\068baf91-6d5a-48be-bd23-0cbc54f63bd2\\retrieval_validation.jsonl",
+  "query_source_split": {
+    "validation": [
+      "srm-facilities-8cffc6f00045ae65",
+      "srm-library-aa051c3d41af32d5",
+      "srm-men-hostel-0226617da422dc30",
+      "srm-religious-84f00409e4871742"
+    ],
+    "test": [
+      "srm-clubs-7ed6c14c4901d5c7",
+      "srm-community-fb303f09176e7781",
+      "srm-dining-320c1a26f260af72",
+      "srm-hostels-efb344c164c97b96",
+      "srm-international-hostel-2d69cffc6938417a",
+      "srm-sports-6050888a6ec198d5",
+      "srm-student-life-f0d141dc0270a95c",
+      "srm-transport-05d1ba9b15526a9f",
+      "srm-women-hostel-94895dcde3c32317"
+    ]
+  },
+  "human_review_status": "pending",
+  "used_for_benchmark_fine_tuning": false
+}

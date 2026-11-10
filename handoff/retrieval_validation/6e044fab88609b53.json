@@ -1,0 +1,376 @@
+{
+  "checked_at": "2026-11-08T23:01:16.561530+00:00",
+  "split": "validation only",
+  "index_version": "6e044fab88609b53",
+  "persistent_chunks": 57,
+  "configuration": {
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "embedding_status": "validated",
+    "candidate_models": [
+      "intfloat/multilingual-e5-small",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    ],
+    "candidate_revisions": {
+      "intfloat/multilingual-e5-small": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "collection": "campus_faq",
+    "device": "cpu",
+    "top_k": 4,
+    "max_cosine_distance": 0.12740584881953368,
+    "max_context_characters": 5500,
+    "chunk_characters": 1000,
+    "chunk_overlap": 150,
+    "max_source_age_days": 180,
+    "require_verified": true,
+    "accepted_verification_statuses": [
+      "human_verified",
+      "source_verified"
+    ],
+    "validation_query_fingerprint": "10f0070d60c4d0f543e97eec99c2b2cedfcb809fc4dad9bc0fbffed27f35e845",
+    "citation_policy": "model-or-verbatim-v2"
+  },
+  "languages": {
+    "en": {
+      "queries": 8,
+      "mrr_after_calibrated_cutoff": 0.75,
+      "recall_at_k_percent": 75.0
+    },
+    "hi": {
+      "queries": 8,
+      "mrr_after_calibrated_cutoff": 1.0,
+      "recall_at_k_percent": 100.0
+    },
+    "ta": {
+      "queries": 8,
+      "mrr_after_calibrated_cutoff": 1.0,
+      "recall_at_k_percent": 100.0
+    }
+  },
+  "observations": [
+    {
+      "question_id": "ktr-library-rfid:en:q1",
+      "retrieved_document_ids": [],
+      "context_document_ids": [],
+      "reciprocal_rank": 0,
+      "retrieval_seconds": 0.0601176000200212,
+      "context_characters": 0
+    },
+    {
+      "question_id": "ktr-library-rfid:en:q2",
+      "retrieved_document_ids": [],
+      "context_document_ids": [],
+      "reciprocal_rank": 0,
+      "retrieval_seconds": 0.02436060004401952,
+      "context_characters": 0
+    },
+    {
+      "question_id": "ktr-library-rfid:hi:q1",
+      "retrieved_document_ids": [
+        "srm-library-aa051c3d41af32d5",
+        "srm-hostels-efb344c164c97b96",
+        "srm-transport-05d1ba9b15526a9f",
+        "ktr-medical-library-25a81b67ca9adb8b"
+      ],
+      "context_document_ids": [
+        "srm-library-aa051c3d41af32d5",
+        "srm-hostels-efb344c164c97b96",
+        "srm-transport-05d1ba9b15526a9f",
+        "ktr-medical-library-25a81b67ca9adb8b"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.02198089996818453,
+      "context_characters": 768
+    },
+    {
+      "question_id": "ktr-library-rfid:hi:q2",
+      "retrieved_document_ids": [
+        "srm-library-aa051c3d41af32d5"
+      ],
+      "context_document_ids": [
+        "srm-library-aa051c3d41af32d5"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.024212599964812398,
+      "context_characters": 218
+    },
+    {
+      "question_id": "ktr-library-rfid:ta:q1",
+      "retrieved_document_ids": [
+        "srm-library-aa051c3d41af32d5",
+        "srm-hostels-efb344c164c97b96",
+        "srm-transport-05d1ba9b15526a9f"
+      ],
+      "context_document_ids": [
+        "srm-library-aa051c3d41af32d5",
+        "srm-hostels-efb344c164c97b96",
+        "srm-transport-05d1ba9b15526a9f"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.025881499983370304,
+      "context_characters": 596
+    },
+    {
+      "question_id": "ktr-library-rfid:ta:q2",
+      "retrieved_document_ids": [
+        "srm-library-aa051c3d41af32d5",
+        "ktr-medical-library-25a81b67ca9adb8b",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "context_document_ids": [
+        "srm-library-aa051c3d41af32d5",
+        "ktr-medical-library-25a81b67ca9adb8b",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.024570000008679926,
+      "context_characters": 618
+    },
+    {
+      "question_id": "ktr-facilities-division:en:q1",
+      "retrieved_document_ids": [
+        "srm-facilities-8cffc6f00045ae65"
+      ],
+      "context_document_ids": [
+        "srm-facilities-8cffc6f00045ae65"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.023884099908173084,
+      "context_characters": 202
+    },
+    {
+      "question_id": "ktr-facilities-division:en:q2",
+      "retrieved_document_ids": [
+        "srm-facilities-8cffc6f00045ae65"
+      ],
+      "context_document_ids": [
+        "srm-facilities-8cffc6f00045ae65"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.023391199996694922,
+      "context_characters": 202
+    },
+    {
+      "question_id": "ktr-facilities-division:hi:q1",
+      "retrieved_document_ids": [
+        "srm-facilities-8cffc6f00045ae65",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "context_document_ids": [
+        "srm-facilities-8cffc6f00045ae65",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.024853700073435903,
+      "context_characters": 369
+    },
+    {
+      "question_id": "ktr-facilities-division:hi:q2",
+      "retrieved_document_ids": [
+        "srm-facilities-8cffc6f00045ae65",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "context_document_ids": [
+        "srm-facilities-8cffc6f00045ae65",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.023845399962738156,
+      "context_characters": 369
+    },
+    {
+      "question_id": "ktr-facilities-division:ta:q1",
+      "retrieved_document_ids": [
+        "srm-facilities-8cffc6f00045ae65",
+        "srm-hostels-efb344c164c97b96",
+        "ktr-medical-cafeteria-35b7909d2e25283e"
+      ],
+      "context_document_ids": [
+        "srm-facilities-8cffc6f00045ae65",
+        "srm-hostels-efb344c164c97b96",
+        "ktr-medical-cafeteria-35b7909d2e25283e"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.02415289997588843,
+      "context_characters": 568
+    },
+    {
+      "question_id": "ktr-facilities-division:ta:q2",
+      "retrieved_document_ids": [
+        "srm-facilities-8cffc6f00045ae65",
+        "srm-hostels-efb344c164c97b96",
+        "srm-student-life-f0d141dc0270a95c",
+        "srm-clubs-7ed6c14c4901d5c7"
+      ],
+      "context_document_ids": [
+        "srm-facilities-8cffc6f00045ae65",
+        "srm-hostels-efb344c164c97b96",
+        "srm-student-life-f0d141dc0270a95c",
+        "srm-clubs-7ed6c14c4901d5c7"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.02653669996652752,
+      "context_characters": 726
+    },
+    {
+      "question_id": "ktr-vinayagar-temple:en:q1",
+      "retrieved_document_ids": [
+        "srm-religious-84f00409e4871742"
+      ],
+      "context_document_ids": [
+        "srm-religious-84f00409e4871742"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.022268400061875582,
+      "context_characters": 153
+    },
+    {
+      "question_id": "ktr-vinayagar-temple:en:q2",
+      "retrieved_document_ids": [
+        "srm-religious-84f00409e4871742"
+      ],
+      "context_document_ids": [
+        "srm-religious-84f00409e4871742"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.024557100026868284,
+      "context_characters": 153
+    },
+    {
+      "question_id": "ktr-vinayagar-temple:hi:q1",
+      "retrieved_document_ids": [
+        "srm-religious-84f00409e4871742"
+      ],
+      "context_document_ids": [
+        "srm-religious-84f00409e4871742"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.023887700052000582,
+      "context_characters": 154
+    },
+    {
+      "question_id": "ktr-vinayagar-temple:hi:q2",
+      "retrieved_document_ids": [
+        "srm-religious-84f00409e4871742",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "context_document_ids": [
+        "srm-religious-84f00409e4871742",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.025671300012618303,
+      "context_characters": 337
+    },
+    {
+      "question_id": "ktr-vinayagar-temple:ta:q1",
+      "retrieved_document_ids": [
+        "srm-religious-84f00409e4871742",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "context_document_ids": [
+        "srm-religious-84f00409e4871742",
+        "srm-hostels-efb344c164c97b96"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.024616400012746453,
+      "context_characters": 324
+    },
+    {
+      "question_id": "ktr-vinayagar-temple:ta:q2",
+      "retrieved_document_ids": [
+        "srm-religious-84f00409e4871742"
+      ],
+      "context_document_ids": [
+        "srm-religious-84f00409e4871742"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.0246171000180766,
+      "context_characters": 150
+    },
+    {
+      "question_id": "ktr-oori-ac:en:q1",
+      "retrieved_document_ids": [
+        "srm-men-hostel-0226617da422dc30"
+      ],
+      "context_document_ids": [
+        "srm-men-hostel-0226617da422dc30"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.022913999971933663,
+      "context_characters": 169
+    },
+    {
+      "question_id": "ktr-oori-ac:en:q2",
+      "retrieved_document_ids": [
+        "srm-men-hostel-0226617da422dc30"
+      ],
+      "context_document_ids": [
+        "srm-men-hostel-0226617da422dc30"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.023896300001069903,
+      "context_characters": 169
+    },
+    {
+      "question_id": "ktr-oori-ac:hi:q1",
+      "retrieved_document_ids": [
+        "srm-men-hostel-0226617da422dc30",
+        "srm-hostels-efb344c164c97b96",
+        "srm-international-hostel-2d69cffc6938417a"
+      ],
+      "context_document_ids": [
+        "srm-men-hostel-0226617da422dc30",
+        "srm-hostels-efb344c164c97b96",
+        "srm-international-hostel-2d69cffc6938417a"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.02364479994866997,
+      "context_characters": 551
+    },
+    {
+      "question_id": "ktr-oori-ac:hi:q2",
+      "retrieved_document_ids": [
+        "srm-men-hostel-0226617da422dc30",
+        "srm-hostels-efb344c164c97b96",
+        "srm-international-hostel-2d69cffc6938417a",
+        "srm-transport-05d1ba9b15526a9f"
+      ],
+      "context_document_ids": [
+        "srm-men-hostel-0226617da422dc30",
+        "srm-hostels-efb344c164c97b96",
+        "srm-international-hostel-2d69cffc6938417a",
+        "srm-transport-05d1ba9b15526a9f"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.02519329998176545,
+      "context_characters": 721
+    },
+    {
+      "question_id": "ktr-oori-ac:ta:q1",
+      "retrieved_document_ids": [
+        "srm-men-hostel-0226617da422dc30"
+      ],
+      "context_document_ids": [
+        "srm-men-hostel-0226617da422dc30"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.024421000038273633,
+      "context_characters": 179
+    },
+    {
+      "question_id": "ktr-oori-ac:ta:q2",
+      "retrieved_document_ids": [
+        "srm-men-hostel-0226617da422dc30"
+      ],
+      "context_document_ids": [
+        "srm-men-hostel-0226617da422dc30"
+      ],
+      "reciprocal_rank": 1.0,
+      "retrieval_seconds": 0.02326709998305887,
+      "context_characters": 179
+    }
+  ],
+  "human_response_annotations_created": 0
+}

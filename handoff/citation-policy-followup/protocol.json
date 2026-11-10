@@ -1,0 +1,39 @@
+{
+  "frozen_at": "2026-11-08T22:58:58.670630+00:00",
+  "primary_study_id": "0f3dfb3d-298f-47c1-a020-4be01eb4bcec",
+  "primary_campus_runs": {
+    "A": "7397049e-5b46-4f77-9362-6a4d82a50252",
+    "B": "82540012-8fa2-4827-8b33-8f199248da88",
+    "C": "168585c5-3777-4bac-aa51-8aab3151a3c5",
+    "D": "d9f859af-917e-4cf9-b6ab-574b8933ca99"
+  },
+  "primary_test_version": "a75705ed443380de",
+  "primary_corpus_version": "652d19bfd9f0b4cc",
+  "primary_index_version": "d7d31923b9ecac7f",
+  "primary_metric_sha256": {
+    "A": "30777e516ab4a910e9bfdd3be019aee642fc5a42b77424f514f551ffde3276d2",
+    "B": "1ff664f234f28d19a3caa3a7e383d488c3bbc24116a0761c1177ac9caef4a6e7",
+    "C": "e8624648122c9bf3e5fef81b8e7f690c26b4aaa175953cbc03b2009111b8afca",
+    "D": "a0d9c2aeb185a930c0431c1fcebc650f09936cc4ccfadf1e7d071887d3e9a2f3"
+  },
+  "trigger": "Primary strict model-emitted citations were omitted; the original guarded results are preserved, including the negative finding.",
+  "response_policy": "model-or-verbatim-v2",
+  "rule": "For missing model citations only: attribute a complete case/whitespace/terminal-period-normalized match to a full answer or evidence quote from exactly one supplied source. Preserve internal punctuation/signs and Indic marks. No aliases, substrings, similarity, gold references or labels enter attribution. Invalid/ambiguous content still abstains.",
+  "semantic_claim_support": "Not certified by text matching; human factuality annotations remain required.",
+  "model_prompt_generation_training_changes": false,
+  "model_configuration_sha256": "9b209c7c8e2808edfd0ee7d8a4f7498bcd94c432d691a6fc619d9b0d030bcbef",
+  "source_sha256": {
+    "backend/source_attribution.py": "4f63d3028d23a449c89ecd479364e6fc1699d2d70b4ac78e969496ae8ba88606",
+    "backend/evaluation/inference_runner.py": "58be8e77bcfb618206a37860eac3431057a4caa3ea27fe60a87f036801a969ff",
+    "backend/modeling.py": "5fb9f2fcc89facf4de18c80da7d6015ea899a34e369280ea0b4040fd2039bda6"
+  },
+  "test_protocol": "Six new official source documents are disjoint from the entire primary FAQ corpus and the validation source documents; the same 45 fresh questions are used for A/B/C/D. Original 24 validation queries and embedding/threshold choices are retained.",
+  "interpretation": "Compare arms only within a test version. Primary/follow-up percentages are not a paired causal estimate because questions and corpus differ.",
+  "software_validation": "103 passed; results/pytest-current.xml",
+  "human_review_status": "pending",
+  "followup_corpus_version": "b07405a784a7045c",
+  "followup_test_version": "29ed6c44573105ff",
+  "followup_test_sealed_at": "2026-11-08T22:58:59.199377+00:00",
+  "followup_test_checksum": "41a79c24acc3de44cbd749c4fcf5bb83cc69db1320d31b82501c6cfcc06f680d",
+  "validation_query_fingerprint": "10f0070d60c4d0f543e97eec99c2b2cedfcb809fc4dad9bc0fbffed27f35e845"
+}

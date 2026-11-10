@@ -1,0 +1,114 @@
+campus: SRM Institute of Science and Technology — Kattankulathur
+allowed_hosts:
+- www.srmist.edu.in
+- srmist.edu.in
+- dental.srmist.edu.in
+- medical.srmist.edu.in
+collection_policy: Public official pages only; capture does not itself verify a FAQ.
+  No private portals, student records or authenticated requests.
+sources:
+- id: srm-ktr-home
+  url: https://www.srmist.edu.in/
+  title: SRMIST — Kattankulathur main campus
+  category: university
+  status: capture_pending_faq_review
+- id: srm-library
+  url: https://www.srmist.edu.in/library/
+  title: Library — SRMIST
+  category: library
+  status: capture_pending_faq_review
+- id: srm-transport
+  url: https://www.srmist.edu.in/transport-facility/
+  title: Transport Facility — SRMIST
+  category: transport
+  status: capture_pending_faq_review
+- id: srm-facilities
+  url: https://www.srmist.edu.in/life-at-srm/facilities-and-operations/
+  title: Facilities and Operations — SRMIST
+  category: facilities
+  status: capture_pending_faq_review
+- id: srm-sports
+  url: https://www.srmist.edu.in/sports/
+  title: Sports — SRMIST
+  category: sports
+  status: capture_pending_faq_review
+- id: srm-community
+  url: https://www.srmist.edu.in/life-at-srm/student-life/community-centers/
+  title: Community Centers — SRMIST
+  category: student_services
+  status: capture_pending_faq_review
+- id: srm-clubs
+  url: https://www.srmist.edu.in/life-at-srm/student-life/clubs/
+  title: Clubs — SRMIST
+  category: student_services
+  status: capture_pending_faq_review
+- id: srm-religious
+  url: https://www.srmist.edu.in/life-at-srm/student-life/religious-life/
+  title: Religious Life — SRMIST
+  category: student_services
+  status: capture_pending_faq_review
+- id: srm-hostels
+  url: https://www.srmist.edu.in/srm-hostels/
+  title: SRM Hostels — SRMIST
+  category: housing
+  status: capture_pending_faq_review
+- id: srm-women-hostel
+  url: https://www.srmist.edu.in/srm-hostels/hostel-for-women/
+  title: Hostel for Women — SRMIST
+  category: housing
+  status: capture_pending_faq_review
+- id: srm-men-hostel
+  url: https://www.srmist.edu.in/srm-hostels/hostel-for-men/
+  title: Hostel for Men — SRMIST
+  category: housing
+  status: capture_pending_faq_review
+- id: srm-international-hostel
+  url: https://www.srmist.edu.in/srm-hostels/international-hostel/
+  title: International Hostel — SRMIST
+  category: housing
+  status: capture_pending_faq_review
+- id: srm-dining
+  url: https://www.srmist.edu.in/srm-hostels/dining-eateries/
+  title: Dining and Eateries — SRMIST
+  category: dining
+  status: capture_pending_faq_review
+- id: srm-anti-ragging
+  url: https://www.srmist.edu.in/life-at-srm/anti-ragging/
+  title: Anti-Ragging — SRMIST
+  category: student_services
+  status: capture_pending_faq_review
+- id: srm-student-life
+  url: https://www.srmist.edu.in/life-at-srm/student-life/
+  title: Student Life — SRMIST
+  category: student_services
+  status: capture_pending_faq_review
+- id: ktr-dental-library
+  title: Dental Library — SRM Kattankulathur Dental College
+  category: library
+  url: https://dental.srmist.edu.in/dental-library/
+  status: capture_pending_faq_review
+- id: ktr-dental-hostel
+  title: Dental Hostels — SRM Kattankulathur Dental College
+  category: housing
+  url: https://dental.srmist.edu.in/hostels/
+  status: capture_pending_faq_review
+- id: ktr-dental-mobile
+  title: Mobile Clinic — SRM Kattankulathur Dental College
+  category: student_services
+  url: https://dental.srmist.edu.in/mobile-clinic/
+  status: capture_pending_faq_review
+- id: ktr-dental-simulation
+  title: Simulation Center — SRM Kattankulathur Dental College
+  category: facilities
+  url: https://dental.srmist.edu.in/simulation-center/
+  status: capture_pending_faq_review
+- id: ktr-medical-cafeteria
+  title: Cafeteria — SRM Medical College Kattankulathur
+  category: dining
+  url: https://medical.srmist.edu.in/cafeteria/
+  status: capture_pending_faq_review
+- id: ktr-medical-library
+  title: Medical College Central Library — SRMIST Kattankulathur
+  category: library
+  url: https://medical.srmist.edu.in/srm-medical-college-hospital-research-centre-central-library/
+  status: capture_pending_faq_review

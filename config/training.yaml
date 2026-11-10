@@ -1,0 +1,26 @@
+# Local RTX 2050 study. Original 7B settings: config/profiles/.
+lora_rank: 8
+lora_alpha: 16
+lora_dropout: 0.05
+target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+learning_rate: 0.0001
+batch_size: 1
+gradient_accumulation_steps: 16
+epochs: 2
+warmup_ratio: 0.03
+weight_decay: 0.01
+max_sequence_length: 1024
+gradient_checkpointing: true
+precision: float16
+optimizer: paged_adamw_8bit
+seed: 42
+language_balanced_sampling: false
+language_balanced_selection: true
+maximum_training_examples_per_language: 256
+maximum_validation_examples_per_language: 32
+supervised_logits_only: true
+required_training_languages: [en, hi, ta]
+abstention_augmentation: true
+abstention_fraction: 0.1
+evaluation_steps: 20
+save_steps: 20
