@@ -21,12 +21,16 @@ function chatLanguage() { return chatState.preference === 'auto' ? typedLanguage
 function suggestionMarkup(language, compact=false) {
   return chatState.suggestions.map(item => `<button type="button" class="${compact ? 'chat-topic-chip' : 'chat-suggestion'}" data-suggestion="${esc(item.id)}" lang="${language}" aria-label="${esc(item.questions[language])}" ${chatState.busy ? 'disabled' : ''}><strong>${esc(item.labels[language])}</strong>${compact ? '' : `<span>${esc(item.questions[language])}</span><i aria-hidden="true">↗</i>`}</button>`).join('');
 }
+function chatAnswerMarkup(result) {
+  if (result.answer_method !== 'prepared_demo' || !Array.isArray(result.answer_sections)) return esc(result.generated_answer);
+  return `<h3 class="demo-answer-title">${esc(result.answer_title)}</h3>\n\n<p class="demo-answer-intro">${esc(result.answer_intro)}</p>\n\n${result.answer_sections.map(section => `<section class="demo-answer-section"><h4>${esc(section.heading)}</h4>\n<p>${esc(section.text)}</p></section>`).join('\n\n')}`;
+}
 function chatMessagesMarkup() {
-  if (!chatState.messages.length) return `<div class="chat-empty"><div class="assistant-emblem" aria-hidden="true">cq<span>✦</span></div><h2>Hi! How can I help you?</h2><p>Pick a question below, or type your own.<br>English, हिन्दी, தமிழ் — your question sets the language.</p><div class="chat-suggestions" id="chat-suggestions">${suggestionMarkup(chatLanguage())}</div></div>`;
+  if (!chatState.messages.length) return `<div class="chat-empty"><div class="assistant-emblem" aria-hidden="true">cq<span>✦</span></div><h2>Hi! How can I help you?</h2><p>Try one of five detailed demo guides below.<br>Ask in English, हिन्दी or தமிழ் for a full answer in your language.</p><div class="chat-suggestions" id="chat-suggestions">${suggestionMarkup(chatLanguage())}</div></div>`;
   return chatState.messages.map(message => {
     if (message.role === 'user') return `<div class="chat-turn user-turn"><div class="chat-message user" lang="${message.language}">${esc(message.text)}</div><span class="chat-person" aria-hidden="true">You</span></div>`;
     const result = message.result, language = result?.language || message.language, copy = chatCopy[language];
-    const content = message.pending ? `<span class="spinner"></span> ${esc(copy.pending)}` : message.error ? esc(copy.error) + `<small class="chat-error-detail">${esc(message.error)}</small>` : `<div class="chat-answer-text">${esc(result.generated_answer)}</div>${result.answer_method === 'source_faq' || result.answer_method === 'localized_source_faq' ? `<small class="chat-answer-origin">${esc(copy.faq)}</small>` : ''}${(result.citations || []).map(citation => citationMarkup(citation,result.retrieved || [])).join('')}`;
+    const content = message.pending ? `<span class="spinner"></span> ${esc(copy.pending)}` : message.error ? esc(copy.error) + `<small class="chat-error-detail">${esc(message.error)}</small>` : `${result.is_demo ? `<small class="chat-demo-label">${esc(result.demo_notice)}</small>` : ''}<div class="chat-answer-text ${result.is_demo ? 'detailed-answer' : ''}">${chatAnswerMarkup(result)}</div>${result.answer_method === 'source_faq' || result.answer_method === 'localized_source_faq' ? `<small class="chat-answer-origin">${esc(copy.faq)}</small>` : ''}${(result.citations || []).map(citation => citationMarkup(citation,result.reference_sources || result.retrieved || [])).join('')}`;
     return `<div class="chat-turn assistant-turn"><span class="chat-avatar" aria-hidden="true">cq</span><div class="chat-reply"><span class="chat-speaker">CampusQA <small>${{en:'English',hi:'हिन्दी',ta:'தமிழ்'}[language]}</small></span><div class="chat-message ${message.error ? 'error' : 'assistant'}" lang="${language}" ${message.pending ? 'aria-busy="true"' : ''}>${content}</div></div></div>`;
   }).join('');
 }
@@ -38,7 +42,9 @@ function refreshChat() {
   $('#chat-followup-topics').innerHTML = suggestionMarkup(chatLanguage(),true);
   $('#send-chat').disabled = chatState.busy;
   $('#new-chat').disabled = chatState.busy;
-  messages.scrollTo({top:messages.scrollHeight,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+  const latest = messages.querySelector('.assistant-turn:last-child');
+  const top = latest ? latest.getBoundingClientRect().top - messages.getBoundingClientRect().top + messages.scrollTop - 12 : 0;
+  messages.scrollTo({top,behavior:'instant'});
 }
 function refreshChatLanguage() {
   if (!$('#question')) return;
@@ -97,7 +103,7 @@ function empty(title = 'Evaluation not yet performed.', text = 'Results will app
 function details(rows) { return `<dl class="detail-list">${rows.map(([key,value]) => `<div><dt>${esc(key)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>`; }
 function citationMarkup(citation, retrieved) {
   const source = retrieved.find(item => item.source_document_id === citation.document_id);
-  const review = source?.reviewer_kind === 'ai' ? 'AI source check · human review pending' :
+  const review = source?.is_demo_reference ? ({en:'Official reference · Prepared demo',hi:'आधिकारिक स्रोत · डेमो विवरण',ta:'அதிகாரப்பூர்வ ஆதாரம் · டெமோ விளக்கம்'}[source.language] || 'Official reference · Prepared demo') : source?.reviewer_kind === 'ai' ? 'AI source check · human review pending' :
     source?.reviewer_kind === 'human' ? 'Human-reviewed source' : 'Review provenance unavailable';
   return `<a class="citation" href="${esc(citation.url)}" target="_blank" rel="noopener">[${esc(citation.label)}] ${esc(citation.title)} ↗<br><small>${esc(review)}</small></a>`;
 }
@@ -223,7 +229,7 @@ async function campus() {
 async function chat() {
   chatState.suggestions = (await api('/chat/suggestions')).questions;
   return `<div class="chat-page-heading"><div class="eyebrow"><span class="live-dot"></span> SRM KATTANKULATHUR · CAMPUS GUIDE</div><h1>Your campus. <span>Your language.</span></h1><p>Ask in English, <span lang="hi">हिन्दी</span> or <span lang="ta">தமிழ்</span>. I’ll reply in the same language.</p></div>
-  <section class="campus-chat-panel" aria-label="Campus assistant"><div class="chat-panel-header"><div><span class="chat-header-dot"></span><strong>CampusQA</strong><span class="chat-header-note">Here to help you find your way</span></div><button class="button small" id="new-chat" ${chatState.busy ? 'disabled' : ''}>＋ New chat</button></div>
+  <section class="campus-chat-panel" aria-label="Campus assistant"><div class="chat-panel-header"><div><span class="chat-header-dot"></span><strong>CampusQA</strong><span class="chat-header-note">Five detailed campus guides · Three languages</span></div><button class="button small" id="new-chat" ${chatState.busy ? 'disabled' : ''}>＋ New chat</button></div>
   <div class="chat-body" id="messages" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions text">${chatMessagesMarkup()}</div>
   <div class="chat-followups" id="chat-followups" ${chatState.messages.length ? '' : 'hidden'}><span>Try another topic</span><div id="chat-followup-topics">${suggestionMarkup(chatLanguage(),true)}</div></div>
   <form class="chat-compose" id="chat-form"><div class="chat-input-wrap"><label class="sr-only" for="question">Your campus question</label><textarea id="question" rows="2" placeholder="${esc(chatCopy[chatLanguage()].placeholder)}" required minlength="3" maxlength="2000">${esc(chatState.draft)}</textarea><button type="submit" id="send-chat" aria-label="Send message" ${chatState.busy ? 'disabled' : ''}><span aria-hidden="true">↑</span></button></div><div class="chat-compose-meta"><div class="chat-language-control"><label for="chat-language">Reply language</label><select id="chat-language">${[['auto','Auto-detect'],['en','English'],['hi','हिन्दी'],['ta','தமிழ்']].map(([value,name]) => `<option value="${value}" ${chatState.preference === value ? 'selected' : ''}>${name}</option>`).join('')}</select></div><span id="chat-detected">${chatState.preference === 'auto' && !chatState.draft ? 'Auto-detect · English / हिन्दी / தமிழ்' : chatCopy[chatLanguage()].detected}</span><small>Enter to send · Shift + Enter for a new line</small></div></form></section>

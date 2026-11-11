@@ -1,46 +1,45 @@
-# Multilingual campus chatbot
+# Detailed multilingual chatbot demo
 
-Application update: 11 November 2026. This interface update is separate from the completed research experiments and introduces no new benchmark scores or model training.
+Current project folder: `D:\multilingual_faq`. The landing page is a chatbot at `http://127.0.0.1:8765/`.
 
-Open `http://127.0.0.1:8765/` for the chatbot. The research overview, training charts, experiment history, source corpus, reviews and reports remain available in the sidebar.
+## Five detailed guides
 
-## Ask in your language
-
-The default **Auto-detect** setting routes English, Devanagari Hindi and Tamil questions to the corresponding reply language. English entity names inside a Hindi or Tamil question do not override the Indic script. Questions mixing both Indic scripts require an explicit reply-language choice. Transliteration and numeric-only queries also need an explicit language choice.
-
-Choose a suggested question or type in the message box. Enter sends the question; Shift + Enter inserts a new line. **New chat** clears the current conversation. Conversation history stays in the open browser session and is not written to research predictions or human annotations.
-
-## Five quick topics
-
-| Topic | Information returned from the reviewed FAQ |
+| Topic | Example English question |
 |---|---|
-| Library technology | The technology used for Central Library automation |
-| Campus bus booking | Where students manage bus bookings |
-| Oori hostel rooms | Whether the hostel has air-conditioned rooms |
-| Temple on campus | The listed campus temple |
-| Campus maintenance | The division responsible for facilities |
+| SRM overview | Tell me about SRM. |
+| Hostels and accommodation | Tell me about hostels at SRM. |
+| Placements and career preparation | Tell me about placements at SRM. |
+| Admissions and courses | Tell me about admissions at SRM. |
+| Campus life and facilities | Tell me about campus life and facilities. |
 
-Each suggestion has English, Hindi and Tamil questions and answers drawn from the active versioned FAQ corpus. Clicking a suggestion sends its full localized question through the API and displays a real source citation. Exact canonical questions and a small set of authored question variants use this FAQ path without GPU inference. It does not use keyword matching or held-out test references to assign an answer.
+Every topic has an authored English, Hindi and Tamil version: 15 detailed answers. Each answer contains a title, an introduction and four named sections, rather than a one-line FAQ response. Examples in Hindi include `एसआरएम के छात्रावासों के बारे में बताइए।`; in Tamil, `எஸ்ஆர்எம் வேலைவாய்ப்புகள் பற்றி சொல்லுங்கள்.`
 
-Source records must pass the corpus checksum, existing evidence/version checks, accepted review status, freshness and effective-date checks. These are AI source-reviewed pilot records; independent human review remains pending. Source citations retain that provenance.
+The user's short forms such as `tell about hostels` and `tell about placements` are also supported. Common polite prefixes, spacing and punctuation are normalized. Matching uses explicit supported questions and variants, rather than assigning a topic merely because its keyword appears in an unrelated question.
 
-## Other questions and availability
+## Edit the demo answers
 
-Other questions continue through the existing local Qwen + LoRA + RAG path. A response in the wrong script is replaced with the corresponding reviewed FAQ translation only when the inference pipeline established exact source attribution to that FAQ. Otherwise, the application abstains in the requested language. Raw model text remains available in the API response.
+All prepared content is in [`config/demo_answers.json`](../config/demo_answers.json). Each topic provides localized `labels`, `questions`, `aliases`, and `answers`. An answer has `title`, `intro`, and four `sections`, each containing `heading` and `text`. Official reference links are provided in `sources`.
 
-When the model is unavailable because of GPU memory, missing prerequisites or another active request, the chatbot returns a localized availability notice and keeps its quick-question buttons usable. An availability notice is not a factual answer or evidence that a question is unanswerable. The app does not stop other projects or unload their GPU models.
+The application reads this file for each request, so content edits do not require model training. Refresh the page after changing suggestions. The demo is scoped to Kattankulathur. It avoids invented placement rates, salary packages, current fees, deadlines and room guarantees; users can follow the official references for current details.
 
-## API and experiment boundaries
+Prepared answers are visibly labelled as demo overviews. They are not represented as generated Qwen answers, human-certified policies or new experimental predictions. Responses explicitly include `answer_method: "prepared_demo"`, `model_inference_performed: false`, `research_scored: false` and `is_demo: true`. Reference links are identified as demo references, not vector-retrieval hits.
 
-- `GET /api/chat/suggestions` returns the five available topics and their three question localizations.
-- `POST /api/chat` with `answer_mode: "faq_first"` enables the application FAQ path, conversational script routing and localized availability handling. `language: null` requests automatic detection.
-- The default `answer_mode: "model"` preserves the existing model API. Closed-book A/B requests do not receive FAQ shortcut answers.
-- Responses identify `answer_method`, include actual source citations when applicable and set `research_scored: false`. Direct FAQ replies additionally identify that no model inference was performed.
+## Language and interface
 
-The benchmark and campus evaluation workers, model prompts, quantization, embedding threshold, sealed datasets, adapters and historical metric snapshots are unchanged. The FAQ shortcut is not claimed as a new fine-tuned model result. Original research validation counts in the manuscript describe the recorded research snapshot; current interface checks are recorded separately in `results/chat-ui-full-suite.xml` and `results/chat-ui-browser.log`.
+Auto-detection uses English, Devanagari Hindi and Tamil script. English entity names inside Hindi/Tamil do not override the Indic script. An explicit reply-language selector remains available for transliteration, numeric-only queries or mixed Indic scripts.
 
-## Verification
+Click a topic or type a question. Enter sends; Shift + Enter adds a line. **New chat** clears the browser conversation. Conversation text is not inserted into research predictions or human annotations. Long answers render as escaped text in semantic headings and paragraphs. The conversation moves immediately to the start of the latest answer, allowing its introduction to be read before scrolling through the sections.
 
-The interface update passed 133 isolated Python tests. The full Edge run passed seven browser tests and skipped the model-generation smoke check while free GPU memory was below its minimum. When GPU capacity became available, that exact model smoke check passed separately with a real cited response. The final targeted chat run passed all four core chat/mobile cases, including all 15 topic/language combinations and same-language follow-up chips; its unavailable-model case was skipped because the model was then available. That unavailable branch had already passed against the real website and is also covered by isolated tests in all three languages.
+## Compatibility and research boundaries
 
-The original ten research runs, 28,274 predictions and zero human annotations are unchanged. See the public [interface validation record](../handoff/chat-interface-validation.json). Desktop and mobile screenshots are retained locally under `results/chat-ui-*.png`.
+`GET /api/chat/suggestions` now returns the five broad demo topics in all three languages. The UI calls `POST /api/chat` with `answer_mode: "faq_first"` and automatic language selection. In C/D application mode, a supported demo question is answered first; older exact source-FAQ questions still use their existing source-backed path. Unmatched questions continue to the local model when available. The default `answer_mode: "model"` and closed-book A/B behavior remain unchanged.
+
+Busy or unavailable model requests receive a localized availability notice. The five prepared guides remain usable without free GPU memory. No unrelated GPU service is stopped.
+
+The benchmark workers, frozen model prompts and inference code, training data, adapter, retrieval threshold, sealed campus corpus/tests and historical metrics are unchanged. This is an application demo update, not an additional model-quality experiment.
+
+## Validation
+
+The update passed 157 isolated Python tests. Browser checks verified all 15 detailed answer/language combinations, structured sections, visible demo labels, actual source links, language retention and mobile layout. Four directly affected browser cases passed; the environment-dependent unavailable-model case was skipped because the model was available. The supported demo questions themselves never load the GPU model.
+
+The original 10 research runs, 28,274 predictions and zero human annotations are preserved. See [`handoff/detailed-demo-validation.json`](../handoff/detailed-demo-validation.json) for the application verification record. The earlier short-FAQ interface record remains separately preserved in [`handoff/chat-interface-validation.json`](../handoff/chat-interface-validation.json).

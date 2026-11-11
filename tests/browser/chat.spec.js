@@ -12,7 +12,7 @@ test('chat is the home screen with five source-backed suggestions', async ({page
   expect(errors).toEqual([]);
 });
 
-test('all five questions auto-detect English, Hindi and Tamil and return sourced replies', async ({page,request}) => {
+test('all five broad questions return detailed demo answers in English, Hindi and Tamil', async ({page,request}) => {
   const before = await (await request.get('/api/experiments')).json();
   const topics = (await (await request.get('/api/chat/suggestions')).json()).questions;
   expect(topics).toHaveLength(5);
@@ -27,13 +27,19 @@ test('all five questions auto-detect English, Hindi and Tamil and return sourced
       expect(response.request().postDataJSON().language).toBeNull();
       const answer = await response.json();
       expect(answer.language).toBe(language);
-      expect(answer.answer_method).toBe('source_faq');
+      expect(answer.answer_method).toBe('prepared_demo');
+      expect(answer.is_demo).toBe(true);
+      expect(answer.answer_sections).toHaveLength(4);
+      expect(answer.generated_answer.length).toBeGreaterThan(900);
       expect(answer.model_inference_performed).toBe(false);
       expect(answer.research_scored).toBe(false);
-      expect(answer.citations).toHaveLength(1);
+      expect(answer.citations.length).toBeGreaterThan(0);
       await expect(page.locator('.chat-message.assistant').last()).toHaveAttribute('lang',language);
       await expect(page.locator('.chat-message.assistant .chat-answer-text').last()).toHaveText(answer.generated_answer);
-      await expect(page.locator('.chat-message.assistant .citation').last()).toHaveAttribute('href',answer.citations[0].url);
+      await expect(page.locator('.chat-message.assistant').last().locator('.citation').first()).toHaveAttribute('href',answer.citations[0].url);
+      await expect(page.locator('.chat-message.assistant').last().locator('.demo-answer-section')).toHaveCount(4);
+      await expect(page.locator('.chat-message.assistant').last().locator('.chat-demo-label')).toBeVisible();
+      await expect(page.locator('.chat-message.assistant').last().locator('.demo-answer-title')).toBeInViewport();
       await expect(page.locator('.chat-topic-chip').first()).toHaveAttribute('lang',language);
       await expect(page.getByRole('button', {name:'Send message'})).toBeEnabled();
     }

@@ -2,7 +2,7 @@
 
 **[Read the research-paper draft](RESEARCH_DRAFT.md)** — manuscript with abstract, related work, methods, actual results, limitations, references and experimental provenance. Author and affiliation details remain to be confirmed; human factuality review is pending.
 
-**The website opens as a chatbot.** Type in English, Hindi or Tamil for a reply in the same language, or use one of five suggested questions about library technology, bus booking, Oori hostel rooms, the campus temple and campus maintenance. Quick answers come directly from source-reviewed FAQs; other questions use the local model when available. If it is busy or short of GPU memory, the assistant gives a localized availability message while the five FAQ topics remain usable. The research dashboard remains under **Overview**. See [the chat interface guide](docs/CHAT_INTERFACE.md).
+**The website opens as a chatbot with five detailed demo guides:** SRM overview, hostels, placements, admissions and campus life. Ask in English, Hindi or Tamil for a full answer in the same language, with an introduction and four titled sections. Try “tell me about SRM”, “tell about hostels” or “tell about placements”. These authored demo answers work without GPU inference and are labelled as prepared demo content. Other questions retain the source-FAQ/local-model path. The research dashboard remains under **Overview**. See [the chat interface guide](docs/CHAT_INTERFACE.md).
 
 **Active study: Qwen/Qwen2.5-1.5B-Instruct on the laptop RTX 2050.** The user explicitly approved this change so actual GPU experiments can run with 4 GiB VRAM. The original 7B model/training settings are archived in `config/profiles/`; 1.5B results must never be represented as 7B results. See [the authorized study amendments](docs/STUDY_AMENDMENTS.md).
 
@@ -26,7 +26,7 @@ The public repository includes the implementation, pinned configuration, reviewe
 In PowerShell:
 
 ```powershell
-Set-Location 'D:\shameek RAI'
+Set-Location 'D:\multilingual_faq'
 & '.\.venv\Scripts\python.exe' -m backend.cli serve --port 8765
 ```
 

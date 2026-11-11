@@ -14,7 +14,8 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from backend.college import college_summary
-from backend.campus_chat import detect_chat_language, enforce_reply_language, faq_reply, suggestions, unavailable_reply
+from backend.demo_chat import demo_reply, demo_suggestions
+from backend.campus_chat import detect_chat_language, enforce_reply_language, faq_reply, unavailable_reply
 from backend.datasets import LANGUAGES, current_manifest, identify_language, load_split
 from backend.db import Database
 from backend.evaluation.evaluation_runner import evaluate_predictions
@@ -306,7 +307,7 @@ class ChatRequest(BaseModel):
 
 @app.get("/api/chat/suggestions")
 def chat_suggestions():
-    return suggestions()
+    return demo_suggestions()
 
 
 @app.post("/api/chat")
@@ -316,6 +317,9 @@ def chat(body: ChatRequest):
     if not language:
         raise HTTPException(422,"Choose English, Hindi or Tamil explicitly for mixed-script or transliterated questions.")
     if body.answer_mode == "faq_first" and body.experiment in {"C", "D"}:
+        prepared = demo_reply(body.question, language)
+        if prepared is not None:
+            return prepared
         answer = faq_reply(body.question, language)
         if answer is not None:
             return answer

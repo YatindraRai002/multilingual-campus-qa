@@ -1,0 +1,626 @@
+{
+  "schema_version": 1,
+  "purpose": "prepared_interactive_demo",
+  "campus": "Kattankulathur",
+  "prepared_on": "2026-11-11",
+  "not_research_data": true,
+  "topics": [
+    {
+      "id": "demo-srm-overview",
+      "labels": {
+        "en": "About SRM",
+        "hi": "एसआरएम के बारे में",
+        "ta": "எஸ்ஆர்எம் பற்றி"
+      },
+      "questions": {
+        "en": "Tell me about SRM.",
+        "hi": "मुझे एसआरएम के बारे में बताइए।",
+        "ta": "எஸ்ஆர்எம் பற்றி சொல்லுங்கள்."
+      },
+      "aliases": {
+        "en": [
+          "tell about srm",
+          "tell me about srm",
+          "tell me about srmist",
+          "about srm",
+          "what is srm",
+          "srm",
+          "srmist",
+          "tell me about srm university",
+          "give me an overview of srm"
+        ],
+        "hi": [
+          "एसआरएम के बारे में बताओ",
+          "एसआरएम के बारे में बताइए",
+          "मुझे एसआरएम के बारे में बताओ",
+          "SRM के बारे में बताओ",
+          "SRM के बारे में बताइए",
+          "एसआरएम क्या है"
+        ],
+        "ta": [
+          "எஸ்ஆர்எம் பற்றி கூறுங்கள்",
+          "எஸ்ஆர்எம் பற்றி சொல்லவும்",
+          "SRM பற்றி சொல்லுங்கள்",
+          "SRM பற்றி கூறுங்கள்",
+          "எஸ்ஆர்எம் என்றால் என்ன"
+        ]
+      },
+      "answers": {
+        "en": {
+          "title": "SRMIST at a glance",
+          "intro": "SRM Institute of Science and Technology, usually called SRMIST, is a higher-education institution. This demo focuses on its Kattankulathur campus near Chennai in Tamil Nadu.",
+          "sections": [
+            {
+              "heading": "Study and academic choices",
+              "text": "The university presents programmes across areas such as engineering and technology, management, science and humanities, and health sciences. Start with the particular degree and department that interest you, because course content and availability depend on the programme and campus."
+            },
+            {
+              "heading": "Learning beyond lectures",
+              "text": "A useful way to explore SRM is to look at the curriculum alongside laboratories, projects, research interests and opportunities to work with other students. When comparing courses, ask how projects, practical work and elective choices fit your goals."
+            },
+            {
+              "heading": "Living on campus",
+              "text": "The campus information pages cover hostels, the library, sports, student activities and transport. These make the university experience broader than classroom study. Accommodation, daily travel and the facilities near your department are useful things to consider before joining."
+            },
+            {
+              "heading": "Where to look next",
+              "text": "Use the official programme and admissions pages for eligibility, current fees and application instructions. You can ask this demo about hostels, placements, admissions or campus life for a more focused explanation. The overview does not claim a current ranking or guarantee an outcome."
+            }
+          ]
+        },
+        "hi": {
+          "title": "एसआरएमआईएसटी का परिचय",
+          "intro": "एसआरएम इंस्टीट्यूट ऑफ साइंस एंड टेक्नोलॉजी को सामान्यतः एसआरएमआईएसटी कहा जाता है। इस डेमो में चेन्नई के पास तमिलनाडु स्थित कट्टनकुलथूर परिसर की जानकारी दी गई है।",
+          "sections": [
+            {
+              "heading": "पढ़ाई के विकल्प",
+              "text": "विश्वविद्यालय की जानकारी में इंजीनियरिंग और प्रौद्योगिकी, प्रबंधन, विज्ञान और मानविकी तथा स्वास्थ्य विज्ञान जैसे क्षेत्रों के पाठ्यक्रम शामिल हैं। अपनी रुचि की डिग्री और विभाग से शुरुआत करें, क्योंकि विषय और उपलब्धता कार्यक्रम तथा परिसर के अनुसार अलग हो सकते हैं।"
+            },
+            {
+              "heading": "कक्षा से आगे सीखना",
+              "text": "किसी पाठ्यक्रम को समझते समय उसके विषयों के साथ प्रयोगशालाओं, परियोजनाओं और शोध के अवसरों को भी देखें। विभाग से पूछें कि व्यावहारिक काम, वैकल्पिक विषय और समूह परियोजनाएँ आपके शैक्षणिक लक्ष्यों में कैसे मदद कर सकती हैं।"
+            },
+            {
+              "heading": "परिसर में जीवन",
+              "text": "आधिकारिक परिसर पृष्ठों में छात्रावास, पुस्तकालय, खेल, छात्र गतिविधियाँ और परिवहन की जानकारी मिलती है। विश्वविद्यालय चुनते समय रहने की व्यवस्था, विभाग तक यात्रा और दैनिक सुविधाओं पर भी विचार करना उपयोगी है।"
+            },
+            {
+              "heading": "आगे की जानकारी कहाँ मिलेगी",
+              "text": "पात्रता, वर्तमान शुल्क और आवेदन प्रक्रिया के लिए संबंधित आधिकारिक पाठ्यक्रम तथा प्रवेश पृष्ठ देखें। इस डेमो से छात्रावास, प्लेसमेंट, प्रवेश या परिसर के जीवन के बारे में भी पूछ सकते हैं। यह परिचय किसी वर्तमान रैंकिंग या निश्चित परिणाम का दावा नहीं करता।"
+            }
+          ]
+        },
+        "ta": {
+          "title": "எஸ்ஆர்எம்ஐஎஸ்டி — ஓர் அறிமுகம்",
+          "intro": "எஸ்ஆர்எம் அறிவியல் மற்றும் தொழில்நுட்ப நிறுவனம் பொதுவாக எஸ்ஆர்எம்ஐஎஸ்டி என்று அழைக்கப்படுகிறது. இந்த விளக்கம் தமிழ்நாட்டில் சென்னைக்கு அருகிலுள்ள காட்டாங்குளத்தூர் வளாகத்தை மையமாகக் கொண்டது.",
+          "sections": [
+            {
+              "heading": "படிப்புத் தேர்வுகள்",
+              "text": "பல்கலைக்கழகத் தகவல்களில் பொறியியல் மற்றும் தொழில்நுட்பம், மேலாண்மை, அறிவியல் மற்றும் மனிதவியல், சுகாதார அறிவியல் போன்ற துறைகள் இடம்பெறுகின்றன. பாடத்திட்டமும் கிடைக்கும் படிப்புகளும் துறை மற்றும் வளாகத்தைப் பொறுத்து மாறுவதால், உங்களுக்கு விருப்பமான பட்டப்படிப்பை முதலில் தேர்ந்தெடுக்கவும்."
+            },
+            {
+              "heading": "வகுப்பறைக்கு அப்பால் கற்றல்",
+              "text": "ஒரு படிப்பை மதிப்பிடும்போது பாடங்கள் மட்டுமின்றி ஆய்வகங்கள், செய்முறைப் பயிற்சி, திட்டப்பணிகள் மற்றும் ஆராய்ச்சி வாய்ப்புகளையும் பார்க்கலாம். விருப்பப் பாடங்களும் குழுத் திட்டங்களும் உங்கள் இலக்குகளுக்கு எவ்வாறு உதவும் என்பதைத் துறையிடம் கேட்டறியுங்கள்."
+            },
+            {
+              "heading": "வளாக வாழ்க்கை",
+              "text": "விடுதிகள், நூலகம், விளையாட்டு, மாணவர் செயல்பாடுகள் மற்றும் போக்குவரத்து பற்றிய தகவல்களை அதிகாரப்பூர்வ வளாகப் பக்கங்களில் காணலாம். தங்குமிடம், தினசரிப் பயணம் மற்றும் துறைக்கு அருகிலுள்ள வசதிகளையும் கல்லூரித் தேர்வின் ஒரு பகுதியாகக் கருதுங்கள்."
+            },
+            {
+              "heading": "அடுத்து என்ன பார்க்கலாம்",
+              "text": "தகுதி, தற்போதைய கட்டணம் மற்றும் விண்ணப்ப வழிமுறைகளுக்கு அதிகாரப்பூர்வ படிப்பு மற்றும் சேர்க்கைப் பக்கங்களைப் பயன்படுத்துங்கள். விடுதிகள், வேலைவாய்ப்பு, சேர்க்கை அல்லது வளாக வாழ்க்கை பற்றி இந்த டெமோவிடம் கேட்கலாம். இவ்விளக்கம் தற்போதைய தரவரிசையையோ உறுதியான பலனையையோ கூறவில்லை."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "id": "srmist-home",
+          "title": "SRMIST — official website",
+          "url": "https://www.srmist.edu.in/"
+        },
+        {
+          "id": "srmist-admissions",
+          "title": "SRMIST — Admissions India",
+          "url": "https://www.srmist.edu.in/admission-india/"
+        },
+        {
+          "id": "srmist-student-life",
+          "title": "SRMIST — Student Life",
+          "url": "https://www.srmist.edu.in/life-at-srm/student-life/"
+        }
+      ]
+    },
+    {
+      "id": "demo-hostels",
+      "labels": {
+        "en": "Hostels & accommodation",
+        "hi": "छात्रावास और आवास",
+        "ta": "விடுதிகள் மற்றும் தங்குமிடம்"
+      },
+      "questions": {
+        "en": "Tell me about hostels at SRM.",
+        "hi": "एसआरएम के छात्रावासों के बारे में बताइए।",
+        "ta": "எஸ்ஆர்எம் விடுதிகளைப் பற்றி சொல்லுங்கள்."
+      },
+      "aliases": {
+        "en": [
+          "tell about hostels",
+          "tell me about hostels",
+          "tell me about hostel",
+          "tell about hostel",
+          "hostels",
+          "hostel",
+          "srm hostels",
+          "tell me about srm hostels",
+          "what are the hostel facilities",
+          "tell me about accommodation"
+        ],
+        "hi": [
+          "छात्रावास के बारे में बताओ",
+          "छात्रावासों के बारे में बताइए",
+          "एसआरएम के हॉस्टल के बारे में बताओ",
+          "हॉस्टल के बारे में बताओ",
+          "हॉस्टल की जानकारी",
+          "छात्रावास"
+        ],
+        "ta": [
+          "விடுதிகள் பற்றி சொல்லுங்கள்",
+          "விடுதி பற்றி சொல்லுங்கள்",
+          "விடுதிகள் பற்றி கூறுங்கள்",
+          "SRM விடுதி பற்றி சொல்லுங்கள்",
+          "விடுதி வசதிகள் என்ன"
+        ]
+      },
+      "answers": {
+        "en": {
+          "title": "Hostels and accommodation at SRM Kattankulathur",
+          "intro": "SRMIST publishes separate hostel information for men, women and international students. The hostel pages are a starting point for understanding residential options at Kattankulathur; a specific room is subject to the current allocation process.",
+          "sections": [
+            {
+              "heading": "Room choices",
+              "text": "Room type, sharing arrangements and facilities vary by block. For example, Oori is listed as an air-conditioned men’s hostel. Do not assume that every hostel has the same room layout, bathroom arrangement or amenities."
+            },
+            {
+              "heading": "Food and everyday living",
+              "text": "When considering accommodation, check the current mess arrangement, meal options, laundry access, study spaces and the walking distance to your department. Confirm which facilities belong to your allocated block rather than relying on a general description of campus life."
+            },
+            {
+              "heading": "Booking and practical questions",
+              "text": "Use the official hostel instructions and the relevant student portal. Before paying, ask about room availability, the complete hostel and mess charge, the allocation schedule and the applicable cancellation or refund rules. Keep copies of official confirmations."
+            },
+            {
+              "heading": "Rules and support",
+              "text": "Read the current residence rules and ask how to contact the warden or hostel office for maintenance and other concerns. This demo does not state a live room price, promise a particular room, or replace the official hostel notice."
+            }
+          ]
+        },
+        "hi": {
+          "title": "एसआरएम कट्टनकुलथूर में छात्रावास",
+          "intro": "एसआरएमआईएसटी पुरुष, महिला और अंतरराष्ट्रीय छात्रों के लिए अलग छात्रावास संबंधी जानकारी प्रकाशित करता है। कट्टनकुलथूर में आवास के विकल्प समझने के लिए ये पृष्ठ उपयोगी हैं, लेकिन किसी कमरे का आवंटन वर्तमान प्रक्रिया के अनुसार होता है।",
+          "sections": [
+            {
+              "heading": "कमरों के विकल्प",
+              "text": "कमरे का प्रकार, उसमें रहने वाले छात्रों की संख्या और सुविधाएँ ब्लॉक के अनुसार अलग हो सकती हैं। उदाहरण के लिए, ओरी एक वातानुकूलित पुरुष छात्रावास है। सभी छात्रावासों में एक जैसा कमरा या स्नानघर होने की धारणा न बनाएँ।"
+            },
+            {
+              "heading": "भोजन और दैनिक सुविधाएँ",
+              "text": "रहने का विकल्प चुनते समय वर्तमान मेस व्यवस्था, भोजन के विकल्प, कपड़े धोने की सुविधा, पढ़ाई के स्थान और विभाग से दूरी के बारे में पूछें। पूरे परिसर की सामान्य सुविधाओं और आपके आवंटित ब्लॉक की सुविधाओं में अंतर हो सकता है।"
+            },
+            {
+              "heading": "बुकिंग के समय क्या पूछें",
+              "text": "आधिकारिक छात्रावास निर्देश और संबंधित छात्र पोर्टल का उपयोग करें। भुगतान से पहले कमरे की उपलब्धता, छात्रावास और मेस का कुल शुल्क, आवंटन समय-सारणी तथा रद्द करने या धनवापसी के लागू नियमों की पुष्टि करें। आधिकारिक पुष्टि की प्रति रखें।"
+            },
+            {
+              "heading": "नियम और सहायता",
+              "text": "निवास के वर्तमान नियम पढ़ें और रखरखाव या अन्य समस्या होने पर वार्डन तथा छात्रावास कार्यालय से संपर्क करने का तरीका जानें। यह डेमो किसी कमरे की गारंटी या वर्तमान शुल्क की घोषणा नहीं करता और आधिकारिक सूचना का विकल्प नहीं है।"
+            }
+          ]
+        },
+        "ta": {
+          "title": "எஸ்ஆர்எம் காட்டாங்குளத்தூர் விடுதிகள்",
+          "intro": "ஆண்கள், பெண்கள் மற்றும் சர்வதேச மாணவர்களுக்கான விடுதித் தகவல்களை எஸ்ஆர்எம்ஐஎஸ்டி தனித்தனியாக வெளியிடுகிறது. காட்டாங்குளத்தூரில் தங்குமிடத்தைப் புரிந்துகொள்ள இவை உதவும்; குறிப்பிட்ட அறை கிடைப்பது தற்போதைய ஒதுக்கீட்டு முறையைப் பொறுத்தது.",
+          "sections": [
+            {
+              "heading": "அறை வகைகள்",
+              "text": "அறை வகை, பகிர்ந்து தங்கும் மாணவர்களின் எண்ணிக்கை மற்றும் வசதிகள் கட்டடத்தைப் பொறுத்து மாறலாம். உதாரணமாக, ஓரி குளிர்சாதன வசதியுள்ள ஆண்கள் விடுதியாகும். எல்லா விடுதிகளிலும் ஒரே அறை அல்லது குளியலறை அமைப்பு இருக்கும் எனக் கருத வேண்டாம்."
+            },
+            {
+              "heading": "உணவும் அன்றாட வசதிகளும்",
+              "text": "விடுதியைத் தேர்ந்தெடுக்கும்போது தற்போதைய உணவுக்கூட ஏற்பாடு, உணவுத் தேர்வுகள், துணி துவைக்கும் வசதி, படிக்கும் இடங்கள் மற்றும் துறைக்கான தூரம் ஆகியவற்றைப் பற்றிக் கேட்டறியுங்கள். உங்கள் கட்டடத்தில் உள்ள வசதிகளைத் தனியாக உறுதிப்படுத்துவது உதவும்."
+            },
+            {
+              "heading": "முன்பதிவுக்கு முன்",
+              "text": "அதிகாரப்பூர்வ விடுதி வழிமுறைகளையும் தொடர்புடைய மாணவர் தளத்தையும் பயன்படுத்துங்கள். பணம் செலுத்துவதற்கு முன் அறை இருப்பு, விடுதி மற்றும் உணவுக்கான மொத்தக் கட்டணம், ஒதுக்கீட்டு அட்டவணை மற்றும் ரத்து அல்லது பணத்திருப்ப விதிகளை உறுதிப்படுத்துங்கள். அதிகாரப்பூர்வ உறுதிப்படுத்தல்களைச் சேமிக்கவும்."
+            },
+            {
+              "heading": "விதிகளும் உதவியும்",
+              "text": "தற்போதைய விடுதி விதிகளைப் படித்து, பராமரிப்பு அல்லது பிற பிரச்சினைகளுக்கு விடுதிக் காப்பாளர் மற்றும் அலுவலகத்தை அணுகும் முறையைத் தெரிந்துகொள்ளுங்கள். இந்த டெமோ தற்போதைய அறைக் கட்டணத்தையோ குறிப்பிட்ட அறை கிடைக்கும் என்ற உறுதியையோ வழங்கவில்லை."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "id": "srmist-hostels",
+          "title": "SRMIST — Hostels",
+          "url": "https://www.srmist.edu.in/srm-hostels/"
+        },
+        {
+          "id": "srmist-men-hostel",
+          "title": "SRMIST — Hostel for Men",
+          "url": "https://www.srmist.edu.in/srm-hostels/hostel-for-men/"
+        },
+        {
+          "id": "srmist-women-hostel",
+          "title": "SRMIST — Hostel for Women",
+          "url": "https://www.srmist.edu.in/srm-hostels/hostel-for-women/"
+        }
+      ]
+    },
+    {
+      "id": "demo-placements",
+      "labels": {
+        "en": "Placements & careers",
+        "hi": "प्लेसमेंट और करियर",
+        "ta": "வேலைவாய்ப்பும் தொழில் வளர்ச்சியும்"
+      },
+      "questions": {
+        "en": "Tell me about placements at SRM.",
+        "hi": "एसआरएम में प्लेसमेंट के बारे में बताइए।",
+        "ta": "எஸ்ஆர்எம் வேலைவாய்ப்புகள் பற்றி சொல்லுங்கள்."
+      },
+      "aliases": {
+        "en": [
+          "tell about placements",
+          "tell me about placements",
+          "tell about placement",
+          "tell me about placement",
+          "placements",
+          "placement",
+          "srm placements",
+          "tell me about srm placements",
+          "placement details",
+          "how are placements at srm"
+        ],
+        "hi": [
+          "प्लेसमेंट के बारे में बताओ",
+          "प्लेसमेंट के बारे में बताइए",
+          "एसआरएम प्लेसमेंट के बारे में बताओ",
+          "प्लेसमेंट की जानकारी",
+          "प्लेसमेंट कैसा है"
+        ],
+        "ta": [
+          "வேலைவாய்ப்பு பற்றி சொல்லுங்கள்",
+          "வேலைவாய்ப்புகள் பற்றி சொல்லுங்கள்",
+          "வேலைவாய்ப்பு பற்றி கூறுங்கள்",
+          "SRM placements பற்றி சொல்லுங்கள்",
+          "பிளேஸ்மென்ட் பற்றி சொல்லுங்கள்"
+        ]
+      },
+      "answers": {
+        "en": {
+          "title": "Placements and career preparation at SRMIST",
+          "intro": "SRMIST’s Career Centre describes support for students moving from university into employment. It brings together placement activities and career development. For this demo, the focus is on how that support works and how a student can prepare.",
+          "sections": [
+            {
+              "heading": "Recruitment activities",
+              "text": "The official Career Centre page describes activities such as pre-placement talks, written tests, group discussions and interviews. It also discusses training, workshops and interaction with industry. The stages for a particular opportunity depend on the recruiting organisation."
+            },
+            {
+              "heading": "How to prepare",
+              "text": "Build a clear résumé, be able to explain your projects, and practise the skills needed for your target roles. For technical roles, this may include programming and core subject knowledge; communication and interview practice are useful across many roles. These are preparation suggestions, not an SRM eligibility rule."
+            },
+            {
+              "heading": "What to confirm for your batch",
+              "text": "Ask the Career Centre for the current recruitment calendar, role descriptions, registration process and programme-specific eligibility. Check each opportunity’s instructions rather than assuming every student or course has access to the same selection process."
+            },
+            {
+              "heading": "Understanding placement figures",
+              "text": "Use an official report for the exact campus, programme and graduating batch when checking placement percentages or salary figures. Highest, average and median packages mean different things. This demo intentionally gives no unverified salary number or guarantee that every student will receive an offer."
+            }
+          ]
+        },
+        "hi": {
+          "title": "एसआरएमआईएसटी में प्लेसमेंट और करियर की तैयारी",
+          "intro": "एसआरएमआईएसटी का करियर सेंटर विश्वविद्यालय से रोजगार की ओर बढ़ने में छात्रों के लिए सहायता का वर्णन करता है। इसमें प्लेसमेंट गतिविधियाँ और करियर विकास शामिल हैं। इस डेमो का उद्देश्य सहायता की प्रकृति और छात्र की तैयारी को विस्तार से समझाना है।",
+          "sections": [
+            {
+              "heading": "भर्ती की गतिविधियाँ",
+              "text": "आधिकारिक करियर सेंटर पृष्ठ में प्री-प्लेसमेंट वार्ता, लिखित परीक्षा, समूह चर्चा और साक्षात्कार जैसी गतिविधियाँ बताई गई हैं। प्रशिक्षण, कार्यशालाओं और उद्योग से संवाद का भी उल्लेख है। किसी अवसर के वास्तविक चरण संबंधित भर्ती करने वाले संगठन पर निर्भर करते हैं।"
+            },
+            {
+              "heading": "छात्र कैसे तैयारी करें",
+              "text": "स्पष्ट बायोडाटा बनाएँ, अपनी परियोजनाओं को समझाकर बताने का अभ्यास करें और इच्छित भूमिका के लिए आवश्यक कौशल विकसित करें। तकनीकी भूमिकाओं में प्रोग्रामिंग तथा विषय का ज्ञान उपयोगी हो सकता है। संचार और साक्षात्कार का अभ्यास भी करें। ये तैयारी के सुझाव हैं, एसआरएम की पात्रता का नियम नहीं।"
+            },
+            {
+              "heading": "अपने बैच के लिए क्या पूछें",
+              "text": "करियर सेंटर से वर्तमान भर्ती कैलेंडर, भूमिका का विवरण, पंजीकरण प्रक्रिया और कार्यक्रम के अनुसार पात्रता की पुष्टि करें। हर अवसर के निर्देश अलग से पढ़ें; सभी छात्रों और पाठ्यक्रमों के लिए एक जैसी चयन प्रक्रिया मान लेना उचित नहीं है।"
+            },
+            {
+              "heading": "आँकड़ों को कैसे समझें",
+              "text": "प्लेसमेंट प्रतिशत या वेतन देखते समय उसी परिसर, कार्यक्रम और पास होने वाले बैच की आधिकारिक रिपोर्ट देखें। अधिकतम, औसत और मध्य वेतन अलग माप हैं। यह डेमो कोई अपुष्ट पैकेज नहीं बताता और प्रत्येक छात्र को नौकरी मिलने की गारंटी नहीं देता।"
+            }
+          ]
+        },
+        "ta": {
+          "title": "எஸ்ஆர்எம்ஐஎஸ்டியில் வேலைவாய்ப்பும் தயாரிப்பும்",
+          "intro": "பல்கலைக்கழகத்திலிருந்து வேலைவாய்ப்பிற்குச் செல்லும் மாணவர்களுக்கு உதவுவதற்கான செயல்பாடுகளை எஸ்ஆர்எம்ஐஎஸ்டியின் தொழில் வழிகாட்டல் மையம் விளக்குகிறது. இதில் ஆட்சேர்ப்பு நடவடிக்கைகளும் திறன் மேம்பாடும் இடம்பெறுகின்றன. அந்த உதவியையும் மாணவர் தயாரிப்பையும் இந்த டெமோ விளக்குகிறது.",
+          "sections": [
+            {
+              "heading": "ஆட்சேர்ப்பு நடவடிக்கைகள்",
+              "text": "அதிகாரப்பூர்வ மையப் பக்கத்தில் வேலைவாய்ப்பு அறிமுக உரைகள், எழுத்துத் தேர்வுகள், குழு விவாதங்கள் மற்றும் நேர்முகத் தேர்வுகள் குறிப்பிடப்படுகின்றன. பயிற்சி, பட்டறைகள் மற்றும் தொழில்துறையுடனான தொடர்புகளும் விளக்கப்படுகின்றன. ஒவ்வொரு வாய்ப்பின் தேர்வு நிலைகளும் அந்த நிறுவனத்தைப் பொறுத்து மாறும்."
+            },
+            {
+              "heading": "மாணவர்கள் தயாராகும் வழி",
+              "text": "தெளிவான சுயவிவரத்தை உருவாக்கி, உங்கள் திட்டப்பணிகளை விளக்கும் பயிற்சியை மேற்கொள்ளுங்கள். விரும்பும் பணிக்குத் தேவையான திறன்களை வளர்த்துக்கொள்ளுங்கள். தொழில்நுட்பப் பணிகளுக்கு நிரலாக்கமும் துறை அறிவும் உதவலாம்; தொடர்புத்திறனும் நேர்முகப் பயிற்சியும் பல பணிகளுக்குப் பயனுள்ளதாகும். இவை தயாரிப்பு ஆலோசனைகள் மட்டுமே."
+            },
+            {
+              "heading": "உங்கள் படிப்பிற்கு உறுதிப்படுத்த வேண்டியது",
+              "text": "தற்போதைய ஆட்சேர்ப்பு அட்டவணை, பணியின் விவரம், பதிவு முறை மற்றும் படிப்பிற்கான தகுதி விதிகளை மையத்திடம் கேட்டறியுங்கள். எல்லா மாணவர்களுக்கும் ஒரே வாய்ப்பும் ஒரே தேர்வு முறையும் இருக்கும் என்று கருதாமல் ஒவ்வொரு அறிவிப்பையும் படியுங்கள்."
+            },
+            {
+              "heading": "வேலைவாய்ப்பு விவரங்களை மதிப்பிடுதல்",
+              "text": "சதவீதம் அல்லது ஊதியத்தைப் பார்க்கும்போது அதே வளாகம், படிப்பு மற்றும் முடிக்கும் ஆண்டிற்கான அதிகாரப்பூர்வ அறிக்கையைப் பயன்படுத்துங்கள். அதிகபட்சம், சராசரி மற்றும் நடுநிலை ஊதியம் வெவ்வேறு அளவுகள். இந்த டெமோ சரிபார்க்காத ஊதிய எண்ணையோ அனைவருக்கும் வேலை கிடைக்கும் என்ற உறுதியையோ அளிக்கவில்லை."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "id": "srmist-career-centre",
+          "title": "SRMIST — Career Centre",
+          "url": "https://www.srmist.edu.in/career-centre/"
+        }
+      ]
+    },
+    {
+      "id": "demo-admissions",
+      "labels": {
+        "en": "Admissions & courses",
+        "hi": "प्रवेश और पाठ्यक्रम",
+        "ta": "சேர்க்கையும் படிப்புகளும்"
+      },
+      "questions": {
+        "en": "Tell me about admissions at SRM.",
+        "hi": "एसआरएम में प्रवेश प्रक्रिया के बारे में बताइए।",
+        "ta": "எஸ்ஆர்எம் சேர்க்கை பற்றி சொல்லுங்கள்."
+      },
+      "aliases": {
+        "en": [
+          "tell me about admissions",
+          "tell about admissions",
+          "admissions",
+          "admission",
+          "srm admissions",
+          "how can i apply to srm",
+          "how to apply for srm",
+          "tell me about courses at srm"
+        ],
+        "hi": [
+          "प्रवेश के बारे में बताओ",
+          "प्रवेश प्रक्रिया बताइए",
+          "एसआरएम में एडमिशन कैसे लें",
+          "एसआरएम में प्रवेश कैसे लें",
+          "एडमिशन के बारे में बताओ"
+        ],
+        "ta": [
+          "சேர்க்கை பற்றி சொல்லுங்கள்",
+          "சேர்க்கை முறை என்ன",
+          "எஸ்ஆர்எம் சேர்க்கை பற்றி கூறுங்கள்",
+          "SRM admission பற்றி சொல்லுங்கள்",
+          "எஸ்ஆர்எம் படிப்புகள் பற்றி சொல்லுங்கள்"
+        ]
+      },
+      "answers": {
+        "en": {
+          "title": "Admissions and course choices at SRMIST",
+          "intro": "Admission information should be checked for the exact programme and campus you want. SRMIST’s official admissions pages link to different study areas and application routes, so there is not one identical process for every course.",
+          "sections": [
+            {
+              "heading": "Choose your programme first",
+              "text": "Decide the degree level, subject and campus before starting an application. Compare the course curriculum, entry requirements and what you want to study. Do not assume that two courses with similar names have the same eligibility or admission route."
+            },
+            {
+              "heading": "Follow the relevant application route",
+              "text": "Use the official admissions page to reach the appropriate application form. The B.Tech application information refers to SRMJEEE; other programmes can have different selection requirements. Read the instructions for your chosen course rather than applying an engineering rule to every degree."
+            },
+            {
+              "heading": "Prepare your information",
+              "text": "Check which academic records, identification details and supporting documents the current form requests. Enter information carefully, keep access to your registered contact details and save the application acknowledgement. Complete any payment only through the official route described in the application."
+            },
+            {
+              "heading": "Check current details before deciding",
+              "text": "Confirm deadlines, the complete fee structure, campus availability, scholarships and withdrawal conditions on the current official pages. This demo gives a process overview and does not announce an admission date, cutoff, guaranteed seat or scholarship entitlement."
+            }
+          ]
+        },
+        "hi": {
+          "title": "एसआरएमआईएसटी में प्रवेश और पाठ्यक्रम",
+          "intro": "प्रवेश की जानकारी अपने चुने हुए कार्यक्रम और परिसर के अनुसार देखनी चाहिए। एसआरएमआईएसटी के आधिकारिक प्रवेश पृष्ठ विभिन्न विषयों और आवेदन मार्गों तक पहुँच देते हैं, इसलिए सभी पाठ्यक्रमों की प्रक्रिया एक जैसी नहीं होती।",
+          "sections": [
+            {
+              "heading": "पहले कार्यक्रम चुनें",
+              "text": "आवेदन शुरू करने से पहले डिग्री का स्तर, विषय और परिसर तय करें। पाठ्यक्रम, प्रवेश की शर्तों और अपनी रुचि की तुलना करें। एक जैसे नाम वाले दो पाठ्यक्रमों के लिए समान पात्रता या चयन प्रक्रिया मान लेना सही नहीं है।"
+            },
+            {
+              "heading": "संबंधित आवेदन प्रक्रिया अपनाएँ",
+              "text": "आधिकारिक प्रवेश पृष्ठ से सही आवेदन फॉर्म तक जाएँ। बीटेक आवेदन की जानकारी में एसआरएमजेईईई का उल्लेख है; दूसरे कार्यक्रमों की चयन आवश्यकताएँ अलग हो सकती हैं। इंजीनियरिंग का नियम हर डिग्री पर लागू करने के बजाय अपने पाठ्यक्रम के निर्देश पढ़ें।"
+            },
+            {
+              "heading": "जानकारी और दस्तावेज तैयार रखें",
+              "text": "वर्तमान फॉर्म में माँगे गए शैक्षणिक रिकॉर्ड, पहचान विवरण और सहायक दस्तावेजों की सूची देखें। जानकारी ध्यान से भरें, पंजीकृत संपर्क विवरण उपलब्ध रखें और आवेदन की पावती सुरक्षित रखें। भुगतान केवल आधिकारिक आवेदन में बताए गए मार्ग से करें।"
+            },
+            {
+              "heading": "निर्णय से पहले पुष्टि करें",
+              "text": "समय-सीमा, पूरा शुल्क, परिसर में उपलब्धता, छात्रवृत्ति और प्रवेश वापस लेने की शर्तें वर्तमान आधिकारिक पृष्ठ पर जाँचें। यह डेमो सामान्य प्रक्रिया समझाता है; किसी तारीख, कटऑफ, निश्चित सीट या छात्रवृत्ति की गारंटी की घोषणा नहीं करता।"
+            }
+          ]
+        },
+        "ta": {
+          "title": "எஸ்ஆர்எம்ஐஎஸ்டி சேர்க்கை மற்றும் படிப்புத் தேர்வு",
+          "intro": "நீங்கள் விரும்பும் படிப்பிற்கும் வளாகத்திற்கும் உரிய சேர்க்கைத் தகவலைப் பார்க்க வேண்டும். அதிகாரப்பூர்வ சேர்க்கைப் பக்கங்கள் பல துறைகளுக்கான விண்ணப்ப வழிகளை வழங்குவதால், எல்லாப் படிப்புகளுக்கும் ஒரே செயல்முறை இருப்பதில்லை.",
+          "sections": [
+            {
+              "heading": "முதலில் படிப்பைத் தேர்ந்தெடுக்கவும்",
+              "text": "விண்ணப்பிக்கும் முன் பட்டப்படிப்பின் நிலை, பாடப்பிரிவு மற்றும் வளாகத்தை முடிவு செய்யுங்கள். பாடத்திட்டம், நுழைவுத் தகுதி மற்றும் உங்கள் ஆர்வத்தை ஒப்பிடுங்கள். ஒரேபோன்ற பெயருடைய படிப்புகளுக்கு ஒரே தகுதியும் தேர்வுமுறையும் இருக்கும் என்று கருத வேண்டாம்."
+            },
+            {
+              "heading": "சரியான விண்ணப்ப வழி",
+              "text": "அதிகாரப்பூர்வ சேர்க்கைப் பக்கத்திலிருந்து தொடர்புடைய விண்ணப்பத்திற்குச் செல்லுங்கள். பி.டெக் விண்ணப்பத் தகவலில் எஸ்ஆர்எம்ஜேஇஇஇ குறிப்பிடப்படுகிறது; மற்ற படிப்புகளுக்கான விதிகள் வேறுபடலாம். ஒரு பொறியியல் சேர்க்கை விதியை எல்லாப் பட்டங்களுக்கும் பயன்படுத்த வேண்டாம்."
+            },
+            {
+              "heading": "விவரங்களைத் தயாராக்கவும்",
+              "text": "தற்போதைய விண்ணப்பம் கேட்கும் கல்விச் சான்றுகள், அடையாள விவரங்கள் மற்றும் ஆதார ஆவணங்களைப் பாருங்கள். விவரங்களை கவனமாக நிரப்பி, பதிவு செய்த தொடர்பு விவரங்களை அணுகக்கூடிய நிலையில் வைத்திருந்து, விண்ணப்ப ஒப்புகையைச் சேமிக்கவும். அதிகாரப்பூர்வ வழிமுறையிலேயே பணம் செலுத்துங்கள்."
+            },
+            {
+              "heading": "இறுதி முடிவிற்கு முன்",
+              "text": "கடைசி நாள், முழுக் கட்டணம், வளாகத்தில் படிப்பு கிடைப்பது, உதவித்தொகை மற்றும் சேர்க்கையைத் திரும்பப்பெறும் நிபந்தனைகளை தற்போதைய பக்கத்தில் உறுதிப்படுத்துங்கள். இந்த டெமோ பொதுவான வழிகாட்டுதலே; தேதி, கட்-ஆஃப், உறுதியான இடம் அல்லது உதவித்தொகையை அறிவிக்கவில்லை."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "id": "srmist-admissions",
+          "title": "SRMIST — Admissions India",
+          "url": "https://www.srmist.edu.in/admission-india/"
+        },
+        {
+          "id": "srmist-btech",
+          "title": "SRMIST — B.Tech application information",
+          "url": "https://applications.srmist.edu.in/btech"
+        }
+      ]
+    },
+    {
+      "id": "demo-campus-life",
+      "labels": {
+        "en": "Campus life & facilities",
+        "hi": "परिसर का जीवन और सुविधाएँ",
+        "ta": "வளாக வாழ்க்கையும் வசதிகளும்"
+      },
+      "questions": {
+        "en": "Tell me about campus life and facilities.",
+        "hi": "परिसर की सुविधाओं और छात्र जीवन के बारे में बताइए।",
+        "ta": "வளாக வாழ்க்கை மற்றும் வசதிகள் பற்றி சொல்லுங்கள்."
+      },
+      "aliases": {
+        "en": [
+          "tell me about campus life",
+          "tell about campus life",
+          "campus life",
+          "campus facilities",
+          "tell me about facilities",
+          "tell about facilities",
+          "student life",
+          "tell me about student life",
+          "life at srm"
+        ],
+        "hi": [
+          "परिसर के जीवन के बारे में बताओ",
+          "कैंपस की सुविधाएँ बताइए",
+          "छात्र जीवन के बारे में बताइए",
+          "कैंपस लाइफ के बारे में बताओ",
+          "परिसर की सुविधाएं"
+        ],
+        "ta": [
+          "வளாக வாழ்க்கை பற்றி சொல்லுங்கள்",
+          "வளாக வசதிகள் பற்றி சொல்லுங்கள்",
+          "மாணவர் வாழ்க்கை பற்றி சொல்லுங்கள்",
+          "வளாக வாழ்க்கை பற்றி கூறுங்கள்"
+        ]
+      },
+      "answers": {
+        "en": {
+          "title": "Campus life and facilities at Kattankulathur",
+          "intro": "Campus life combines academic work with places to study, activities to join and practical services for daily living. SRMIST’s student-life and facilities pages are useful starting points for exploring Kattankulathur beyond your classroom.",
+          "sections": [
+            {
+              "heading": "Library and study resources",
+              "text": "The Central Library uses RFID technology for library automation. When using the library, check its current access instructions, available resources and opening schedule rather than assuming the same arrangement applies to every department or examination period."
+            },
+            {
+              "heading": "Clubs and sports",
+              "text": "The campus material includes student clubs, sports and recreation. For example, Astrophilia is an astronomy and space club, and the sports material lists the Dr. T. R. Paarivendhar Aquatic Complex. Ask about membership and access rules before joining an activity."
+            },
+            {
+              "heading": "Transport and everyday support",
+              "text": "Students can manage campus bus bookings through the Student / Faculty Portal. For daily travel, check your actual route and current service instructions. Learn where to find the student affairs, hostel and facilities support relevant to your needs."
+            },
+            {
+              "heading": "Make the most of your time",
+              "text": "A practical approach is to plan study time, choose a manageable number of activities and ask the relevant office when information is unclear. This demo does not invent operating hours, bus timings, event dates or facility-access guarantees. Use the source links for current arrangements."
+            }
+          ]
+        },
+        "hi": {
+          "title": "कट्टनकुलथूर में परिसर का जीवन और सुविधाएँ",
+          "intro": "परिसर का जीवन पढ़ाई के साथ अध्ययन के स्थानों, गतिविधियों और रोजमर्रा की सेवाओं से मिलकर बनता है। कक्षा के बाहर कट्टनकुलथूर को समझने के लिए एसआरएमआईएसटी के छात्र जीवन और सुविधाओं के पृष्ठ उपयोगी हैं।",
+          "sections": [
+            {
+              "heading": "पुस्तकालय और अध्ययन",
+              "text": "केंद्रीय पुस्तकालय के स्वचालन में आरएफआईडी तकनीक उपयोग होती है। पुस्तकालय की वर्तमान प्रवेश व्यवस्था, उपलब्ध संसाधन और समय-सारणी जाँचें। हर विभाग या परीक्षा अवधि में एक जैसी व्यवस्था होने की धारणा न बनाएँ।"
+            },
+            {
+              "heading": "क्लब और खेल",
+              "text": "परिसर की जानकारी में छात्र क्लब, खेल और मनोरंजन शामिल हैं। उदाहरण के लिए एस्ट्रोफिलिया खगोल विज्ञान और अंतरिक्ष से जुड़ा एक छात्र क्लब है। खेल की जानकारी में डॉ. टी. आर. पारिवेंधर एक्वाटिक कॉम्प्लेक्स का नाम मिलता है। किसी गतिविधि के लिए सदस्यता और प्रवेश के नियम पूछें।"
+            },
+            {
+              "heading": "परिवहन और दैनिक सहायता",
+              "text": "छात्र परिसर की बस बुकिंग को स्टूडेंट / फैकल्टी पोर्टल पर प्रबंधित कर सकते हैं। अपने वास्तविक मार्ग और वर्तमान सेवा निर्देशों की पुष्टि करें। छात्र मामलों, छात्रावास और सुविधाओं से संबंधित कार्यालयों की सहायता का तरीका भी जानें।"
+            },
+            {
+              "heading": "समय का उपयोग कैसे करें",
+              "text": "पढ़ाई का समय निर्धारित करें, अपनी क्षमता के अनुसार गतिविधियाँ चुनें और जानकारी अस्पष्ट होने पर संबंधित कार्यालय से पूछें। यह डेमो पुस्तकालय का समय, बस की समय-सारणी, कार्यक्रम की तारीख या सुविधा में प्रवेश की गारंटी नहीं बनाता। वर्तमान व्यवस्था के लिए स्रोत लिंक देखें।"
+            }
+          ]
+        },
+        "ta": {
+          "title": "காட்டாங்குளத்தூர் வளாக வாழ்க்கை மற்றும் வசதிகள்",
+          "intro": "வளாக வாழ்க்கையில் படிப்புடன் படிக்கும் இடங்கள், மாணவர் செயல்பாடுகள் மற்றும் அன்றாடச் சேவைகளும் அடங்கும். வகுப்பறைக்கு வெளியே காட்டாங்குளத்தூரைப் புரிந்துகொள்ள மாணவர் வாழ்க்கை மற்றும் வசதிகள் பற்றிய அதிகாரப்பூர்வ பக்கங்கள் உதவுகின்றன.",
+          "sections": [
+            {
+              "heading": "நூலகமும் படிப்பும்",
+              "text": "மத்திய நூலகத் தானியக்கத்தில் ஆர்எஃப்ஐடி தொழில்நுட்பம் பயன்படுத்தப்படுகிறது. நூலகத்தின் தற்போதைய அணுகல் முறை, வளங்கள் மற்றும் நேரத்தைச் சரிபார்க்கவும். எல்லாத் துறைகளுக்கும் தேர்வுக் காலங்களுக்கும் ஒரே ஏற்பாடு இருக்கும் என்று கருத வேண்டாம்."
+            },
+            {
+              "heading": "மன்றங்களும் விளையாட்டும்",
+              "text": "மாணவர் மன்றங்கள், விளையாட்டு மற்றும் பொழுதுபோக்கு வளாக வாழ்க்கையின் பகுதிகளாகக் குறிப்பிடப்படுகின்றன. ஆஸ்ட்ரோஃபிலியா வானியல் மற்றும் விண்வெளி மன்றமாக உள்ளது; விளையாட்டுத் தகவலில் டாக்டர் டி. ஆர். பாரிவேந்தர் நீர்விளையாட்டு வளாகம் இடம்பெறுகிறது. உறுப்பினர் சேர்க்கை மற்றும் அணுகல் விதிகளைத் தெரிந்துகொள்ளுங்கள்."
+            },
+            {
+              "heading": "போக்குவரத்தும் அன்றாட உதவியும்",
+              "text": "மாணவர்கள் வளாகப் பேருந்து முன்பதிவுகளை மாணவர் / ஆசிரியர் தளத்தில் நிர்வகிக்கலாம். உங்கள் வழித்தடத்தையும் தற்போதைய சேவை அறிவுறுத்தல்களையும் உறுதிப்படுத்துங்கள். மாணவர் நலன், விடுதி மற்றும் பராமரிப்புக்கான உதவி எங்கு கிடைக்கும் என்பதையும் தெரிந்துகொள்ளுங்கள்."
+            },
+            {
+              "heading": "உங்கள் நேரத்தைத் திட்டமிடுதல்",
+              "text": "படிக்கும் நேரத்தைத் திட்டமிட்டு, சமாளிக்கக்கூடிய அளவிலான செயல்பாடுகளைத் தேர்ந்தெடுங்கள். தகவல் தெளிவில்லையெனில் தொடர்புடைய அலுவலகத்திடம் கேளுங்கள். இந்த டெமோ திறந்திருக்கும் நேரம், பேருந்து அட்டவணை, நிகழ்ச்சித் தேதி அல்லது வசதிக்கான உறுதியான அணுகலை உருவாக்கிக் கூறுவதில்லை."
+            }
+          ]
+        }
+      },
+      "sources": [
+        {
+          "id": "srmist-student-life",
+          "title": "SRMIST — Student Life",
+          "url": "https://www.srmist.edu.in/life-at-srm/student-life/"
+        },
+        {
+          "id": "srmist-library",
+          "title": "SRMIST — Library",
+          "url": "https://www.srmist.edu.in/library/"
+        },
+        {
+          "id": "srmist-sports",
+          "title": "SRMIST — Sports",
+          "url": "https://www.srmist.edu.in/sports/"
+        },
+        {
+          "id": "srmist-transport",
+          "title": "SRMIST — Transport",
+          "url": "https://www.srmist.edu.in/transport-facility/"
+        }
+      ]
+    }
+  ]
+}

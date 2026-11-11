@@ -51,6 +51,9 @@ with zipfile.ZipFile(output,'w',compression=zipfile.ZIP_DEFLATED) as archive:
     for folder in ['citation-policy-followup','retrieval_validation']:
         for path in sorted((root/'results'/folder).glob('*.json')):
             archive.write(path,'handoff/'+folder+'/'+path.name)
+    demo_audit = root/'handoff'/'detailed-demo-validation.json'
+    if demo_audit.is_file():
+        archive.write(demo_audit,'handoff/detailed-demo-validation.json')
     interface_audit = root/'handoff'/'chat-interface-validation.json'
     if interface_audit.is_file():
         archive.write(interface_audit,'handoff/chat-interface-validation.json')
